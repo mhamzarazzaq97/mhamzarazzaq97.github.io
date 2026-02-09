@@ -1,0 +1,136 @@
+\documentclass[11pt,a4paper,sans]{moderncv}
+\moderncvstyle{banking}
+\moderncvcolor{black}
+\nopagenumbers{}
+\usepackage[utf8]{inputenc}
+\usepackage{ragged2e}
+\usepackage[scale=0.915]{geometry}
+\usepackage{import}
+\usepackage{multicol}
+\usepackage{import}
+\usepackage{enumitem}
+\usepackage[utf8]{inputenc}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{tikz}
+\name{Muhammad Hamza}{Razzaq}
+\newcommand*{\customcventry}[7][.13em]{
+\begin{tabular}{@{}l}
+{\bfseries #4} \
+{\itshape #3}
+\end{tabular}
+\hfill
+\begin{tabular}{l@{}}
+{\bfseries #5} \
+{\itshape #2}
+\end{tabular}
+\ifx&#7&%
+\else{\
+\begin{minipage}{\maincolumnwidth}%
+\small#7%
+\end{minipage}}\fi%
+\par\addvspace{#1}}
+\begin{document}
+\vspace*{-10mm}
+\begin{minipage}[c]{0.18\textwidth}
+\includegraphics[width=2.8cm]{photo.jpg}
+\end{minipage}%
+\begin{minipage}[c]{0.80\textwidth}
+{\Huge\bfseries Muhammad Hamza Razzaq}\\[4pt]
+\textbf{DevOps Engineer | 4x AWS Certified | 2x Kubernetes Certified | Terraform Certified}\\[4pt]
+\begin{tabular}{ @{} l @{\hspace{2em}} l @{\hspace{2em}} l }
+\faMobile\enspace +971 55 103 9986 & \faMobile\enspace +92 307 705 2134 & \faEnvelope\enspace mhamzarazzaq97@gmail.com \\[3pt]
+\faLinkedin\enspace \href{https://linkedin.com/in/hamzarazzaq97}{in/hamzarazzaq97} & \faHome\enspace Abu Dhabi, UAE & \faCalendar\enspace Last Updated: \today
+\end{tabular}
+\end{minipage}
+
+\section{Profile Summary}
+DevOps Team Lead with 6+ years of experience, currently leading a team of 5 engineers managing 15+ production environments serving millions of daily requests with 99.9\%+ uptime. Expert in AWS cloud infrastructure (EKS, RDS, MSK, ElastiCache), Kubernetes, Terraform IaC, and security tools including Kyverno and Trivy for vulnerability scanning. Delivered \$70K+/month in cost savings, 40\% faster deployments, and zero-downtime migrations across all environments.
+
+\section{Technical Skills}
+{\begin{itemize}[label=\textbullet]
+\item {\textbf{Cloud \& Infrastructure —} Terraform, AWS (EKS, RDS, ELB, ASG, CloudFront, OpenSearch, MSK, ElastiCache, Route53, Secrets Manager, IAM, VPC, S3, EC2, Lambda, CloudWatch, SNS, SQS, KMS, CloudFormation)}
+\item {\textbf{Kubernetes Ecosystem —} Kubernetes, Helm, Kustomize, ArgoCD, FluxCD, Karpenter, Kyverno, Trivy, KEDA, External Secrets, Cert Manager, Lens}
+\item {\textbf{CI/CD \& GitOps —} GitHub Actions, Gitlab CI/CD, ArgoCD, FluxCD, Jenkins, CodeDeploy, CodePipeline}
+\item {\textbf{Programming \& Scripting —} Bash, Terraform HCL, Golang, Python}
+\item {\textbf{Monitoring \& Observability —} Prometheus, Grafana, OpenSearch, Fluent Bit, New Relic, CloudWatch}
+\end{itemize}}
+
+\section{Professional Experience}
+\customcventry{01/2023 ‐ present}{}{DevOps Engineer — Callsign Technologies}{Abu Dhabi, UAE}{}{
+{\begin{itemize}[leftmargin=0.6cm,topsep=5pt, itemsep=2pt, parsep=2pt, label={\textbullet}]
+    \item Leading and mentoring a team of 5 DevOps engineers responsible for managing 15+ production and non-production environments, overseeing component upgrades, releases, feature development, and continuous improvements to the infrastructure codebase.
+    \item Maintaining 99.9\% uptime while leading critical services upgrades (EKS, RDS, MSK) with zero downtime and no data loss.
+    \item Cut infrastructure provisioning from hours to minutes by building a GitLab pipeline framework orchestrating 15+ Terraform repos.
+    \item Achieved 35-40\% monthly cost savings (\$70K+/month) by developing an in-house 'Environment Scaler' tool that automatically downscales non-production environments during off-hours.
+    \item Reduced critical CVEs through comprehensive cluster security implementation including Kyverno policy enforcement, Trivy vulnerability scanning, and automated AMI patching via Karpenter.
+    \item Serving as primary escalation point for complex production incidents, conducting deep-dive root cause analysis across distributed systems to identify issues spanning multiple services, clusters, and AWS components.
+    \item Reduced deployment time by 30-40\% by refactoring deployment strategy to decouple infrastructure and application releases, enabling independent and faster change rollouts.
+    \item Eliminated 30 minutes of manual IRSA updates per deployment by migrating to EKS Pod Identity, simplifying IAM management for microservices across all environments.
+    \item Improved cluster autoscaling efficiency by migrating from AWS Auto Scaling Groups to Karpenter and implementing event-driven scaling with KEDA, reducing response time to traffic spikes.
+\item[]
+\end{itemize}}}
+
+\customcventry{02/2022 ‐ 01/2023}{}{DevOps Engineer — Dubbizle Labs}{Lahore, Pakistan}{}{
+{\begin{itemize}[leftmargin=0.6cm,topsep=5pt, itemsep=2pt, parsep=2pt, label={\textbullet}]
+    \item Containerized legacy applications and migrated them to Kubernetes, delivering production-grade scalability and reliability.
+    \item Built and rolled out GitOps workflows with ArgoCD, Helm, Kustomize, and External Secrets, ensuring consistency across production and non-prod environments.  
+    \item Designed and implemented CI/CD pipelines using GitHub Actions integrated with ArgoCD, enabling automated and reliable deployment strategy with minimal human intervention.  
+    \item Implemented a centralized observability stack with OpenSearch and Fluent Bit, reducing incident detection and troubleshooting time from hours to minutes.
+    \item Optimized cloud infrastructure management through continuous improvements to Terraform code, ensuring consistency across environments.
+    \item Integrated AWS SSO with ArgoCD and OpenSearch, tightening access control and simplifying authentication across the platform.
+\item[]
+\end{itemize}}}
+
+% \newpage
+
+\customcventry{02/2021 ‐ 02/2022}{}{DevOps Engineer — Arbisoft}{Lahore, Pakistan}{}{
+{\begin{itemize}[leftmargin=0.6cm,topsep=5pt, itemsep=1pt, parsep=1pt, label={\textbullet}]
+    \item Migrated workloads from standalone EC2 instances to auto-scaling-group based architecture, improving availability and reducing operational overhead.
+    \item Enhanced CI/CD pipelines with CircleCI and AWS CodeDeploy, accelerating release velocity and minimizing deployment failures.  
+    \item Authored reusable CloudFormation templates to standardize infrastructure provisioning and ensure consistency across projects.  
+    \item Tuned and optimized Nginx configurations, reducing application response times by more than 70\%.  
+    \item Automated repetitive operational tasks with Bash scripting, increasing team efficiency and reducing manual toil.
+    \item Integrated New Relic for application performance monitoring, enabling proactive issue detection and faster root-cause analysis.
+\item[]
+\end{itemize}}}
+
+\customcventry{07/2019 ‐ 02/2021}{}{Software Engineer — Northbay Solutions}{Lahore, Pakistan}{}{
+{\begin{itemize}[leftmargin=0.6cm,topsep=5pt, itemsep=1pt, parsep=1pt, label={\textbullet}]
+    \item Worked on writing reusable IaC scripts in CloudFormation and Terraform for seamless infrastructure provisioning.
+    \item Contributed to the design and implementation of an application migration from Rackspace to AWS ECS, improving scalability and reliability of services.  
+    \item Developed AWS Lambda functions workflow orchestration using Step Functions, automating event-driven processes.  
+    \item Set up SFTP server on AWS using AWS Transfer Service, ensuring secure and reliable data transfer.
+\item[]
+\end{itemize}}}
+
+\section{ Certifications}
+\begin{multicols}{2}
+  {\begin{itemize}[leftmargin=0.6cm,topsep=5pt, itemsep=2pt, parsep=2pt, label={\textbullet}]
+     \item AWS Certified DevOps Engineer - Professional
+     \item AWS Certified Solutions Architect - Associate
+     \item AWS Certified Developer - Associate
+     \item AWS Certified Cloud Practitioner
+     \item Certified Kubernetes Administrator
+     \item Certified Kubernetes Application Developer
+     \item Terraform Certified Associate
+     \item[] 
+  \end{itemize}} 
+\end{multicols}
+
+\section{Education}
+\customcventry{2015-2019}{\underline{Punjab University College of Information and Technology}}{Bachelor’s in Software Engineering}{}{}{}{Relevant Courses: Data Structures, Algorithms, Object Oriented Programming, Databases, Machine Learning}\\
+{CGPA: 3.62/4}
+
+\section{Additional Skills}
+\begin{multicols}{2}
+  {\begin{itemize}[leftmargin=0.6cm,topsep=5pt, itemsep=2pt, parsep=2pt, label={\textbullet}]
+     \item Team Leadership \& Mentorship
+     \item Incident Management \& Root Cause Analysis
+     \item Cross-Functional Collaboration
+     \item Critical Thinking \& Problem Solving
+     \item Technical Communication
+  \end{itemize}} 
+\end{multicols}
+
+\end{document}
