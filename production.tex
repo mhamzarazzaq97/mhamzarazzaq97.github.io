@@ -25,10 +25,8 @@
 {\itshape #2}
 \end{tabular}
 \ifx&#7&%
-\else{\
-\begin{minipage}{\maincolumnwidth}%
-\small#7%
-\end{minipage}}\fi%
+\else{%
+\small#7}\fi%
 \par\addvspace{#1}}
 \begin{document}
 \vspace*{-10mm}
@@ -50,7 +48,7 @@ DevOps Team Lead with 6+ years of experience, currently leading a team of 5 engi
 \section{Technical Skills}
 {\begin{itemize}[label=\textbullet]
 \item {\textbf{Cloud \& Infrastructure —} Terraform, AWS (EKS, RDS, ELB, ASG, CloudFront, OpenSearch, MSK, ElastiCache, Route53, Secrets Manager, IAM, VPC, S3, EC2, Lambda, CloudWatch, SNS, SQS, KMS, CloudFormation)}
-\item {\textbf{Kubernetes Ecosystem —} Kubernetes, Helm, Kustomize, ArgoCD, FluxCD, Karpenter, Kyverno, Trivy, KEDA, External Secrets, Cert Manager, Lens}
+\item {\textbf{Kubernetes Ecosystem —} Kubernetes, Helm, Kustomize, ArgoCD, FluxCD, Karpenter, Kyverno, Trivy, KEDA, Istio, External Secrets, Cert Manager, Lens}
 \item {\textbf{CI/CD \& GitOps —} GitHub Actions, Gitlab CI/CD, ArgoCD, FluxCD, Jenkins, CodeDeploy, CodePipeline}
 \item {\textbf{Programming \& Scripting —} Bash, Terraform HCL, Golang, Python}
 \item {\textbf{Monitoring \& Observability —} Prometheus, Grafana, OpenSearch, Fluent Bit, New Relic, CloudWatch}
@@ -61,14 +59,14 @@ DevOps Team Lead with 6+ years of experience, currently leading a team of 5 engi
 {\begin{itemize}[leftmargin=0.6cm,topsep=5pt, itemsep=2pt, parsep=2pt, label={\textbullet}]
     \item Leading and mentoring a team of 5 DevOps engineers responsible for managing 15+ production and non-production environments, overseeing component upgrades, releases, feature development, and continuous improvements to the infrastructure codebase.
     \item Maintaining 99.99\% uptime while leading critical services upgrades (EKS, RDS, MSK) with zero downtime and no data loss.
-    \item Cut infrastructure provisioning from hours to minutes by building a GitLab pipeline framework orchestrating 15+ Terraform repos.
+    \item Played a key role in emergency cross-region DR failover for a top UAE banking client during a multi-AZ AWS outage, coordinating with AWS support to migrate RDS databases, replicate S3 data, and provision complete infrastructure in the secondary region, restoring full service operation.
     \item Achieved 35-40\% monthly cost savings (\$70K+/month) by developing an in-house 'Environment Scaler' tool that automatically downscales non-production environments during off-hours.
     \item Reduced critical CVEs through comprehensive cluster security implementation including Kyverno policy enforcement, Trivy vulnerability scanning, and automated AMI patching via Karpenter.
-    \item Serving as primary escalation point for complex production incidents, conducting deep-dive root cause analysis across distributed systems to identify issues spanning multiple services, clusters, and AWS components.
     \item Reduced deployment time by 30-40\% by refactoring deployment strategy to decouple infrastructure and application releases, enabling independent and faster change rollouts.
-    \item Eliminated 30 minutes of manual IRSA updates per deployment by migrating to EKS Pod Identity, simplifying IAM management for microservices across all environments.
+    \item Cut infrastructure provisioning from hours to minutes by building a GitLab pipeline framework orchestrating 15+ Terraform repos.
+    \item Serving as primary escalation point for complex production incidents, conducting deep-dive root cause analysis across distributed systems to identify issues spanning multiple services, clusters, and AWS components.
+    \item Reduced deployment time by migrating from IRSA to EKS Pod Identity, simplifying IAM management across all microservices.
     \item Improved cluster autoscaling efficiency by migrating from AWS Auto Scaling Groups to Karpenter and implementing event-driven scaling with KEDA, reducing response time to traffic spikes.
-\item[]
 \end{itemize}}}
 
 \customcventry{02/2022 ‐ 01/2023}{}{DevOps Engineer — Dubbizle Labs}{Lahore, Pakistan}{}{
@@ -77,12 +75,10 @@ DevOps Team Lead with 6+ years of experience, currently leading a team of 5 engi
     \item Built and rolled out GitOps workflows with ArgoCD, Helm, Kustomize, and External Secrets, ensuring consistency across production and non-prod environments.  
     \item Designed and implemented CI/CD pipelines using GitHub Actions integrated with ArgoCD, enabling automated and reliable deployment strategy with minimal human intervention.  
     \item Implemented a centralized observability stack with OpenSearch and Fluent Bit, reducing incident detection and troubleshooting time from hours to minutes.
-    \item Optimized cloud infrastructure management through continuous improvements to Terraform code, ensuring consistency across environments.
+    \item Continuously improved Terraform codebase to ensure consistent infrastructure across environments.
     \item Integrated AWS SSO with ArgoCD and OpenSearch, tightening access control and simplifying authentication across the platform.
 \item[]
 \end{itemize}}}
-
-% \newpage
 
 \customcventry{02/2021 ‐ 02/2022}{}{DevOps Engineer — Arbisoft}{Lahore, Pakistan}{}{
 {\begin{itemize}[leftmargin=0.6cm,topsep=5pt, itemsep=1pt, parsep=1pt, label={\textbullet}]
