@@ -398,21 +398,29 @@
     .section-header {
       background: var(--bg-card-header);
       border-bottom: 1px solid var(--border);
-      padding: 10px 18px;
+      padding: 12px 20px;
       display: flex;
       align-items: center;
-      gap: 8px;
+      gap: 10px;
+    }
+
+    .section-tag {
       font-family: var(--font-mono);
-    }
-
-    .section-cmd {
-      font-size: 0.85rem;
+      font-size: 0.72rem;
+      color: var(--cyan);
+      background: var(--cyan-dim);
+      padding: 2px 7px;
+      border-radius: 4px;
+      border: 1px solid rgba(56, 189, 248, 0.3);
       font-weight: 600;
-      color: var(--text-white);
     }
 
-    .section-cmd-prompt {
-      color: var(--green);
+    .section-title {
+      font-family: var(--font-heading);
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: var(--text-white);
+      letter-spacing: -0.01em;
     }
 
     .section-body {
@@ -843,20 +851,20 @@
         <div class="metric-label">// KUBESTRONAUT</div>
       </div>
       <div class="metric-card">
-        <div class="metric-val">$200K+</div>
-        <div class="metric-label">// CLOUD SAVINGS</div>
+        <div class="metric-val">4x AWS</div>
+        <div class="metric-label">// CERTIFIED</div>
       </div>
       <div class="metric-card">
-        <div class="metric-val">0 DOWNTIME</div>
-        <div class="metric-label">// CORE UPGRADES</div>
+        <div class="metric-val">$200K+</div>
+        <div class="metric-label">// CLOUD SAVINGS</div>
       </div>
     </div>
 
     <!-- Profile Summary Section -->
     <section class="section-window">
       <div class="section-header">
-        <span class="section-cmd-prompt">$</span>
-        <span class="section-cmd">cat /etc/profile.md --summary</span>
+        <span class="section-tag">01</span>
+        <h3 class="section-title">Profile Summary</h3>
       </div>
       <div class="section-body">
         <p class="profile-summary-text">
@@ -868,8 +876,8 @@
     <!-- Technical Skills Section -->
     <section class="section-window">
       <div class="section-header">
-        <span class="section-cmd-prompt">$</span>
-        <span class="section-cmd">kubectl get stack -A --show-labels</span>
+        <span class="section-tag">02</span>
+        <h3 class="section-title">Technical Stack & Core Domains</h3>
       </div>
 
       <div class="section-body">
@@ -979,8 +987,8 @@
     <!-- Professional Experience Section -->
     <section class="section-window">
       <div class="section-header">
-        <span class="section-cmd-prompt">$</span>
-        <span class="section-cmd">git log --all --experience --graph</span>
+        <span class="section-tag">03</span>
+        <h3 class="section-title">Professional Experience</h3>
       </div>
 
       <div class="section-body">
@@ -1082,8 +1090,8 @@
     <!-- Certifications Section -->
     <section class="section-window">
       <div class="section-header">
-        <span class="section-cmd-prompt">$</span>
-        <span class="section-cmd">kubectl get certs -n cncf-aws</span>
+        <span class="section-tag">04</span>
+        <h3 class="section-title">Certifications & Accreditations</h3>
       </div>
 
       <div class="section-body">
@@ -1141,8 +1149,8 @@
     <!-- Education Section -->
     <section class="section-window">
       <div class="section-header">
-        <span class="section-cmd-prompt">$</span>
-        <span class="section-cmd">cat /etc/education.txt</span>
+        <span class="section-tag">05</span>
+        <h3 class="section-title">Education</h3>
       </div>
 
       <div class="section-body">
@@ -1160,8 +1168,8 @@
     <!-- Leadership / Additional Skills Section -->
     <section class="section-window">
       <div class="section-header">
-        <span class="section-cmd-prompt">$</span>
-        <span class="section-cmd">systemctl list-units --type=competency</span>
+        <span class="section-tag">06</span>
+        <h3 class="section-title">Leadership & Core Competencies</h3>
       </div>
 
       <div class="section-body">
