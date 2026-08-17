@@ -16,8 +16,8 @@
   <meta property="og:title" content="Muhammad Hamza Razzaq — DevOps Engineer | Kubestronaut">
   <meta property="og:description" content="DevOps Engineer | Kubestronaut | 4x AWS Certified | Terraform Certified">
 
-  <!-- Favicon: Titanium Monogram -->
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2220%22 fill=%22%2318181b%22 stroke=%22%233f3f46%22 stroke-width=%224%22/><text x=%2250%%22 y=%2266%%22 font-family=%22monospace%22 font-weight=%22800%22 font-size=%2244%22 fill=%22%23ffffff%22 text-anchor=%22middle%22>HR</text></svg>">
+  <!-- Favicon: Titanium Monogram with K8s Blue Accent -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2220%22 fill=%22%23121215%22 stroke=%22%23326ce5%22 stroke-width=%224%22/><text x=%2250%%22 y=%2266%%22 font-family=%22monospace%22 font-weight=%22800%22 font-size=%2244%22 fill=%22%23ffffff%22 text-anchor=%22middle%22>HR</text></svg>">
 
   <!-- Google Fonts: Inter & Fira Code (Monospace) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -28,16 +28,22 @@
     :root {
       --bg-dark: #09090b;
       --bg-card: #121215;
-      --bg-card-hover: #17171c;
+      --bg-card-hover: #16161c;
       --bg-tag: #18181b;
       --border: #27272a;
-      --border-hover: #52525b;
-      --border-active: #a1a1aa;
+      --border-hover: #3f3f46;
+      --border-active: #52525b;
       
       --text-white: #ffffff;
       --text-main: #d4d4d8;
       --text-muted: #a1a1aa;
       --text-subtle: #71717a;
+      
+      /* Subtle Touch of CNCF Kubernetes Blue */
+      --k8s-blue: #326ce5;
+      --k8s-blue-light: #528bf5;
+      --k8s-blue-dim: rgba(50, 108, 229, 0.12);
+      --k8s-blue-border: rgba(50, 108, 229, 0.38);
       
       --font-mono: 'Fira Code', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
       --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
@@ -94,14 +100,14 @@
       height: 40px;
       border-radius: 6px;
       background: #18181b;
-      border: 1px solid var(--border);
+      border: 1px solid var(--k8s-blue-border);
       display: flex;
       align-items: center;
       justify-content: center;
       font-family: var(--font-mono);
       font-weight: 700;
-      font-size: 0.95rem;
-      color: var(--text-white);
+      font-size: 0.92rem;
+      color: var(--k8s-blue-light);
       flex-shrink: 0;
     }
 
@@ -129,7 +135,7 @@
       gap: 6px;
     }
 
-    /* Titanium Monospace Badges */
+    /* Badges */
     .badge {
       display: inline-flex;
       align-items: center;
@@ -149,6 +155,13 @@
       border-color: #52525b;
       color: var(--text-white);
       background: #27272a;
+    }
+
+    .badge-k8s {
+      background: var(--k8s-blue-dim);
+      border-color: var(--k8s-blue-border);
+      color: var(--k8s-blue-light);
+      font-weight: 700;
     }
 
     /* Actions Suite */
@@ -207,7 +220,7 @@
       z-index: 1;
     }
 
-    /* Titanium Card */
+    /* Card Containers */
     .hero-card {
       background: var(--bg-card);
       border: 1px solid var(--border);
@@ -218,7 +231,7 @@
     }
 
     .hero-card:hover {
-      border-color: var(--border-hover);
+      border-color: var(--k8s-blue-border);
     }
 
     .hero-name-group h2 {
@@ -266,13 +279,18 @@
 
     .contact-item:hover {
       color: var(--text-white);
-      border-color: var(--border-hover);
-      background: #27272a;
+      border-color: var(--k8s-blue-border);
+      background: #1f1f26;
+    }
+
+    .contact-item:hover svg {
+      color: var(--k8s-blue-light);
     }
 
     .contact-item svg {
       color: var(--text-muted);
       flex-shrink: 0;
+      transition: color 0.15s ease;
     }
 
     /* Metrics Grid */
@@ -291,7 +309,7 @@
     }
 
     .metric-card:hover {
-      border-color: var(--border-hover);
+      border-color: var(--k8s-blue-border);
       background: var(--bg-card-hover);
     }
 
@@ -307,7 +325,7 @@
       font-family: var(--font-mono);
       font-size: 0.74rem;
       font-weight: 600;
-      color: var(--text-subtle);
+      color: var(--k8s-blue-light);
       text-transform: uppercase;
       letter-spacing: 0.05em;
       margin-top: 3px;
@@ -323,7 +341,7 @@
     }
 
     .section-card:hover {
-      border-color: var(--border-hover);
+      border-color: var(--k8s-blue-border);
     }
 
     .section-header {
@@ -339,7 +357,7 @@
       font-family: var(--font-mono);
       font-size: 0.85rem;
       font-weight: 700;
-      color: var(--text-muted);
+      color: var(--k8s-blue-light);
     }
 
     .section-title {
@@ -368,6 +386,11 @@
       border: 1px solid var(--border);
       border-radius: 6px;
       padding: 18px;
+      transition: border-color 0.15s ease;
+    }
+
+    .skill-category-card:hover {
+      border-color: var(--border-hover);
     }
 
     .skill-category-title {
@@ -400,9 +423,9 @@
     }
 
     .skill-tag:hover {
-      border-color: #52525b;
+      border-color: var(--k8s-blue-border);
       color: var(--text-white);
-      background: #27272f;
+      background: #272733;
     }
 
     /* Experience Timeline */
@@ -426,7 +449,8 @@
       width: 10px;
       height: 10px;
       border-radius: 2px;
-      background: var(--text-white);
+      background: var(--k8s-blue);
+      box-shadow: 0 0 8px rgba(50, 108, 229, 0.4);
     }
 
     .exp-header {
@@ -481,7 +505,7 @@
       position: absolute;
       left: 0;
       font-family: var(--font-mono);
-      color: var(--text-muted);
+      color: var(--k8s-blue-light);
       font-size: 0.85rem;
     }
 
@@ -533,20 +557,20 @@
     }
 
     .cert-card:hover {
-      border-color: #52525b;
-      background: #27272f;
+      border-color: var(--k8s-blue-border);
+      background: #272733;
       transform: translateX(2px);
     }
 
     .cert-card.kubestronaut {
-      background: #27272a;
-      border-color: #52525b;
+      background: var(--k8s-blue-dim);
+      border-color: var(--k8s-blue-border);
       color: var(--text-white);
       font-weight: 700;
     }
 
     .cert-code {
-      color: var(--text-muted);
+      color: var(--k8s-blue-light);
       font-weight: 600;
     }
 
@@ -602,14 +626,14 @@
     }
 
     .soft-skill-pill:hover {
-      border-color: #52525b;
-      background: #1f1f24;
+      border-color: var(--k8s-blue-border);
+      background: #1f1f26;
       color: var(--text-white);
     }
 
     .soft-skill-pill::before {
       content: "—";
-      color: var(--text-muted);
+      color: var(--k8s-blue-light);
     }
 
     /* Toast Alert */
@@ -618,7 +642,7 @@
       bottom: 24px;
       right: 24px;
       background: #18181b;
-      border: 1px solid #52525b;
+      border: 1px solid var(--k8s-blue-border);
       color: var(--text-white);
       font-family: var(--font-mono);
       padding: 11px 18px;
@@ -662,7 +686,7 @@
     }
 
     footer a:hover {
-      color: var(--text-white);
+      color: var(--k8s-blue-light);
     }
 
     /* Mobile Responsive */
@@ -718,7 +742,7 @@
         <div class="brand-title">Muhammad Hamza Razzaq</div>
         <div class="brand-badges">
           <span class="badge badge-highlight">DevOps</span>
-          <span class="badge badge-highlight">&#9733; Kubestronaut</span>
+          <span class="badge badge-k8s">&#9733; Kubestronaut</span>
           <span class="badge">4x AWS</span>
           <span class="badge">Terraform</span>
         </div>
