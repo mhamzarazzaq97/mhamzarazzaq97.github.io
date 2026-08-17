@@ -6,8 +6,8 @@
   <title>Muhammad Hamza Razzaq — DevOps Engineer | Kubestronaut</title>
   
   <!-- SEO & Social Meta Tags -->
-  <meta name="description" content="Muhammad Hamza Razzaq — Senior DevOps Engineer with 7+ years experience. CNCF Kubestronaut, 4x AWS Certified, Terraform Certified. Production EKS, Azure AKS, Terraform IaC, and Kubernetes.">
-  <meta name="keywords" content="DevOps, Kubestronaut, Kubernetes, AWS, Terraform, Cloud Engineer, SRE, Infrastructure">
+  <meta name="description" content="Muhammad Hamza Razzaq — Senior DevOps Engineer with 7+ years experience. CNCF Kubestronaut, 4x AWS Certified, Terraform Certified. Production AWS EKS, Azure AKS, Terraform IaC, and Kubernetes.">
+  <meta name="keywords" content="DevOps, Kubestronaut, Kubernetes, AWS, Terraform, Cloud Engineer, SRE, Infrastructure, Linux, CNCF">
   <meta name="author" content="Muhammad Hamza Razzaq">
 
   <!-- Open Graph / Social Sharing -->
@@ -16,8 +16,8 @@
   <meta property="og:title" content="Muhammad Hamza Razzaq — DevOps Engineer | Kubestronaut">
   <meta property="og:description" content="Senior DevOps Engineer &bull; Kubestronaut &bull; 4x AWS &bull; Terraform">
 
-  <!-- Favicon: Sharp Monogram -->
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2220%22 fill=%22%2318181b%22 stroke=%22%2327272a%22 stroke-width=%224%22/><text x=%2250%%22 y=%2266%%22 font-family=%22monospace%22 font-weight=%22800%22 font-size=%2244%22 fill=%22%2338bdf8%22 text-anchor=%22middle%22>HR</text></svg>">
+  <!-- Favicon: Terminal Prompt Icon -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2220%22 fill=%22%230c0e14%22 stroke=%22%2327272a%22 stroke-width=%224%22/><text x=%2250%%22 y=%2266%%22 font-family=%22monospace%22 font-weight=%22800%22 font-size=%2244%22 fill=%22%2338bdf8%22 text-anchor=%22middle%22>&gt;_</text></svg>">
 
   <!-- Google Fonts: Inter & Fira Code (Monospace) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -26,28 +26,29 @@
 
   <style>
     :root {
-      --bg-dark: #09090b;
-      --bg-card: #111114;
-      --bg-card-hover: #16161a;
-      --bg-tag: #18181b;
-      --border: #27272a;
-      --border-hover: #3f3f46;
-      --text-white: #fafafa;
-      --text-main: #d4d4d8;
-      --text-muted: #a1a1aa;
-      --text-subtle: #71717a;
+      --bg-dark: #090a0f;
+      --bg-card: #0e1117;
+      --bg-card-header: #141822;
+      --bg-tag: #171b26;
+      --border: #232936;
+      --border-hover: #3b4254;
+      --text-white: #f8fafc;
+      --text-main: #cbd5e1;
+      --text-muted: #94a3b8;
+      --text-subtle: #64748b;
       
-      /* Crisp Technical Accents */
+      /* Terminal / Linux Colors */
       --cyan: #38bdf8;
       --cyan-dim: rgba(56, 189, 248, 0.12);
-      --green: #22c55e;
-      --green-dim: rgba(34, 197, 94, 0.12);
-      --amber: #f59e0b;
-      --amber-dim: rgba(245, 158, 11, 0.12);
-      --purple: #a855f7;
-      --purple-dim: rgba(168, 85, 247, 0.12);
-      --blue: #3b82f6;
-      --blue-dim: rgba(59, 130, 246, 0.12);
+      --green: #4ade80;
+      --green-dim: rgba(74, 222, 128, 0.12);
+      --amber: #fbbf24;
+      --amber-dim: rgba(251, 191, 36, 0.12);
+      --purple: #c084fc;
+      --purple-dim: rgba(192, 132, 252, 0.12);
+      --blue: #60a5fa;
+      --blue-dim: rgba(96, 165, 250, 0.12);
+      --red: #f87171;
       
       --font-mono: 'Fira Code', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
       --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
@@ -63,8 +64,10 @@
     body {
       font-family: var(--font-sans);
       background-color: var(--bg-dark);
-      background-image: radial-gradient(#27272a 1px, transparent 1px);
-      background-size: 24px 24px;
+      background-image: 
+        radial-gradient(rgba(56, 189, 248, 0.04) 1px, transparent 1px),
+        linear-gradient(to bottom, #090a0f 0%, #0d1017 100%);
+      background-size: 20px 20px, 100% 100%;
       color: var(--text-main);
       min-height: 100vh;
       display: flex;
@@ -82,11 +85,11 @@
       left: 0;
       right: 0;
       width: 100%;
-      background: rgba(9, 9, 11, 0.92);
+      background: rgba(9, 10, 15, 0.94);
       backdrop-filter: blur(12px);
       -webkit-backdrop-filter: blur(12px);
       border-bottom: 1px solid var(--border);
-      padding: 12px 32px;
+      padding: 10px 28px;
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -96,23 +99,21 @@
     .brand-group {
       display: flex;
       align-items: center;
-      gap: 14px;
+      gap: 12px;
     }
 
-    .avatar-box {
-      width: 40px;
-      height: 40px;
-      border-radius: 8px;
-      background: #18181b;
+    .terminal-badge-prompt {
+      font-family: var(--font-mono);
+      font-size: 0.85rem;
+      font-weight: 700;
+      color: var(--cyan);
+      background: var(--bg-card);
       border: 1px solid var(--border);
+      padding: 6px 12px;
+      border-radius: 6px;
       display: flex;
       align-items: center;
-      justify-content: center;
-      font-family: var(--font-mono);
-      font-weight: 700;
-      font-size: 1rem;
-      color: var(--cyan);
-      flex-shrink: 0;
+      gap: 8px;
     }
 
     .brand-meta {
@@ -123,12 +124,12 @@
 
     .brand-title {
       font-family: var(--font-heading);
-      font-size: 1.15rem;
+      font-size: 1.12rem;
       font-weight: 700;
       color: var(--text-white);
       display: flex;
       align-items: center;
-      gap: 10px;
+      gap: 8px;
       letter-spacing: -0.01em;
     }
 
@@ -139,15 +140,15 @@
       gap: 6px;
     }
 
-    /* Tech Badges (Crisp Monospace) */
+    /* Linux / K8s Tags */
     .badge {
       display: inline-flex;
       align-items: center;
-      gap: 5px;
+      gap: 4px;
       font-family: var(--font-mono);
-      font-size: 0.7rem;
+      font-size: 0.68rem;
       font-weight: 600;
-      padding: 2px 8px;
+      padding: 2px 7px;
       border-radius: 4px;
       border: 1px solid var(--border);
       background: var(--bg-tag);
@@ -156,7 +157,7 @@
 
     .badge-role {
       color: var(--text-white);
-      border-color: #3f3f46;
+      border-color: #3b4254;
     }
 
     .badge-k8s {
@@ -167,13 +168,13 @@
 
     .badge-aws {
       background: var(--amber-dim);
-      border-color: rgba(245, 158, 11, 0.4);
+      border-color: rgba(251, 191, 36, 0.4);
       color: var(--amber);
     }
 
     .badge-tf {
       background: var(--purple-dim);
-      border-color: rgba(168, 85, 247, 0.4);
+      border-color: rgba(192, 132, 252, 0.4);
       color: var(--purple);
     }
 
@@ -187,109 +188,119 @@
     .btn {
       display: inline-flex;
       align-items: center;
-      gap: 8px;
-      padding: 8px 16px;
+      gap: 6px;
+      padding: 7px 14px;
       font-family: var(--font-mono);
-      font-size: 0.82rem;
+      font-size: 0.8rem;
       font-weight: 600;
       border-radius: 6px;
       text-decoration: none;
       transition: all 0.15s ease;
       cursor: pointer;
       border: 1px solid var(--border);
-      background: #18181b;
+      background: #141822;
       color: var(--text-main);
       outline: none;
     }
 
     .btn:hover {
-      background: #27272a;
+      background: #1b212f;
       border-color: var(--border-hover);
       color: var(--text-white);
     }
 
     .btn-primary {
-      background: var(--cyan);
-      color: #09090b;
-      border-color: var(--cyan);
+      background: #0284c7;
+      color: #ffffff;
+      border-color: #38bdf8;
       font-weight: 700;
     }
 
     .btn-primary:hover {
-      background: #7dd3fc;
-      border-color: #7dd3fc;
-      color: #09090b;
+      background: #38bdf8;
+      color: #090a0f;
     }
 
     /* Main Container */
     main {
       width: 100%;
       max-width: 960px;
-      padding: 32px 20px 80px;
+      padding: 28px 20px 80px;
       display: flex;
       flex-direction: column;
       gap: 24px;
       z-index: 1;
     }
 
-    /* Hero / Terminal Card */
-    .hero-card {
+    /* Linux Window Card */
+    .terminal-window {
       background: var(--bg-card);
       border: 1px solid var(--border);
       border-radius: 8px;
-      padding: 28px;
-      position: relative;
+      overflow: hidden;
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.6);
     }
 
-    .terminal-bar {
+    .terminal-titlebar {
+      background: var(--bg-card-header);
+      border-bottom: 1px solid var(--border);
+      padding: 10px 16px;
       display: flex;
       align-items: center;
       justify-content: space-between;
-      margin-bottom: 20px;
-      padding-bottom: 12px;
-      border-bottom: 1px solid var(--border);
       font-family: var(--font-mono);
-      font-size: 0.78rem;
+      font-size: 0.76rem;
       color: var(--text-subtle);
     }
 
-    .terminal-dots {
+    .terminal-controls {
       display: flex;
-      gap: 6px;
-    }
-
-    .terminal-dot {
-      width: 10px;
-      height: 10px;
-      border-radius: 50%;
-      background: #27272a;
-    }
-
-    .status-badge {
-      display: inline-flex;
       align-items: center;
-      gap: 6px;
-      color: var(--green);
-      font-family: var(--font-mono);
-      font-size: 0.75rem;
-      font-weight: 600;
-      background: var(--green-dim);
-      padding: 2px 8px;
-      border-radius: 4px;
-      border: 1px solid rgba(34, 197, 94, 0.3);
+      gap: 7px;
     }
 
-    .status-pulse {
-      width: 6px;
-      height: 6px;
+    .win-btn {
+      width: 11px;
+      height: 11px;
       border-radius: 50%;
-      background: var(--green);
-      box-shadow: 0 0 8px var(--green);
+    }
+    .win-close { background: #ef4444; }
+    .win-min { background: #eab308; }
+    .win-max { background: #22c55e; }
+
+    .terminal-titlebar-text {
+      color: var(--text-muted);
+      font-weight: 500;
+    }
+
+    .terminal-body {
+      padding: 24px;
+    }
+
+    /* CLI Prompt Box */
+    .cli-prompt-row {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-family: var(--font-mono);
+      font-size: 0.88rem;
+      color: var(--cyan);
+      margin-bottom: 12px;
+    }
+
+    .cli-prompt-user {
+      color: var(--green);
+      font-weight: 600;
+    }
+
+    .cli-prompt-path {
+      color: var(--blue);
+      font-weight: 500;
     }
 
     .hero-name-group h2 {
       font-family: var(--font-heading);
-      font-size: 2.2rem;
+      font-size: 2.15rem;
       font-weight: 800;
       color: var(--text-white);
       letter-spacing: -0.02em;
@@ -308,7 +319,7 @@
       flex-wrap: wrap;
       gap: 10px;
       margin-top: 20px;
-      padding-top: 18px;
+      padding-top: 16px;
       border-top: 1px solid var(--border);
     }
 
@@ -322,7 +333,7 @@
       text-decoration: none;
       transition: all 0.15s ease;
       cursor: pointer;
-      background: #18181b;
+      background: #141822;
       padding: 6px 12px;
       border-radius: 4px;
       border: 1px solid var(--border);
@@ -331,7 +342,7 @@
     .contact-item:hover {
       color: var(--text-white);
       border-color: var(--border-hover);
-      background: #27272a;
+      background: #1c2230;
     }
 
     .contact-item svg {
@@ -343,14 +354,14 @@
     .metrics-grid {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
-      gap: 14px;
+      gap: 12px;
     }
 
     .metric-card {
       background: var(--bg-card);
       border: 1px solid var(--border);
       border-radius: 8px;
-      padding: 18px 16px;
+      padding: 16px 14px;
       transition: border-color 0.15s ease;
     }
 
@@ -360,55 +371,56 @@
 
     .metric-val {
       font-family: var(--font-mono);
-      font-size: 1.7rem;
+      font-size: 1.65rem;
       font-weight: 700;
       color: var(--text-white);
+      letter-spacing: -0.02em;
     }
 
     .metric-label {
       font-family: var(--font-mono);
       font-size: 0.72rem;
       font-weight: 500;
-      color: var(--text-subtle);
+      color: var(--cyan);
       text-transform: uppercase;
       letter-spacing: 0.05em;
       margin-top: 2px;
     }
 
-    /* Section Component */
-    .section-card {
+    /* Section Terminal Windows */
+    .section-window {
       background: var(--bg-card);
       border: 1px solid var(--border);
       border-radius: 8px;
-      padding: 28px;
+      overflow: hidden;
     }
 
     .section-header {
+      background: var(--bg-card-header);
+      border-bottom: 1px solid var(--border);
+      padding: 10px 18px;
       display: flex;
       align-items: center;
-      gap: 10px;
-      margin-bottom: 20px;
-      padding-bottom: 14px;
-      border-bottom: 1px solid var(--border);
-    }
-
-    .section-prefix {
+      gap: 8px;
       font-family: var(--font-mono);
-      font-size: 0.9rem;
-      font-weight: 700;
-      color: var(--cyan);
     }
 
-    .section-title {
-      font-family: var(--font-heading);
-      font-size: 1.25rem;
-      font-weight: 700;
+    .section-cmd {
+      font-size: 0.85rem;
+      font-weight: 600;
       color: var(--text-white);
-      letter-spacing: -0.01em;
+    }
+
+    .section-cmd-prompt {
+      color: var(--green);
+    }
+
+    .section-body {
+      padding: 24px;
     }
 
     .profile-summary-text {
-      font-size: 0.95rem;
+      font-size: 0.94rem;
       color: var(--text-main);
       line-height: 1.75;
     }
@@ -417,11 +429,11 @@
     .skills-grid {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
-      gap: 16px;
+      gap: 14px;
     }
 
     .skill-category-card {
-      background: #141417;
+      background: #121620;
       border: 1px solid var(--border);
       border-radius: 6px;
       padding: 16px;
@@ -446,13 +458,13 @@
 
     .skill-tag {
       font-family: var(--font-mono);
-      font-size: 0.75rem;
+      font-size: 0.74rem;
       font-weight: 500;
       color: var(--text-main);
-      background: #1c1c20;
+      background: #181d2a;
       padding: 3px 8px;
       border-radius: 4px;
-      border: 1px solid #2e2e33;
+      border: 1px solid #283042;
     }
 
     /* Experience Timeline */
@@ -464,7 +476,7 @@
 
     .exp-item {
       position: relative;
-      padding-left: 24px;
+      padding-left: 22px;
       border-left: 2px solid var(--border);
     }
 
@@ -527,11 +539,11 @@
     }
 
     .exp-bullets li::before {
-      content: ">";
+      content: "$";
       position: absolute;
       left: 0;
       font-family: var(--font-mono);
-      color: var(--cyan);
+      color: var(--green);
       font-size: 0.85rem;
       font-weight: 700;
     }
@@ -540,19 +552,19 @@
     .certs-grid {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
-      gap: 16px;
+      gap: 14px;
     }
 
     .cert-group {
-      background: #141417;
+      background: #121620;
       border: 1px solid var(--border);
       border-radius: 6px;
-      padding: 18px;
+      padding: 16px;
     }
 
     .cert-group-title {
       font-family: var(--font-mono);
-      font-size: 0.8rem;
+      font-size: 0.78rem;
       font-weight: 600;
       color: var(--cyan);
       margin-bottom: 12px;
@@ -572,26 +584,21 @@
       display: flex;
       align-items: center;
       gap: 8px;
-      background: #1c1c20;
+      background: #181d2a;
       padding: 8px 12px;
       border-radius: 4px;
-      border: 1px solid #2e2e33;
+      border: 1px solid #283042;
       font-family: var(--font-mono);
-      font-size: 0.8rem;
+      font-size: 0.78rem;
       font-weight: 500;
       color: var(--text-white);
     }
 
     .cert-card.kubestronaut {
       background: var(--cyan-dim);
-      border-color: rgba(56, 189, 248, 0.35);
+      border-color: rgba(56, 189, 248, 0.4);
       color: var(--cyan);
       font-weight: 600;
-    }
-
-    .cert-card svg {
-      flex-shrink: 0;
-      color: var(--cyan);
     }
 
     /* Education */
@@ -634,7 +641,7 @@
       display: flex;
       align-items: center;
       gap: 8px;
-      background: #141417;
+      background: #121620;
       padding: 10px 14px;
       border-radius: 6px;
       border: 1px solid var(--border);
@@ -644,8 +651,10 @@
       color: var(--text-main);
     }
 
-    .soft-skill-pill svg {
+    .soft-skill-pill::before {
+      content: ">";
       color: var(--cyan);
+      font-weight: 700;
     }
 
     /* Toast Alert */
@@ -653,7 +662,7 @@
       position: fixed;
       bottom: 24px;
       right: 24px;
-      background: #18181b;
+      background: #141822;
       border: 1px solid var(--cyan);
       color: var(--text-white);
       font-family: var(--font-mono);
@@ -721,8 +730,8 @@
         padding: 16px 12px 60px;
         gap: 16px;
       }
-      .hero-card, .section-card {
-        padding: 18px 14px;
+      .terminal-body, .section-body {
+        padding: 16px 12px;
       }
       .hero-name-group h2 {
         font-size: 1.5rem;
@@ -749,7 +758,7 @@
   <!-- Sticky Header -->
   <header>
     <div class="brand-group">
-      <div class="avatar-box">&gt;_</div>
+      <div class="terminal-badge-prompt">&gt;_</div>
       <div class="brand-meta">
         <div class="brand-title">Muhammad Hamza Razzaq</div>
         <div class="brand-badges">
@@ -780,42 +789,46 @@
   <main>
 
     <!-- Hero Card / Terminal Header -->
-    <section class="hero-card">
-      <div class="terminal-bar">
-        <div class="terminal-dots">
-          <div class="terminal-dot"></div>
-          <div class="terminal-dot"></div>
-          <div class="terminal-dot"></div>
+    <section class="terminal-window">
+      <div class="terminal-titlebar">
+        <div class="terminal-controls">
+          <div class="win-btn win-close"></div>
+          <div class="win-btn win-min"></div>
+          <div class="win-btn win-max"></div>
         </div>
-        <div class="status-badge">
-          <div class="status-pulse"></div>
-          <span>99.99%+ Uptime SLA</span>
-        </div>
+        <div class="terminal-titlebar-text">hamza@k8s-control-plane: ~ (zsh)</div>
+        <div style="font-size: 0.7rem; color: var(--text-subtle);">80x24</div>
       </div>
 
-      <div class="hero-name-group">
-        <h2>Muhammad Hamza Razzaq</h2>
-        <div class="hero-subtitle">$ devops --role senior-lead --location "Abu Dhabi, UAE"</div>
-      </div>
+      <div class="terminal-body">
+        <div class="cli-prompt-row">
+          <span class="cli-prompt-user">hamza@cloud-infra</span>:<span class="cli-prompt-path">~</span>$ whoami --verbose
+        </div>
 
-      <!-- Contact Info Row -->
-      <div class="contact-grid">
-        <div class="contact-item" id="copy-email-btn" title="Click to copy email">
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
-          <span>mhamzarazzaq97@gmail.com</span>
+        <div class="hero-name-group">
+          <h2>Muhammad Hamza Razzaq</h2>
+          <div class="hero-subtitle">Senior DevOps Engineer &bull; CNCF Kubestronaut &bull; Multi-Cloud Architect</div>
         </div>
-        <a href="tel:+971551039986" class="contact-item" title="Call phone number">
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-          <span>+971 55 103 9986</span>
-        </a>
-        <div class="contact-item">
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
-          <span>Abu Dhabi, UAE</span>
+
+        <!-- Contact Info Row -->
+        <div class="contact-grid">
+          <div class="contact-item" id="copy-email-btn" title="Click to copy email">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+            <span>mhamzarazzaq97@gmail.com</span>
+          </div>
+          <a href="tel:+971551039986" class="contact-item" title="Call phone number">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            <span>+971 55 103 9986</span>
+          </a>
+          <div class="contact-item">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+            <span>Abu Dhabi, UAE</span>
+          </div>
+          <a href="https://github.com/mhamzarazzaq97" target="_blank" rel="noopener noreferrer" class="contact-item">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.87 1.52 2.34 1.07 2.91.83.1-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33.85 0 1.71.11 2.5.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0 0 12 2Z"/></svg>
+            <span>github.com/mhamzarazzaq97</span>
+          </a>
         </div>
-        <a href="https://github.com/mhamzarazzaq97" target="_blank" rel="noopener noreferrer" class="contact-item">
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.87 1.52 2.34 1.07 2.91.83.1-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33.85 0 1.71.11 2.5.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0 0 12 2Z"/></svg>
-          <span>github.com/mhamzarazzaq97</span>
-        </a>
       </div>
     </section>
 
@@ -826,339 +839,351 @@
         <div class="metric-label">// EXPERIENCE</div>
       </div>
       <div class="metric-card">
-        <div class="metric-val">99.99%</div>
-        <div class="metric-label">// PROD UPTIME</div>
+        <div class="metric-val">5x CNCF</div>
+        <div class="metric-label">// KUBESTRONAUT</div>
       </div>
       <div class="metric-card">
         <div class="metric-val">$200K+</div>
-        <div class="metric-label">// COST SAVINGS</div>
+        <div class="metric-label">// CLOUD SAVINGS</div>
       </div>
       <div class="metric-card">
-        <div class="metric-val">15+ ENV</div>
-        <div class="metric-label">// PROD CLUSTERS</div>
+        <div class="metric-val">0 DOWNTIME</div>
+        <div class="metric-label">// CORE UPGRADES</div>
       </div>
     </div>
 
     <!-- Profile Summary Section -->
-    <section class="section-card">
+    <section class="section-window">
       <div class="section-header">
-        <span class="section-prefix">01.</span>
-        <h3 class="section-title">Profile Summary</h3>
+        <span class="section-cmd-prompt">$</span>
+        <span class="section-cmd">cat /etc/profile.md --summary</span>
       </div>
-      <p class="profile-summary-text">
-        DevOps Engineer with 7+ years of experience and a track record of leading a team of 5 engineers managing 15+ production environments serving millions of daily requests with 99.99%+ uptime. Expert in AWS cloud infrastructure (EKS, RDS, MSK, ElastiCache), Kubernetes, Terraform IaC, and security tools including Kyverno and Trivy for vulnerability scanning. Delivered $200K+ in cost savings, 40% faster deployments, and zero-downtime migrations across all environments. Currently building the product's Azure expansion.
-      </p>
+      <div class="section-body">
+        <p class="profile-summary-text">
+          DevOps Engineer with 7+ years of experience and a track record of leading a team of 5 engineers managing 15+ production environments serving millions of daily requests with 99.99%+ uptime. Expert in AWS cloud infrastructure (EKS, RDS, MSK, ElastiCache), Kubernetes, Terraform IaC, and security tools including Kyverno and Trivy for vulnerability scanning. Delivered $200K+ in cost savings, 40% faster deployments, and zero-downtime migrations across all environments. Currently building the product's Azure expansion.
+        </p>
+      </div>
     </section>
 
     <!-- Technical Skills Section -->
-    <section class="section-card">
+    <section class="section-window">
       <div class="section-header">
-        <span class="section-prefix">02.</span>
-        <h3 class="section-title">Technical Stack & Core Domains</h3>
+        <span class="section-cmd-prompt">$</span>
+        <span class="section-cmd">kubectl get stack -A --show-labels</span>
       </div>
 
-      <div class="skills-grid">
-        <!-- AWS -->
-        <div class="skill-category-card">
-          <div class="skill-category-title">// AWS Cloud Infrastructure</div>
-          <div class="skill-pill-container">
-            <span class="skill-tag">EKS</span>
-            <span class="skill-tag">RDS</span>
-            <span class="skill-tag">ELB</span>
-            <span class="skill-tag">ASG</span>
-            <span class="skill-tag">CloudFront</span>
-            <span class="skill-tag">OpenSearch</span>
-            <span class="skill-tag">MSK</span>
-            <span class="skill-tag">ElastiCache</span>
-            <span class="skill-tag">Route53</span>
-            <span class="skill-tag">Secrets Manager</span>
-            <span class="skill-tag">IAM</span>
-            <span class="skill-tag">VPC</span>
-            <span class="skill-tag">S3</span>
-            <span class="skill-tag">EC2</span>
-            <span class="skill-tag">Lambda</span>
-            <span class="skill-tag">CloudWatch</span>
-            <span class="skill-tag">SNS / SQS</span>
-            <span class="skill-tag">KMS</span>
-            <span class="skill-tag">CloudFormation</span>
+      <div class="section-body">
+        <div class="skills-grid">
+          <!-- AWS -->
+          <div class="skill-category-card">
+            <div class="skill-category-title">// AWS Cloud Infrastructure</div>
+            <div class="skill-pill-container">
+              <span class="skill-tag">EKS</span>
+              <span class="skill-tag">RDS</span>
+              <span class="skill-tag">ELB</span>
+              <span class="skill-tag">ASG</span>
+              <span class="skill-tag">CloudFront</span>
+              <span class="skill-tag">OpenSearch</span>
+              <span class="skill-tag">MSK</span>
+              <span class="skill-tag">ElastiCache</span>
+              <span class="skill-tag">Route53</span>
+              <span class="skill-tag">Secrets Manager</span>
+              <span class="skill-tag">IAM</span>
+              <span class="skill-tag">VPC</span>
+              <span class="skill-tag">S3</span>
+              <span class="skill-tag">EC2</span>
+              <span class="skill-tag">Lambda</span>
+              <span class="skill-tag">CloudWatch</span>
+              <span class="skill-tag">SNS / SQS</span>
+              <span class="skill-tag">KMS</span>
+              <span class="skill-tag">CloudFormation</span>
+            </div>
           </div>
-        </div>
 
-        <!-- Kubernetes Ecosystem -->
-        <div class="skill-category-card">
-          <div class="skill-category-title">// Kubernetes Ecosystem (CNCF)</div>
-          <div class="skill-pill-container">
-            <span class="skill-tag">Kubernetes</span>
-            <span class="skill-tag">Helm</span>
-            <span class="skill-tag">Kustomize</span>
-            <span class="skill-tag">ArgoCD</span>
-            <span class="skill-tag">FluxCD</span>
-            <span class="skill-tag">Karpenter</span>
-            <span class="skill-tag">Kyverno</span>
-            <span class="skill-tag">Trivy</span>
-            <span class="skill-tag">KEDA</span>
-            <span class="skill-tag">Istio</span>
-            <span class="skill-tag">External Secrets</span>
-            <span class="skill-tag">cert-manager</span>
-            <span class="skill-tag">Lens</span>
+          <!-- Kubernetes Ecosystem -->
+          <div class="skill-category-card">
+            <div class="skill-category-title">// Kubernetes Ecosystem (CNCF)</div>
+            <div class="skill-pill-container">
+              <span class="skill-tag">Kubernetes</span>
+              <span class="skill-tag">Helm</span>
+              <span class="skill-tag">Kustomize</span>
+              <span class="skill-tag">ArgoCD</span>
+              <span class="skill-tag">FluxCD</span>
+              <span class="skill-tag">Karpenter</span>
+              <span class="skill-tag">Kyverno</span>
+              <span class="skill-tag">Trivy</span>
+              <span class="skill-tag">KEDA</span>
+              <span class="skill-tag">Istio</span>
+              <span class="skill-tag">External Secrets</span>
+              <span class="skill-tag">cert-manager</span>
+              <span class="skill-tag">Lens</span>
+            </div>
           </div>
-        </div>
 
-        <!-- Azure -->
-        <div class="skill-category-card">
-          <div class="skill-category-title">// Microsoft Azure Platform</div>
-          <div class="skill-pill-container">
-            <span class="skill-tag">AKS</span>
-            <span class="skill-tag">VNet</span>
-            <span class="skill-tag">Front Door</span>
-            <span class="skill-tag">Application Gateway</span>
-            <span class="skill-tag">MySQL Flexible</span>
-            <span class="skill-tag">Storage Accounts</span>
-            <span class="skill-tag">Entra ID</span>
-            <span class="skill-tag">Azure VMs</span>
+          <!-- Azure -->
+          <div class="skill-category-card">
+            <div class="skill-category-title">// Microsoft Azure Platform</div>
+            <div class="skill-pill-container">
+              <span class="skill-tag">AKS</span>
+              <span class="skill-tag">VNet</span>
+              <span class="skill-tag">Front Door</span>
+              <span class="skill-tag">Application Gateway</span>
+              <span class="skill-tag">MySQL Flexible</span>
+              <span class="skill-tag">Storage Accounts</span>
+              <span class="skill-tag">Entra ID</span>
+              <span class="skill-tag">Azure VMs</span>
+            </div>
           </div>
-        </div>
 
-        <!-- CI/CD & GitOps -->
-        <div class="skill-category-card">
-          <div class="skill-category-title">// GitOps & CI/CD Automation</div>
-          <div class="skill-pill-container">
-            <span class="skill-tag">GitHub Actions</span>
-            <span class="skill-tag">GitLab CI/CD</span>
-            <span class="skill-tag">ArgoCD</span>
-            <span class="skill-tag">FluxCD</span>
-            <span class="skill-tag">Jenkins</span>
-            <span class="skill-tag">CodeDeploy</span>
-            <span class="skill-tag">CodePipeline</span>
+          <!-- CI/CD & GitOps -->
+          <div class="skill-category-card">
+            <div class="skill-category-title">// GitOps & CI/CD Automation</div>
+            <div class="skill-pill-container">
+              <span class="skill-tag">GitHub Actions</span>
+              <span class="skill-tag">GitLab CI/CD</span>
+              <span class="skill-tag">ArgoCD</span>
+              <span class="skill-tag">FluxCD</span>
+              <span class="skill-tag">Jenkins</span>
+              <span class="skill-tag">CodeDeploy</span>
+              <span class="skill-tag">CodePipeline</span>
+            </div>
           </div>
-        </div>
 
-        <!-- Programming & Scripting -->
-        <div class="skill-category-card">
-          <div class="skill-category-title">// IaC & Systems Programming</div>
-          <div class="skill-pill-container">
-            <span class="skill-tag">Terraform HCL</span>
-            <span class="skill-tag">Bash Scripting</span>
-            <span class="skill-tag">Golang</span>
-            <span class="skill-tag">Python</span>
+          <!-- Programming & Scripting -->
+          <div class="skill-category-card">
+            <div class="skill-category-title">// IaC & Systems Programming</div>
+            <div class="skill-pill-container">
+              <span class="skill-tag">Terraform HCL</span>
+              <span class="skill-tag">Bash Scripting</span>
+              <span class="skill-tag">Golang</span>
+              <span class="skill-tag">Python</span>
+            </div>
           </div>
-        </div>
 
-        <!-- Monitoring & Observability -->
-        <div class="skill-category-card">
-          <div class="skill-category-title">// Observability & Telemetry</div>
-          <div class="skill-pill-container">
-            <span class="skill-tag">Prometheus</span>
-            <span class="skill-tag">Grafana</span>
-            <span class="skill-tag">OpenSearch</span>
-            <span class="skill-tag">Fluent Bit</span>
-            <span class="skill-tag">New Relic</span>
-            <span class="skill-tag">CloudWatch</span>
+          <!-- Monitoring & Observability -->
+          <div class="skill-category-card">
+            <div class="skill-category-title">// Observability & Telemetry</div>
+            <div class="skill-pill-container">
+              <span class="skill-tag">Prometheus</span>
+              <span class="skill-tag">Grafana</span>
+              <span class="skill-tag">OpenSearch</span>
+              <span class="skill-tag">Fluent Bit</span>
+              <span class="skill-tag">New Relic</span>
+              <span class="skill-tag">CloudWatch</span>
+            </div>
           </div>
         </div>
       </div>
     </section>
 
     <!-- Professional Experience Section -->
-    <section class="section-card">
+    <section class="section-window">
       <div class="section-header">
-        <span class="section-prefix">03.</span>
-        <h3 class="section-title">Professional Experience</h3>
+        <span class="section-cmd-prompt">$</span>
+        <span class="section-cmd">git log --all --experience --graph</span>
       </div>
 
-      <div class="experience-list">
-        <!-- Callsign Technologies -->
-        <div class="exp-item">
-          <div class="exp-header">
-            <div class="exp-role-company">
-              DevOps Engineer &bull; <span class="exp-company">Callsign Technologies</span>
+      <div class="section-body">
+        <div class="experience-list">
+          <!-- Callsign Technologies -->
+          <div class="exp-item">
+            <div class="exp-header">
+              <div class="exp-role-company">
+                DevOps Engineer &bull; <span class="exp-company">Callsign Technologies</span>
+              </div>
+              <div class="exp-meta">
+                <span>2023-01 ➔ PRESENT</span>
+                <span>&bull;</span>
+                <span>Abu Dhabi, UAE</span>
+              </div>
             </div>
-            <div class="exp-meta">
-              <span>2023-01 ➔ PRESENT</span>
-              <span>&bull;</span>
-              <span>Abu Dhabi, UAE</span>
-            </div>
+            <ul class="exp-bullets">
+              <li>Led and mentored a team of 5 DevOps engineers responsible for managing 15+ production and non-production environments, overseeing component upgrades, releases, feature development, and continuous improvements to the infrastructure codebase.</li>
+              <li>Maintaining 99.99% uptime while leading critical services upgrades (EKS, RDS, MSK) with zero downtime and no data loss.</li>
+              <li>Building the product's Azure platform, developing Terraform modules for AKS, VNet, Front Door, Application Gateway, and MySQL Flexible Server to achieve parity with the established AWS production environment and enable multi-cloud deployment.</li>
+              <li>Played a key role in emergency cross-region DR failover for a top UAE banking client during a multi-AZ AWS outage, coordinating with AWS support to migrate RDS databases, replicate S3 data, and provision complete infrastructure in the secondary region, restoring full service operation.</li>
+              <li>Achieved $200K+ (35-40%) in cloud cost reduction through Graviton migrations, compute rightsizing, automated non-prod environment downscaling, and storage lifecycle management.</li>
+              <li>Reduced critical CVEs through comprehensive cluster security implementation including Kyverno policy enforcement, Trivy vulnerability scanning, and automated AMI patching via Karpenter.</li>
+              <li>Reduced deployment time by 30-40% by refactoring deployment strategy to decouple infrastructure and application releases, enabling independent and faster change rollouts.</li>
+              <li>Cut infrastructure provisioning from hours to minutes by building a GitLab pipeline framework orchestrating 15+ Terraform repos.</li>
+              <li>Serving as primary escalation point for complex production incidents, conducting deep-dive root cause analysis across distributed systems to identify issues spanning multiple services, clusters, and AWS components.</li>
+              <li>Reduced deployment time by migrating from IRSA to EKS Pod Identity, simplifying IAM management across all microservices.</li>
+              <li>Improved cluster autoscaling efficiency by migrating from AWS Auto Scaling Groups to Karpenter and implementing event-driven scaling with KEDA, reducing response time to traffic spikes.</li>
+            </ul>
           </div>
-          <ul class="exp-bullets">
-            <li>Led and mentored a team of 5 DevOps engineers responsible for managing 15+ production and non-production environments, overseeing component upgrades, releases, feature development, and continuous improvements to the infrastructure codebase.</li>
-            <li>Maintaining 99.99% uptime while leading critical services upgrades (EKS, RDS, MSK) with zero downtime and no data loss.</li>
-            <li>Building the product's Azure platform, developing Terraform modules for AKS, VNet, Front Door, Application Gateway, and MySQL Flexible Server to achieve parity with the established AWS production environment and enable multi-cloud deployment.</li>
-            <li>Played a key role in emergency cross-region DR failover for a top UAE banking client during a multi-AZ AWS outage, coordinating with AWS support to migrate RDS databases, replicate S3 data, and provision complete infrastructure in the secondary region, restoring full service operation.</li>
-            <li>Achieved $200K+ (35-40%) in cloud cost reduction through Graviton migrations, compute rightsizing, automated non-prod environment downscaling, and storage lifecycle management.</li>
-            <li>Reduced critical CVEs through comprehensive cluster security implementation including Kyverno policy enforcement, Trivy vulnerability scanning, and automated AMI patching via Karpenter.</li>
-            <li>Reduced deployment time by 30-40% by refactoring deployment strategy to decouple infrastructure and application releases, enabling independent and faster change rollouts.</li>
-            <li>Cut infrastructure provisioning from hours to minutes by building a GitLab pipeline framework orchestrating 15+ Terraform repos.</li>
-            <li>Serving as primary escalation point for complex production incidents, conducting deep-dive root cause analysis across distributed systems to identify issues spanning multiple services, clusters, and AWS components.</li>
-            <li>Reduced deployment time by migrating from IRSA to EKS Pod Identity, simplifying IAM management across all microservices.</li>
-            <li>Improved cluster autoscaling efficiency by migrating from AWS Auto Scaling Groups to Karpenter and implementing event-driven scaling with KEDA, reducing response time to traffic spikes.</li>
-          </ul>
-        </div>
 
-        <!-- Dubizzle Labs -->
-        <div class="exp-item">
-          <div class="exp-header">
-            <div class="exp-role-company">
-              DevOps Engineer &bull; <span class="exp-company">Dubizzle Labs</span>
+          <!-- Dubizzle Labs -->
+          <div class="exp-item">
+            <div class="exp-header">
+              <div class="exp-role-company">
+                DevOps Engineer &bull; <span class="exp-company">Dubizzle Labs</span>
+              </div>
+              <div class="exp-meta">
+                <span>2022-02 ➔ 2023-01</span>
+                <span>&bull;</span>
+                <span>Lahore, Pakistan</span>
+              </div>
             </div>
-            <div class="exp-meta">
-              <span>2022-02 ➔ 2023-01</span>
-              <span>&bull;</span>
-              <span>Lahore, Pakistan</span>
-            </div>
+            <ul class="exp-bullets">
+              <li>Containerized legacy applications and migrated them to Kubernetes, delivering production-grade scalability and reliability.</li>
+              <li>Built and rolled out GitOps workflows with ArgoCD, Helm, Kustomize, and External Secrets, ensuring consistency across production and non-prod environments.</li>
+              <li>Designed and implemented CI/CD pipelines using GitHub Actions integrated with ArgoCD, enabling automated and reliable deployment strategy with minimal human intervention.</li>
+              <li>Implemented a centralized observability stack with OpenSearch and Fluent Bit, reducing incident detection and troubleshooting time from hours to minutes.</li>
+              <li>Continuously improved Terraform codebase to ensure consistent infrastructure across environments.</li>
+              <li>Integrated AWS SSO with ArgoCD and OpenSearch, tightening access control and simplifying authentication across the platform.</li>
+            </ul>
           </div>
-          <ul class="exp-bullets">
-            <li>Containerized legacy applications and migrated them to Kubernetes, delivering production-grade scalability and reliability.</li>
-            <li>Built and rolled out GitOps workflows with ArgoCD, Helm, Kustomize, and External Secrets, ensuring consistency across production and non-prod environments.</li>
-            <li>Designed and implemented CI/CD pipelines using GitHub Actions integrated with ArgoCD, enabling automated and reliable deployment strategy with minimal human intervention.</li>
-            <li>Implemented a centralized observability stack with OpenSearch and Fluent Bit, reducing incident detection and troubleshooting time from hours to minutes.</li>
-            <li>Continuously improved Terraform codebase to ensure consistent infrastructure across environments.</li>
-            <li>Integrated AWS SSO with ArgoCD and OpenSearch, tightening access control and simplifying authentication across the platform.</li>
-          </ul>
-        </div>
 
-        <!-- Arbisoft -->
-        <div class="exp-item">
-          <div class="exp-header">
-            <div class="exp-role-company">
-              DevOps Engineer &bull; <span class="exp-company">Arbisoft</span>
+          <!-- Arbisoft -->
+          <div class="exp-item">
+            <div class="exp-header">
+              <div class="exp-role-company">
+                DevOps Engineer &bull; <span class="exp-company">Arbisoft</span>
+              </div>
+              <div class="exp-meta">
+                <span>2021-02 ➔ 2022-02</span>
+                <span>&bull;</span>
+                <span>Lahore, Pakistan</span>
+              </div>
             </div>
-            <div class="exp-meta">
-              <span>2021-02 ➔ 2022-02</span>
-              <span>&bull;</span>
-              <span>Lahore, Pakistan</span>
-            </div>
+            <ul class="exp-bullets">
+              <li>Migrated workloads from standalone EC2 instances to auto-scaling-group based architecture, improving availability and reducing operational overhead.</li>
+              <li>Enhanced CI/CD pipelines with CircleCI and AWS CodeDeploy, accelerating release velocity and minimizing deployment failures.</li>
+              <li>Authored reusable CloudFormation templates to standardize infrastructure provisioning and ensure consistency across projects.</li>
+              <li>Tuned and optimized Nginx configurations, reducing application response times by more than 70%.</li>
+              <li>Automated repetitive operational tasks with Bash scripting, increasing team efficiency and reducing manual toil.</li>
+              <li>Integrated New Relic for application performance monitoring, enabling proactive issue detection and faster root-cause analysis.</li>
+            </ul>
           </div>
-          <ul class="exp-bullets">
-            <li>Migrated workloads from standalone EC2 instances to auto-scaling-group based architecture, improving availability and reducing operational overhead.</li>
-            <li>Enhanced CI/CD pipelines with CircleCI and AWS CodeDeploy, accelerating release velocity and minimizing deployment failures.</li>
-            <li>Authored reusable CloudFormation templates to standardize infrastructure provisioning and ensure consistency across projects.</li>
-            <li>Tuned and optimized Nginx configurations, reducing application response times by more than 70%.</li>
-            <li>Automated repetitive operational tasks with Bash scripting, increasing team efficiency and reducing manual toil.</li>
-            <li>Integrated New Relic for application performance monitoring, enabling proactive issue detection and faster root-cause analysis.</li>
-          </ul>
-        </div>
 
-        <!-- Northbay Solutions -->
-        <div class="exp-item">
-          <div class="exp-header">
-            <div class="exp-role-company">
-              Software Engineer &bull; <span class="exp-company">Northbay Solutions</span>
+          <!-- Northbay Solutions -->
+          <div class="exp-item">
+            <div class="exp-header">
+              <div class="exp-role-company">
+                Software Engineer &bull; <span class="exp-company">Northbay Solutions</span>
+              </div>
+              <div class="exp-meta">
+                <span>2019-07 ➔ 2021-02</span>
+                <span>&bull;</span>
+                <span>Lahore, Pakistan</span>
+              </div>
             </div>
-            <div class="exp-meta">
-              <span>2019-07 ➔ 2021-02</span>
-              <span>&bull;</span>
-              <span>Lahore, Pakistan</span>
-            </div>
+            <ul class="exp-bullets">
+              <li>Worked on writing reusable IaC scripts in CloudFormation and Terraform for seamless infrastructure provisioning.</li>
+              <li>Contributed to the design and implementation of an application migration from Rackspace to AWS ECS, improving scalability and reliability of services.</li>
+              <li>Developed AWS Lambda functions workflow orchestration using Step Functions, automating event-driven processes.</li>
+              <li>Set up SFTP server on AWS using AWS Transfer Service, ensuring secure and reliable data transfer.</li>
+            </ul>
           </div>
-          <ul class="exp-bullets">
-            <li>Worked on writing reusable IaC scripts in CloudFormation and Terraform for seamless infrastructure provisioning.</li>
-            <li>Contributed to the design and implementation of an application migration from Rackspace to AWS ECS, improving scalability and reliability of services.</li>
-            <li>Developed AWS Lambda functions workflow orchestration using Step Functions, automating event-driven processes.</li>
-            <li>Set up SFTP server on AWS using AWS Transfer Service, ensuring secure and reliable data transfer.</li>
-          </ul>
         </div>
       </div>
     </section>
 
     <!-- Certifications Section -->
-    <section class="section-card">
+    <section class="section-window">
       <div class="section-header">
-        <span class="section-prefix">04.</span>
-        <h3 class="section-title">Certifications & Accreditations</h3>
+        <span class="section-cmd-prompt">$</span>
+        <span class="section-cmd">kubectl get certs -n cncf-aws</span>
       </div>
 
-      <div class="certs-grid">
-        <!-- CNCF / Kubernetes -->
-        <div class="cert-group">
-          <div class="cert-group-title">// Cloud Native & Kubernetes (5x)</div>
-          <ul class="cert-list">
-            <li class="cert-card kubestronaut">
-              <span>&#9733; CNCF Kubestronaut</span>
-            </li>
-            <li class="cert-card">
-              <span>[CKS] Certified Kubernetes Security Specialist</span>
-            </li>
-            <li class="cert-card">
-              <span>[CKA] Certified Kubernetes Administrator</span>
-            </li>
-            <li class="cert-card">
-              <span>[CKAD] Certified Kubernetes Application Developer</span>
-            </li>
-            <li class="cert-card">
-              <span>[KCSA] K8s & Cloud Native Security Associate</span>
-            </li>
-            <li class="cert-card">
-              <span>[KCNA] Kubernetes & Cloud Native Associate</span>
-            </li>
-          </ul>
-        </div>
+      <div class="section-body">
+        <div class="certs-grid">
+          <!-- CNCF / Kubernetes -->
+          <div class="cert-group">
+            <div class="cert-group-title">// Cloud Native & Kubernetes (5x)</div>
+            <ul class="cert-list">
+              <li class="cert-card kubestronaut">
+                <span>&#9733; CNCF Kubestronaut</span>
+              </li>
+              <li class="cert-card">
+                <span>[CKS] Certified Kubernetes Security Specialist</span>
+              </li>
+              <li class="cert-card">
+                <span>[CKA] Certified Kubernetes Administrator</span>
+              </li>
+              <li class="cert-card">
+                <span>[CKAD] Certified Kubernetes Application Developer</span>
+              </li>
+              <li class="cert-card">
+                <span>[KCSA] K8s & Cloud Native Security Associate</span>
+              </li>
+              <li class="cert-card">
+                <span>[KCNA] Kubernetes & Cloud Native Associate</span>
+              </li>
+            </ul>
+          </div>
 
-        <!-- AWS & HashiCorp -->
-        <div class="cert-group">
-          <div class="cert-group-title">// AWS (4x) & HashiCorp</div>
-          <ul class="cert-list">
-            <li class="cert-card">
-              <span>[AWS-PRO] DevOps Engineer - Professional</span>
-            </li>
-            <li class="cert-card">
-              <span>[AWS-SAA] Solutions Architect - Associate</span>
-            </li>
-            <li class="cert-card">
-              <span>[AWS-DVA] Developer - Associate</span>
-            </li>
-            <li class="cert-card">
-              <span>[AWS-CLF] Cloud Practitioner</span>
-            </li>
-            <li class="cert-card">
-              <span>[HASHI] HashiCorp Certified: Terraform Associate</span>
-            </li>
-          </ul>
+          <!-- AWS & HashiCorp -->
+          <div class="cert-group">
+            <div class="cert-group-title">// AWS (4x) & HashiCorp</div>
+            <ul class="cert-list">
+              <li class="cert-card">
+                <span>[AWS-PRO] DevOps Engineer - Professional</span>
+              </li>
+              <li class="cert-card">
+                <span>[AWS-SAA] Solutions Architect - Associate</span>
+              </li>
+              <li class="cert-card">
+                <span>[AWS-DVA] Developer - Associate</span>
+              </li>
+              <li class="cert-card">
+                <span>[AWS-CLF] Cloud Practitioner</span>
+              </li>
+              <li class="cert-card">
+                <span>[HASHI] HashiCorp Certified: Terraform Associate</span>
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
     </section>
 
     <!-- Education Section -->
-    <section class="section-card">
+    <section class="section-window">
       <div class="section-header">
-        <span class="section-prefix">05.</span>
-        <h3 class="section-title">Education</h3>
+        <span class="section-cmd-prompt">$</span>
+        <span class="section-cmd">cat /etc/education.txt</span>
       </div>
 
-      <div class="edu-content">
-        <h4>Bachelor of Science in Software Engineering</h4>
-        <div class="edu-institute">Punjab University College of Information and Technology (PUCIT)</div>
-        <div class="edu-meta">2015 ➔ 2019 &bull; CGPA: 3.62 / 4.00</div>
-        <div class="edu-courses">
-          <strong>Relevant Coursework:</strong> Data Structures, Algorithms, Distributed Systems, Databases, Machine Learning, Operating Systems
+      <div class="section-body">
+        <div class="edu-content">
+          <h4>Bachelor of Science in Software Engineering</h4>
+          <div class="edu-institute">Punjab University College of Information and Technology (PUCIT)</div>
+          <div class="edu-meta">2015 ➔ 2019 &bull; CGPA: 3.62 / 4.00</div>
+          <div class="edu-courses">
+            <strong>Relevant Coursework:</strong> Data Structures, Algorithms, Distributed Systems, Databases, Machine Learning, Operating Systems
+          </div>
         </div>
       </div>
     </section>
 
     <!-- Leadership / Additional Skills Section -->
-    <section class="section-card">
+    <section class="section-window">
       <div class="section-header">
-        <span class="section-prefix">06.</span>
-        <h3 class="section-title">Core Competencies & Leadership</h3>
+        <span class="section-cmd-prompt">$</span>
+        <span class="section-cmd">systemctl list-units --type=competency</span>
       </div>
 
-      <div class="soft-skills-grid">
-        <div class="soft-skill-pill">
-          <span>&gt; Team Leadership & Mentorship</span>
-        </div>
-        <div class="soft-skill-pill">
-          <span>&gt; Incident Management & RCA</span>
-        </div>
-        <div class="soft-skill-pill">
-          <span>&gt; Cross-Functional Collaboration</span>
-        </div>
-        <div class="soft-skill-pill">
-          <span>&gt; Disaster Recovery & Chaos Engineering</span>
-        </div>
-        <div class="soft-skill-pill">
-          <span>&gt; Technical Architecture & Review</span>
-        </div>
-        <div class="soft-skill-pill">
-          <span>&gt; Production Infrastructure Security</span>
+      <div class="section-body">
+        <div class="soft-skills-grid">
+          <div class="soft-skill-pill">
+            <span>Team Leadership & Mentorship</span>
+          </div>
+          <div class="soft-skill-pill">
+            <span>Incident Management & RCA</span>
+          </div>
+          <div class="soft-skill-pill">
+            <span>Cross-Functional Collaboration</span>
+          </div>
+          <div class="soft-skill-pill">
+            <span>Disaster Recovery & Chaos Engineering</span>
+          </div>
+          <div class="soft-skill-pill">
+            <span>Technical Architecture & Review</span>
+          </div>
+          <div class="soft-skill-pill">
+            <span>Production Infrastructure Security</span>
+          </div>
         </div>
       </div>
     </section>
