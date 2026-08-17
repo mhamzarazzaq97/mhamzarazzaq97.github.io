@@ -6,8 +6,8 @@
   <title>Muhammad Hamza Razzaq — DevOps Engineer | Kubestronaut</title>
   
   <!-- SEO & Social Meta Tags -->
-  <meta name="description" content="Muhammad Hamza Razzaq — DevOps Engineer with 7+ years of experience. CNCF Kubestronaut, 4x AWS Certified, Terraform Certified. Expert in EKS, RDS, Terraform IaC, and Kubernetes.">
-  <meta name="keywords" content="DevOps, Kubestronaut, Kubernetes, AWS, Terraform, Cloud Engineer, Site Reliability Engineer, SRE">
+  <meta name="description" content="DevOps Engineer with 7+ years of experience. CNCF Kubestronaut, 4x AWS Certified, Terraform Certified. Expert in EKS, RDS, Terraform IaC, and Kubernetes.">
+  <meta name="keywords" content="DevOps Engineer, Kubestronaut, Kubernetes, AWS Certified, Terraform, Cloud Architect, Site Reliability Engineer, SRE">
   <meta name="author" content="Muhammad Hamza Razzaq">
 
   <!-- Open Graph / Social Sharing -->
@@ -25,28 +25,29 @@
   <!-- Google Fonts: Inter & Outfit -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@500;600;700;800&display=swap" rel="stylesheet">
-
-  <!-- PDF.js CDN & TextLayer Stylesheet -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf_viewer.min.css">
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@500;600;700;800;900&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
 
   <style>
     :root {
-      --bg-dark: #090d16;
+      --bg-dark: #080c15;
       --bg-surface: #0f172a;
-      --bg-card: #1e293b;
-      --text-main: #f8fafc;
+      --bg-card: #131d31;
+      --bg-card-hover: #18243c;
+      --text-main: #f1f5f9;
       --text-muted: #94a3b8;
       --text-subtle: #64748b;
-      --accent: #38bdf8;
-      --accent-glow: rgba(56, 189, 248, 0.25);
-      --accent-hover: #0ea5e9;
+      --accent-cyan: #38bdf8;
+      --accent-cyan-glow: rgba(56, 189, 248, 0.18);
+      --accent-indigo: #6366f1;
+      --accent-amber: #fbbf24;
+      --accent-purple: #c084fc;
+      --accent-emerald: #34d399;
       --border: rgba(255, 255, 255, 0.08);
       --border-hover: rgba(255, 255, 255, 0.16);
-      --shadow-lg: 0 20px 40px -15px rgba(0, 0, 0, 0.6);
-      --radius: 12px;
-      --header-h: 70px;
+      --radius-sm: 8px;
+      --radius-md: 12px;
+      --radius-lg: 16px;
+      --shadow-card: 0 10px 30px -10px rgba(0, 0, 0, 0.5);
     }
 
     * {
@@ -64,19 +65,31 @@
       flex-direction: column;
       align-items: center;
       -webkit-font-smoothing: antialiased;
+      line-height: 1.6;
       overflow-x: hidden;
       position: relative;
     }
 
-    /* Ambient Background Glow */
-    .ambient-glow {
+    /* Ambient Background Glows */
+    .ambient-glow-1 {
       position: fixed;
-      top: -150px;
+      top: -120px;
       left: 50%;
       transform: translateX(-50%);
-      width: 700px;
-      height: 400px;
-      background: radial-gradient(circle, rgba(56, 189, 248, 0.12) 0%, rgba(99, 102, 241, 0.08) 45%, transparent 70%);
+      width: 900px;
+      height: 450px;
+      background: radial-gradient(circle, rgba(56, 189, 248, 0.12) 0%, rgba(99, 102, 241, 0.06) 40%, transparent 70%);
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    .ambient-glow-2 {
+      position: fixed;
+      bottom: 10%;
+      right: -100px;
+      width: 500px;
+      height: 500px;
+      background: radial-gradient(circle, rgba(99, 102, 241, 0.06) 0%, transparent 70%);
       pointer-events: none;
       z-index: 0;
     }
@@ -88,17 +101,15 @@
       left: 0;
       right: 0;
       width: 100%;
-      height: var(--header-h);
-      background: rgba(9, 13, 22, 0.82);
+      background: rgba(8, 12, 21, 0.85);
       backdrop-filter: blur(16px);
       -webkit-backdrop-filter: blur(16px);
       border-bottom: 1px solid var(--border);
-      padding: 0 24px;
+      padding: 12px 28px;
       display: flex;
       justify-content: space-between;
       align-items: center;
       z-index: 100;
-      transition: all 0.3s ease;
     }
 
     .brand-group {
@@ -108,18 +119,18 @@
     }
 
     .avatar-icon {
-      width: 40px;
-      height: 40px;
-      border-radius: 10px;
+      width: 44px;
+      height: 44px;
+      border-radius: 12px;
       background: linear-gradient(135deg, #38bdf8, #6366f1);
       display: flex;
       align-items: center;
       justify-content: center;
       font-family: 'Outfit', sans-serif;
       font-weight: 800;
-      font-size: 1.05rem;
-      color: #090d16;
-      box-shadow: 0 0 20px var(--accent-glow);
+      font-size: 1.1rem;
+      color: #080c15;
+      box-shadow: 0 0 20px var(--accent-cyan-glow);
       flex-shrink: 0;
     }
 
@@ -144,16 +155,16 @@
       align-items: center;
       flex-wrap: wrap;
       gap: 6px;
-      margin-top: 2px;
     }
 
+    /* Badge Pills */
     .badge-pill {
       display: inline-flex;
       align-items: center;
       gap: 4px;
-      font-size: 0.7rem;
+      font-size: 0.68rem;
       font-weight: 700;
-      padding: 3px 9px;
+      padding: 3px 8px;
       border-radius: 9999px;
       letter-spacing: 0.03em;
       text-transform: uppercase;
@@ -167,10 +178,10 @@
     }
 
     .badge-k8s {
-      background: linear-gradient(135deg, rgba(56, 189, 248, 0.15), rgba(99, 102, 241, 0.15));
+      background: linear-gradient(135deg, rgba(56, 189, 248, 0.18), rgba(99, 102, 241, 0.18));
       border: 1px solid rgba(56, 189, 248, 0.45);
       color: #38bdf8;
-      box-shadow: 0 0 12px rgba(56, 189, 248, 0.2);
+      box-shadow: 0 0 12px rgba(56, 189, 248, 0.25);
     }
 
     .badge-aws {
@@ -189,268 +200,486 @@
     .actions-group {
       display: flex;
       align-items: center;
-      gap: 8px;
+      gap: 10px;
     }
 
     .btn {
       display: inline-flex;
       align-items: center;
-      gap: 6px;
-      padding: 8px 14px;
-      font-size: 0.84rem;
+      gap: 8px;
+      padding: 9px 16px;
+      font-size: 0.85rem;
       font-weight: 600;
       border-radius: 8px;
       text-decoration: none;
       transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
       cursor: pointer;
       border: 1px solid var(--border);
-      background: rgba(30, 41, 59, 0.6);
+      background: rgba(19, 29, 49, 0.7);
       color: var(--text-main);
       outline: none;
     }
 
     .btn:hover {
-      background: rgba(51, 65, 85, 0.8);
+      background: rgba(30, 41, 59, 0.9);
       border-color: var(--border-hover);
       color: #fff;
       transform: translateY(-1px);
     }
 
-    .btn:active {
-      transform: translateY(0);
-    }
-
-    .btn-icon-only {
-      padding: 8px;
-      border-radius: 8px;
-    }
-
     .btn-primary {
       background: linear-gradient(135deg, #38bdf8, #0ea5e9);
-      color: #090d16;
+      color: #080c15;
       font-weight: 700;
       border: 1px solid transparent;
-      box-shadow: 0 4px 14px var(--accent-glow);
+      box-shadow: 0 4px 14px var(--accent-cyan-glow);
     }
 
     .btn-primary:hover {
       background: linear-gradient(135deg, #7dd3fc, #38bdf8);
       box-shadow: 0 6px 20px rgba(56, 189, 248, 0.4);
-      color: #090d16;
+      color: #080c15;
       transform: translateY(-1px);
     }
 
-    /* PDF Viewer Container */
+    /* Main Container */
     main {
       width: 100%;
-      max-width: 900px;
-      padding: 28px 16px 80px;
+      max-width: 960px;
+      padding: 36px 20px 80px;
       display: flex;
       flex-direction: column;
-      align-items: center;
-      gap: 24px;
+      gap: 32px;
       z-index: 1;
     }
 
-    #pdf-container {
-      width: 100%;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 24px;
-      transition: transform 0.2s ease-out;
-      transform-origin: top center;
-    }
-
-    .pdf-page-wrapper {
-      position: relative;
-      width: 100%;
-      max-width: 860px;
-      display: flex;
-      justify-content: center;
-      background: #ffffff;
-      border-radius: 8px;
-      overflow: hidden;
-      box-shadow: var(--shadow-lg), 0 0 0 1px rgba(255, 255, 255, 0.08);
-      transition: box-shadow 0.3s ease;
-      user-select: text;
-      -webkit-user-select: text;
-    }
-
-    .pdf-page-wrapper:hover {
-      box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.8), 0 0 0 1px rgba(56, 189, 248, 0.2);
-    }
-
-    .textLayer {
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      overflow: hidden;
-      opacity: 1;
-      line-height: 1.0;
-      transform-origin: 0 0;
-      z-index: 2;
-      user-select: text;
-      -webkit-user-select: text;
-    }
-
-    .textLayer span,
-    .textLayer br {
-      color: transparent;
-      position: absolute;
-      white-space: pre;
-      cursor: text;
-      transform-origin: 0% 0%;
-    }
-
-    .textLayer ::selection {
-      background: rgba(56, 189, 248, 0.35);
-      color: transparent;
-    }
-
-    canvas {
-      display: block;
-      width: 100% !important;
-      height: auto !important;
-      max-width: 860px;
-      z-index: 1;
-    }
-
-    /* Skeleton Loading State */
-    #loading {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      gap: 16px;
-      width: 100%;
-      max-width: 860px;
-      min-height: 500px;
+    /* Hero / Contact Bar */
+    .hero-card {
       background: var(--bg-card);
       border: 1px solid var(--border);
-      border-radius: 8px;
-      color: var(--text-muted);
+      border-radius: var(--radius-lg);
+      padding: 32px;
+      box-shadow: var(--shadow-card);
       position: relative;
       overflow: hidden;
     }
 
-    #loading::after {
+    .hero-card::before {
       content: "";
       position: absolute;
-      top: 0; right: 0; bottom: 0; left: 0;
-      transform: translateX(-100%);
-      background-image: linear-gradient(
-        90deg,
-        rgba(255, 255, 255, 0) 0,
-        rgba(255, 255, 255, 0.04) 20%,
-        rgba(255, 255, 255, 0.08) 60%,
-        rgba(255, 255, 255, 0)
-      );
-      animation: shimmer 2s infinite;
+      top: 0; left: 0; right: 0;
+      height: 3px;
+      background: linear-gradient(90deg, #38bdf8, #6366f1, #a855f7);
     }
 
-    @keyframes shimmer {
-      100% { transform: translateX(100%); }
+    .hero-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 20px;
+      flex-wrap: wrap;
     }
 
-    .spinner {
-      width: 42px;
-      height: 42px;
-      border: 3px solid rgba(56, 189, 248, 0.2);
-      border-top-color: var(--accent);
-      border-radius: 50%;
-      animation: spin 0.8s cubic-bezier(0.65, 0, 0.35, 1) infinite;
+    .hero-name-group h2 {
+      font-family: 'Outfit', sans-serif;
+      font-size: 2.1rem;
+      font-weight: 800;
+      color: #fff;
+      letter-spacing: -0.02em;
     }
 
-    @keyframes spin {
-      to { transform: rotate(360deg); }
+    .hero-subtitle {
+      font-size: 1.05rem;
+      font-weight: 500;
+      color: var(--accent-cyan);
+      margin-top: 4px;
     }
 
-    /* Floating Controller Bar */
-    .floating-bar {
-      position: fixed;
-      bottom: 24px;
-      left: 50%;
-      transform: translateX(-50%);
-      background: rgba(15, 23, 42, 0.88);
-      backdrop-filter: blur(14px);
-      -webkit-backdrop-filter: blur(14px);
-      border: 1px solid var(--border-hover);
+    /* Contact Links Grid */
+    .contact-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      margin-top: 20px;
+      padding-top: 20px;
+      border-top: 1px solid rgba(255, 255, 255, 0.06);
+    }
+
+    .contact-item {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      color: var(--text-muted);
+      font-size: 0.88rem;
+      text-decoration: none;
+      transition: all 0.2s ease;
+      cursor: pointer;
+      background: rgba(255, 255, 255, 0.03);
       padding: 6px 12px;
-      border-radius: 9999px;
+      border-radius: 6px;
+      border: 1px solid transparent;
+    }
+
+    .contact-item:hover {
+      color: var(--accent-cyan);
+      background: rgba(56, 189, 248, 0.08);
+      border-color: rgba(56, 189, 248, 0.2);
+    }
+
+    .contact-item svg {
+      color: var(--accent-cyan);
+      flex-shrink: 0;
+    }
+
+    /* Metrics Grid */
+    .metrics-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px;
+    }
+
+    .metric-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      padding: 20px;
+      text-align: center;
+      transition: all 0.2s ease;
+      box-shadow: var(--shadow-card);
+    }
+
+    .metric-card:hover {
+      border-color: var(--border-hover);
+      transform: translateY(-2px);
+      background: var(--bg-card-hover);
+    }
+
+    .metric-val {
+      font-family: 'Outfit', sans-serif;
+      font-size: 1.85rem;
+      font-weight: 800;
+      color: #fff;
+      background: linear-gradient(135deg, #38bdf8, #818cf8);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .metric-label {
+      font-size: 0.78rem;
+      font-weight: 600;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-top: 4px;
+    }
+
+    /* Section Component */
+    .section-container {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: 32px;
+      box-shadow: var(--shadow-card);
+    }
+
+    .section-header {
       display: flex;
       align-items: center;
       gap: 12px;
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
-      z-index: 90;
-      transition: all 0.3s ease;
+      margin-bottom: 24px;
+      padding-bottom: 14px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
     }
 
-    .floating-bar:hover {
-      border-color: rgba(56, 189, 248, 0.4);
-    }
-
-    .bar-divider {
-      width: 1px;
-      height: 18px;
-      background: var(--border);
-    }
-
-    .page-indicator {
-      font-size: 0.8rem;
-      font-weight: 600;
-      color: var(--text-muted);
-      min-width: 75px;
-      text-align: center;
-    }
-
-    .zoom-btn {
-      background: transparent;
-      border: none;
-      color: var(--text-muted);
-      cursor: pointer;
-      width: 28px;
-      height: 28px;
-      border-radius: 6px;
+    .section-icon {
+      width: 32px;
+      height: 32px;
+      border-radius: 8px;
+      background: rgba(56, 189, 248, 0.12);
+      border: 1px solid rgba(56, 189, 248, 0.25);
       display: flex;
       align-items: center;
       justify-content: center;
-      transition: all 0.15s ease;
+      color: var(--accent-cyan);
     }
 
-    .zoom-btn:hover {
-      background: rgba(255, 255, 255, 0.1);
-      color: var(--text-main);
+    .section-title {
+      font-family: 'Outfit', sans-serif;
+      font-size: 1.35rem;
+      font-weight: 700;
+      color: #fff;
     }
 
-    .zoom-label {
+    .profile-summary-text {
+      font-size: 0.96rem;
+      color: var(--text-muted);
+      line-height: 1.75;
+    }
+
+    /* Skills Categorized Grid */
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 18px;
+    }
+
+    .skill-category-card {
+      background: rgba(15, 23, 42, 0.6);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      padding: 18px;
+      transition: all 0.2s ease;
+    }
+
+    .skill-category-card:hover {
+      border-color: rgba(56, 189, 248, 0.3);
+      background: rgba(15, 23, 42, 0.85);
+    }
+
+    .skill-category-title {
+      font-size: 0.86rem;
+      font-weight: 700;
+      color: var(--accent-cyan);
+      margin-bottom: 10px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .skill-pill-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+    }
+
+    .skill-tag {
       font-size: 0.78rem;
+      font-family: 'Inter', sans-serif;
+      font-weight: 500;
+      color: var(--text-main);
+      background: rgba(255, 255, 255, 0.05);
+      padding: 4px 9px;
+      border-radius: 6px;
+      border: 1px solid rgba(255, 255, 255, 0.06);
+    }
+
+    /* Experience Timeline */
+    .experience-list {
+      display: flex;
+      flex-direction: column;
+      gap: 28px;
+    }
+
+    .exp-item {
+      position: relative;
+      padding-left: 24px;
+      border-left: 2px solid rgba(56, 189, 248, 0.25);
+    }
+
+    .exp-item::before {
+      content: "";
+      position: absolute;
+      left: -7px;
+      top: 4px;
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background: var(--accent-cyan);
+      border: 2px solid var(--bg-card);
+      box-shadow: 0 0 10px var(--accent-cyan-glow);
+    }
+
+    .exp-item.current::before {
+      background: #38bdf8;
+      box-shadow: 0 0 14px #38bdf8;
+    }
+
+    .exp-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 6px;
+    }
+
+    .exp-role-company {
+      font-family: 'Outfit', sans-serif;
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: #fff;
+    }
+
+    .exp-company {
+      color: var(--accent-cyan);
+      font-weight: 600;
+    }
+
+    .exp-meta {
+      font-size: 0.82rem;
       font-weight: 600;
       color: var(--text-subtle);
-      min-width: 42px;
-      text-align: center;
+      display: flex;
+      align-items: center;
+      gap: 12px;
     }
 
-    /* Toast Notification */
-    #toast {
-      position: fixed;
-      top: 85px;
-      left: 50%;
-      transform: translateX(-50%) translateY(-20px);
-      background: rgba(15, 23, 42, 0.95);
-      border: 1px solid var(--accent);
-      color: var(--text-main);
-      padding: 10px 18px;
-      border-radius: 8px;
-      font-size: 0.85rem;
-      font-weight: 600;
+    .exp-bullets {
+      list-style: none;
+      margin-top: 12px;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .exp-bullets li {
+      position: relative;
+      padding-left: 18px;
+      font-size: 0.91rem;
+      color: var(--text-muted);
+      line-height: 1.65;
+    }
+
+    .exp-bullets li::before {
+      content: "▹";
+      position: absolute;
+      left: 0;
+      color: var(--accent-cyan);
+      font-size: 0.9rem;
+    }
+
+    /* Certifications Grid */
+    .certs-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 18px;
+    }
+
+    .cert-group {
+      background: rgba(15, 23, 42, 0.6);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      padding: 20px;
+    }
+
+    .cert-group-title {
+      font-size: 0.88rem;
+      font-weight: 700;
+      color: var(--accent-cyan);
+      margin-bottom: 14px;
       display: flex;
       align-items: center;
       gap: 8px;
-      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+    }
+
+    .cert-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .cert-card {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      background: rgba(255, 255, 255, 0.03);
+      padding: 8px 12px;
+      border-radius: 6px;
+      border: 1px solid rgba(255, 255, 255, 0.05);
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: var(--text-main);
+      transition: all 0.2s ease;
+    }
+
+    .cert-card:hover {
+      background: rgba(56, 189, 248, 0.08);
+      border-color: rgba(56, 189, 248, 0.25);
+    }
+
+    .cert-card.kubestronaut {
+      background: linear-gradient(135deg, rgba(56, 189, 248, 0.15), rgba(99, 102, 241, 0.15));
+      border-color: rgba(56, 189, 248, 0.4);
+      color: #38bdf8;
+      box-shadow: 0 0 15px rgba(56, 189, 248, 0.15);
+    }
+
+    .cert-card svg {
+      flex-shrink: 0;
+      color: var(--accent-cyan);
+    }
+
+    /* Education & Additional Skills */
+    .edu-content h4 {
+      font-family: 'Outfit', sans-serif;
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: #fff;
+    }
+
+    .edu-institute {
+      color: var(--accent-cyan);
+      font-size: 0.92rem;
+      font-weight: 600;
+      margin-top: 2px;
+    }
+
+    .edu-meta {
+      font-size: 0.82rem;
+      color: var(--text-subtle);
+      margin-top: 4px;
+    }
+
+    .edu-courses {
+      font-size: 0.86rem;
+      color: var(--text-muted);
+      margin-top: 8px;
+    }
+
+    .soft-skills-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 10px;
+    }
+
+    .soft-skill-pill {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(15, 23, 42, 0.6);
+      padding: 10px 14px;
+      border-radius: 8px;
+      border: 1px solid var(--border);
+      font-size: 0.86rem;
+      font-weight: 600;
+      color: var(--text-main);
+    }
+
+    .soft-skill-pill svg {
+      color: var(--accent-cyan);
+    }
+
+    /* Toast Alert */
+    #toast {
+      position: fixed;
+      bottom: 24px;
+      right: 24px;
+      background: rgba(15, 23, 42, 0.96);
+      border: 1px solid var(--accent-cyan);
+      color: var(--text-main);
+      padding: 12px 20px;
+      border-radius: 10px;
+      font-size: 0.88rem;
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
       opacity: 0;
+      transform: translateY(20px);
       pointer-events: none;
       transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
       z-index: 200;
@@ -458,18 +687,19 @@
 
     #toast.show {
       opacity: 1;
-      transform: translateX(-50%) translateY(0);
+      transform: translateY(0);
     }
 
     /* Footer */
     footer {
       width: 100%;
-      padding: 24px;
+      padding: 32px 20px;
       border-top: 1px solid var(--border);
       display: flex;
-      justify-content: center;
+      flex-direction: column;
       align-items: center;
-      font-size: 0.8rem;
+      gap: 8px;
+      font-size: 0.82rem;
       color: var(--text-subtle);
       margin-top: auto;
       z-index: 1;
@@ -478,12 +708,28 @@
     footer a {
       color: var(--text-muted);
       text-decoration: none;
-      margin-left: 6px;
       transition: color 0.2s;
     }
 
     footer a:hover {
-      color: var(--accent);
+      color: var(--accent-cyan);
+    }
+
+    /* Print Stylesheet */
+    @media print {
+      body {
+        background: #fff;
+        color: #000;
+      }
+      header, footer, .ambient-glow-1, .ambient-glow-2, .btn, #toast {
+        display: none !important;
+      }
+      .section-container, .hero-card, .metric-card {
+        box-shadow: none !important;
+        border: 1px solid #ddd !important;
+        background: #fff !important;
+        color: #000 !important;
+      }
     }
 
     /* Mobile Responsive Optimizations */
@@ -494,40 +740,53 @@
       .brand-title {
         font-size: 0.95rem;
       }
-      .brand-badges {
-        gap: 4px;
-      }
       .badge-pill {
-        font-size: 0.64rem;
+        font-size: 0.62rem;
         padding: 2px 6px;
       }
       .badge-pill svg {
-        width: 9px;
-        height: 9px;
+        width: 8px;
+        height: 8px;
       }
       .btn {
         padding: 6px 10px;
         font-size: 0.78rem;
       }
       main {
-        padding: 16px 8px 90px;
-        gap: 16px;
+        padding: 18px 12px 60px;
+        gap: 20px;
       }
-      #pdf-container {
-        gap: 16px;
+      .hero-card, .section-container {
+        padding: 20px 16px;
       }
-      .floating-bar {
-        bottom: 16px;
-        padding: 5px 10px;
-        gap: 8px;
+      .hero-name-group h2 {
+        font-size: 1.6rem;
+      }
+      .metrics-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+      }
+      .metric-val {
+        font-size: 1.5rem;
+      }
+      .skills-grid, .certs-grid, .soft-skills-grid {
+        grid-template-columns: 1fr;
+      }
+      .exp-header {
+        flex-direction: column;
+        gap: 2px;
+      }
+      .exp-meta {
+        font-size: 0.78rem;
       }
     }
   </style>
 </head>
 <body>
 
-  <!-- Ambient Glow Effect -->
-  <div class="ambient-glow"></div>
+  <!-- Ambient Glow Effects -->
+  <div class="ambient-glow-1"></div>
+  <div class="ambient-glow-2"></div>
 
   <!-- Header -->
   <header>
@@ -561,65 +820,455 @@
       </a>
 
       <!-- Download Button -->
-      <a href="./Hamza_Razzaq_DevOps.pdf" download="Hamza_Razzaq_DevOps.pdf" class="btn btn-primary" title="Download PDF Resume" aria-label="Download PDF">
+      <a href="./Hamza_Razzaq_DevOps.pdf" download="Hamza_Razzaq_DevOps.pdf" class="btn btn-primary" title="Download Official LaTeX PDF Resume" aria-label="Download PDF">
         <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
         <span>Download PDF</span>
       </a>
     </div>
   </header>
 
-  <!-- Main Viewer Content -->
+  <!-- Main Content -->
   <main>
-    <div id="loading">
-      <div class="spinner"></div>
-      <p style="font-weight: 600; font-size: 0.95rem;">Rendering Resume...</p>
-      <span style="font-size: 0.8rem; color: var(--text-subtle);">Optimizing high-resolution preview</span>
-    </div>
-    <div id="pdf-container"></div>
-  </main>
 
-  <!-- Floating Controller Bar -->
-  <div class="floating-bar" id="floating-bar" style="display: none;">
-    <button class="zoom-btn" id="zoom-out" title="Zoom out" aria-label="Zoom out">
-      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/></svg>
-    </button>
-    <span class="zoom-label" id="zoom-label">100%</span>
-    <button class="zoom-btn" id="zoom-in" title="Zoom in" aria-label="Zoom in">
-      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
-    </button>
-    <div class="bar-divider"></div>
-    <span class="page-indicator" id="page-indicator">Page 1 of 2</span>
-    <button class="zoom-btn" id="print-btn" title="Print resume" aria-label="Print">
-      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 6 2 18 2 18 9"/><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect width="12" height="8" x="6" y="14"/></svg>
-    </button>
-  </div>
+    <!-- Hero Card -->
+    <section class="hero-card">
+      <div class="hero-header">
+        <div class="hero-name-group">
+          <h2>Muhammad Hamza Razzaq</h2>
+          <div class="hero-subtitle">Senior DevOps Engineer &bull; Cloud & Platform Infrastructure</div>
+        </div>
+      </div>
+
+      <!-- Contact Info Row -->
+      <div class="contact-grid">
+        <div class="contact-item" id="copy-email-btn" title="Click to copy email">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+          <span>mhamzarazzaq97@gmail.com</span>
+        </div>
+        <a href="tel:+971551039986" class="contact-item" title="Call phone number">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          <span>+971 55 103 9986</span>
+        </a>
+        <div class="contact-item">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+          <span>Abu Dhabi, UAE</span>
+        </div>
+        <a href="https://github.com/mhamzarazzaq97" target="_blank" rel="noopener noreferrer" class="contact-item">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.87 1.52 2.34 1.07 2.91.83.1-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33.85 0 1.71.11 2.5.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0 0 12 2Z"/></svg>
+          <span>github.com/mhamzarazzaq97</span>
+        </a>
+      </div>
+    </section>
+
+    <!-- Key Metrics Stats -->
+    <div class="metrics-grid">
+      <div class="metric-card">
+        <div class="metric-val">7+ Years</div>
+        <div class="metric-label">DevOps Experience</div>
+      </div>
+      <div class="metric-card">
+        <div class="metric-val">99.99%+</div>
+        <div class="metric-label">Production Uptime</div>
+      </div>
+      <div class="metric-card">
+        <div class="metric-val">$200K+</div>
+        <div class="metric-label">Cost Reduction</div>
+      </div>
+      <div class="metric-card">
+        <div class="metric-val">15+</div>
+        <div class="metric-label">Environments Managed</div>
+      </div>
+    </div>
+
+    <!-- Profile Summary Section -->
+    <section class="section-container">
+      <div class="section-header">
+        <div class="section-icon">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+        </div>
+        <h3 class="section-title">Profile Summary</h3>
+      </div>
+      <p class="profile-summary-text">
+        DevOps Engineer with 7+ years of experience and a track record of leading a team of 5 engineers managing 15+ production environments serving millions of daily requests with 99.99%+ uptime. Expert in AWS cloud infrastructure (EKS, RDS, MSK, ElastiCache), Kubernetes, Terraform IaC, and security tools including Kyverno and Trivy for vulnerability scanning. Delivered $200K+ in cost savings, 40% faster deployments, and zero-downtime migrations across all environments. Currently building the product's Azure expansion.
+      </p>
+    </section>
+
+    <!-- Technical Skills Section -->
+    <section class="section-container">
+      <div class="section-header">
+        <div class="section-icon">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+        </div>
+        <h3 class="section-title">Technical Skills</h3>
+      </div>
+
+      <div class="skills-grid">
+        <!-- AWS -->
+        <div class="skill-category-card">
+          <div class="skill-category-title">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M19.35 10.04C18.67 6.59 15.64 4 12 4 9.11 4 6.6 5.64 5.35 8.04 2.34 8.36 0 10.91 0 14c0 3.31 2.69 6 6 6h13c2.76 0 5-2.24 5-5 0-2.64-2.05-4.78-4.65-4.96z"/></svg>
+            AWS Cloud
+          </div>
+          <div class="skill-pill-container">
+            <span class="skill-tag">EKS</span>
+            <span class="skill-tag">RDS</span>
+            <span class="skill-tag">ELB</span>
+            <span class="skill-tag">ASG</span>
+            <span class="skill-tag">CloudFront</span>
+            <span class="skill-tag">OpenSearch</span>
+            <span class="skill-tag">MSK</span>
+            <span class="skill-tag">ElastiCache</span>
+            <span class="skill-tag">Route53</span>
+            <span class="skill-tag">Secrets Manager</span>
+            <span class="skill-tag">IAM</span>
+            <span class="skill-tag">VPC</span>
+            <span class="skill-tag">S3</span>
+            <span class="skill-tag">EC2</span>
+            <span class="skill-tag">Lambda</span>
+            <span class="skill-tag">CloudWatch</span>
+            <span class="skill-tag">SNS / SQS</span>
+            <span class="skill-tag">KMS</span>
+            <span class="skill-tag">CloudFormation</span>
+          </div>
+        </div>
+
+        <!-- Kubernetes Ecosystem -->
+        <div class="skill-category-card">
+          <div class="skill-category-title">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="m12 1.5 2.8 6.9 7.4.6-5.6 4.9 1.7 7.3L12 17.3 5.7 21.2l1.7-7.3-5.6-4.9 7.4-.6z"/></svg>
+            Kubernetes Ecosystem
+          </div>
+          <div class="skill-pill-container">
+            <span class="skill-tag">Kubernetes</span>
+            <span class="skill-tag">Helm</span>
+            <span class="skill-tag">Kustomize</span>
+            <span class="skill-tag">ArgoCD</span>
+            <span class="skill-tag">FluxCD</span>
+            <span class="skill-tag">Karpenter</span>
+            <span class="skill-tag">Kyverno</span>
+            <span class="skill-tag">Trivy</span>
+            <span class="skill-tag">KEDA</span>
+            <span class="skill-tag">Istio</span>
+            <span class="skill-tag">External Secrets</span>
+            <span class="skill-tag">cert-manager</span>
+            <span class="skill-tag">Lens</span>
+          </div>
+        </div>
+
+        <!-- Azure -->
+        <div class="skill-category-card">
+          <div class="skill-category-title">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="18" height="18" x="3" y="3" rx="2"/><path d="M3 9h18"/><path d="M9 21V9"/></svg>
+            Microsoft Azure
+          </div>
+          <div class="skill-pill-container">
+            <span class="skill-tag">AKS</span>
+            <span class="skill-tag">VNet</span>
+            <span class="skill-tag">Front Door</span>
+            <span class="skill-tag">Application Gateway</span>
+            <span class="skill-tag">MySQL Flexible Server</span>
+            <span class="skill-tag">Storage Accounts</span>
+            <span class="skill-tag">Entra ID</span>
+            <span class="skill-tag">VMs</span>
+          </div>
+        </div>
+
+        <!-- CI/CD & GitOps -->
+        <div class="skill-category-card">
+          <div class="skill-category-title">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            CI/CD & GitOps
+          </div>
+          <div class="skill-pill-container">
+            <span class="skill-tag">GitHub Actions</span>
+            <span class="skill-tag">GitLab CI/CD</span>
+            <span class="skill-tag">ArgoCD</span>
+            <span class="skill-tag">FluxCD</span>
+            <span class="skill-tag">Jenkins</span>
+            <span class="skill-tag">CodeDeploy</span>
+            <span class="skill-tag">CodePipeline</span>
+          </div>
+        </div>
+
+        <!-- Programming & Scripting -->
+        <div class="skill-category-card">
+          <div class="skill-category-title">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="4 17 10 11 4 5"/><line x1="12" y1="19" x2="20" y2="19"/></svg>
+            Programming & Scripting
+          </div>
+          <div class="skill-pill-container">
+            <span class="skill-tag">Bash</span>
+            <span class="skill-tag">Terraform HCL</span>
+            <span class="skill-tag">Golang</span>
+            <span class="skill-tag">Python</span>
+          </div>
+        </div>
+
+        <!-- Monitoring & Observability -->
+        <div class="skill-category-card">
+          <div class="skill-category-title">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 3v18h18"/><path d="m19 9-5 5-4-4-3 3"/></svg>
+            Monitoring & Observability
+          </div>
+          <div class="skill-pill-container">
+            <span class="skill-tag">Prometheus</span>
+            <span class="skill-tag">Grafana</span>
+            <span class="skill-tag">OpenSearch</span>
+            <span class="skill-tag">Fluent Bit</span>
+            <span class="skill-tag">New Relic</span>
+            <span class="skill-tag">CloudWatch</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Professional Experience Section -->
+    <section class="section-container">
+      <div class="section-header">
+        <div class="section-icon">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="20" height="14" x="2" y="7" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
+        </div>
+        <h3 class="section-title">Professional Experience</h3>
+      </div>
+
+      <div class="experience-list">
+        <!-- Callsign Technologies -->
+        <div class="exp-item current">
+          <div class="exp-header">
+            <div class="exp-role-company">
+              DevOps Engineer &bull; <span class="exp-company">Callsign Technologies</span>
+            </div>
+            <div class="exp-meta">
+              <span>01/2023 ‐ Present</span>
+              <span>&bull;</span>
+              <span>Abu Dhabi, UAE</span>
+            </div>
+          </div>
+          <ul class="exp-bullets">
+            <li>Led and mentored a team of 5 DevOps engineers responsible for managing 15+ production and non-production environments, overseeing component upgrades, releases, feature development, and continuous improvements to the infrastructure codebase.</li>
+            <li>Maintaining 99.99% uptime while leading critical services upgrades (EKS, RDS, MSK) with zero downtime and no data loss.</li>
+            <li>Building the product's Azure platform, developing Terraform modules for AKS, VNet, Front Door, Application Gateway, and MySQL Flexible Server to achieve parity with the established AWS production environment and enable multi-cloud deployment.</li>
+            <li>Played a key role in emergency cross-region DR failover for a top UAE banking client during a multi-AZ AWS outage, coordinating with AWS support to migrate RDS databases, replicate S3 data, and provision complete infrastructure in the secondary region, restoring full service operation.</li>
+            <li>Achieved $200K+ (35-40%) in cloud cost reduction through Graviton migrations, compute rightsizing, automated non-prod environment downscaling, and storage lifecycle management.</li>
+            <li>Reduced critical CVEs through comprehensive cluster security implementation including Kyverno policy enforcement, Trivy vulnerability scanning, and automated AMI patching via Karpenter.</li>
+            <li>Reduced deployment time by 30-40% by refactoring deployment strategy to decouple infrastructure and application releases, enabling independent and faster change rollouts.</li>
+            <li>Cut infrastructure provisioning from hours to minutes by building a GitLab pipeline framework orchestrating 15+ Terraform repos.</li>
+            <li>Serving as primary escalation point for complex production incidents, conducting deep-dive root cause analysis across distributed systems to identify issues spanning multiple services, clusters, and AWS components.</li>
+            <li>Reduced deployment time by migrating from IRSA to EKS Pod Identity, simplifying IAM management across all microservices.</li>
+            <li>Improved cluster autoscaling efficiency by migrating from AWS Auto Scaling Groups to Karpenter and implementing event-driven scaling with KEDA, reducing response time to traffic spikes.</li>
+          </ul>
+        </div>
+
+        <!-- Dubizzle Labs -->
+        <div class="exp-item">
+          <div class="exp-header">
+            <div class="exp-role-company">
+              DevOps Engineer &bull; <span class="exp-company">Dubizzle Labs</span>
+            </div>
+            <div class="exp-meta">
+              <span>02/2022 ‐ 01/2023</span>
+              <span>&bull;</span>
+              <span>Lahore, Pakistan</span>
+            </div>
+          </div>
+          <ul class="exp-bullets">
+            <li>Containerized legacy applications and migrated them to Kubernetes, delivering production-grade scalability and reliability.</li>
+            <li>Built and rolled out GitOps workflows with ArgoCD, Helm, Kustomize, and External Secrets, ensuring consistency across production and non-prod environments.</li>
+            <li>Designed and implemented CI/CD pipelines using GitHub Actions integrated with ArgoCD, enabling automated and reliable deployment strategy with minimal human intervention.</li>
+            <li>Implemented a centralized observability stack with OpenSearch and Fluent Bit, reducing incident detection and troubleshooting time from hours to minutes.</li>
+            <li>Continuously improved Terraform codebase to ensure consistent infrastructure across environments.</li>
+            <li>Integrated AWS SSO with ArgoCD and OpenSearch, tightening access control and simplifying authentication across the platform.</li>
+          </ul>
+        </div>
+
+        <!-- Arbisoft -->
+        <div class="exp-item">
+          <div class="exp-header">
+            <div class="exp-role-company">
+              DevOps Engineer &bull; <span class="exp-company">Arbisoft</span>
+            </div>
+            <div class="exp-meta">
+              <span>02/2021 ‐ 02/2022</span>
+              <span>&bull;</span>
+              <span>Lahore, Pakistan</span>
+            </div>
+          </div>
+          <ul class="exp-bullets">
+            <li>Migrated workloads from standalone EC2 instances to auto-scaling-group based architecture, improving availability and reducing operational overhead.</li>
+            <li>Enhanced CI/CD pipelines with CircleCI and AWS CodeDeploy, accelerating release velocity and minimizing deployment failures.</li>
+            <li>Authored reusable CloudFormation templates to standardize infrastructure provisioning and ensure consistency across projects.</li>
+            <li>Tuned and optimized Nginx configurations, reducing application response times by more than 70%.</li>
+            <li>Automated repetitive operational tasks with Bash scripting, increasing team efficiency and reducing manual toil.</li>
+            <li>Integrated New Relic for application performance monitoring, enabling proactive issue detection and faster root-cause analysis.</li>
+          </ul>
+        </div>
+
+        <!-- Northbay Solutions -->
+        <div class="exp-item">
+          <div class="exp-header">
+            <div class="exp-role-company">
+              Software Engineer &bull; <span class="exp-company">Northbay Solutions</span>
+            </div>
+            <div class="exp-meta">
+              <span>07/2019 ‐ 02/2021</span>
+              <span>&bull;</span>
+              <span>Lahore, Pakistan</span>
+            </div>
+          </div>
+          <ul class="exp-bullets">
+            <li>Worked on writing reusable IaC scripts in CloudFormation and Terraform for seamless infrastructure provisioning.</li>
+            <li>Contributed to the design and implementation of an application migration from Rackspace to AWS ECS, improving scalability and reliability of services.</li>
+            <li>Developed AWS Lambda functions workflow orchestration using Step Functions, automating event-driven processes.</li>
+            <li>Set up SFTP server on AWS using AWS Transfer Service, ensuring secure and reliable data transfer.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Certifications Section -->
+    <section class="section-container">
+      <div class="section-header">
+        <div class="section-icon">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="7"/><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"/></svg>
+        </div>
+        <h3 class="section-title">Certifications & Accreditations</h3>
+      </div>
+
+      <div class="certs-grid">
+        <!-- CNCF / Kubernetes -->
+        <div class="cert-group">
+          <div class="cert-group-title">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="m12 1.5 2.8 6.9 7.4.6-5.6 4.9 1.7 7.3L12 17.3 5.7 21.2l1.7-7.3-5.6-4.9 7.4-.6z"/></svg>
+            Cloud Native & Kubernetes (5x)
+          </div>
+          <ul class="cert-list">
+            <li class="cert-card kubestronaut">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="m12 1.5 2.8 6.9 7.4.6-5.6 4.9 1.7 7.3L12 17.3 5.7 21.2l1.7-7.3-5.6-4.9 7.4-.6z"/></svg>
+              <span>CNCF Kubestronaut</span>
+            </li>
+            <li class="cert-card">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+              <span>Certified Kubernetes Security Specialist (CKS)</span>
+            </li>
+            <li class="cert-card">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+              <span>Certified Kubernetes Administrator (CKA)</span>
+            </li>
+            <li class="cert-card">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+              <span>Certified Kubernetes Application Developer (CKAD)</span>
+            </li>
+            <li class="cert-card">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+              <span>Kubernetes and Cloud Native Security Associate (KCSA)</span>
+            </li>
+            <li class="cert-card">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+              <span>Kubernetes and Cloud Native Associate (KCNA)</span>
+            </li>
+          </ul>
+        </div>
+
+        <!-- AWS & HashiCorp -->
+        <div class="cert-group">
+          <div class="cert-group-title">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M19.35 10.04C18.67 6.59 15.64 4 12 4 9.11 4 6.6 5.64 5.35 8.04 2.34 8.36 0 10.91 0 14c0 3.31 2.69 6 6 6h13c2.76 0 5-2.24 5-5 0-2.64-2.05-4.78-4.65-4.96z"/></svg>
+            AWS (4x) & HashiCorp
+          </div>
+          <ul class="cert-list">
+            <li class="cert-card">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+              <span>AWS Certified DevOps Engineer - Professional</span>
+            </li>
+            <li class="cert-card">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+              <span>AWS Certified Solutions Architect - Associate</span>
+            </li>
+            <li class="cert-card">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+              <span>AWS Certified Developer - Associate</span>
+            </li>
+            <li class="cert-card">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+              <span>AWS Certified Cloud Practitioner</span>
+            </li>
+            <li class="cert-card">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+              <span>HashiCorp Certified: Terraform Associate</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Education Section -->
+    <section class="section-container">
+      <div class="section-header">
+        <div class="section-icon">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+        </div>
+        <h3 class="section-title">Education</h3>
+      </div>
+
+      <div class="edu-content">
+        <h4>Bachelor’s in Software Engineering</h4>
+        <div class="edu-institute">Punjab University College of Information and Technology (PUCIT)</div>
+        <div class="edu-meta">2015 ‐ 2019 &bull; CGPA: 3.62 / 4.00</div>
+        <div class="edu-courses">
+          <strong>Relevant Coursework:</strong> Data Structures, Algorithms, Object Oriented Programming, Databases, Machine Learning
+        </div>
+      </div>
+    </section>
+
+    <!-- Additional Skills Section -->
+    <section class="section-container">
+      <div class="section-header">
+        <div class="section-icon">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+        </div>
+        <h3 class="section-title">Leadership & Core Competencies</h3>
+      </div>
+
+      <div class="soft-skills-grid">
+        <div class="soft-skill-pill">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          <span>Team Leadership & Mentorship</span>
+        </div>
+        <div class="soft-skill-pill">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10.29 3.86 1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+          <span>Incident Management & Root Cause Analysis</span>
+        </div>
+        <div class="soft-skill-pill">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="18" cy="18" r="3"/><circle cx="6" cy="6" r="3"/><path d="M13 6h3a2 2 0 0 1 2 2v7"/><line x1="6" y1="9" x2="6" y2="21"/></svg>
+          <span>Cross-Functional Collaboration</span>
+        </div>
+        <div class="soft-skill-pill">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+          <span>Critical Thinking & Problem Solving</span>
+        </div>
+        <div class="soft-skill-pill">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+          <span>Technical Communication</span>
+        </div>
+      </div>
+    </section>
+
+  </main>
 
   <!-- Toast Notification -->
   <div id="toast">
-    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#38bdf8" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#38bdf8" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
     <span id="toast-message">Email copied to clipboard!</span>
   </div>
 
   <!-- Footer -->
   <footer>
-    <span>&copy; <span id="year"></span> Muhammad Hamza Razzaq &bull; Hosted on</span>
-    <a href="https://github.com/mhamzarazzaq97/mhamzarazzaq97.github.io" target="_blank" rel="noopener noreferrer">GitHub Pages</a>
+    <span>&copy; <span id="year"></span> Muhammad Hamza Razzaq &bull; DevOps Engineer | Kubestronaut</span>
+    <span>Hosted on <a href="https://github.com/mhamzarazzaq97/mhamzarazzaq97.github.io" target="_blank" rel="noopener noreferrer">GitHub Pages</a></span>
   </footer>
 
   <script>
-    const pdfUrl = './Hamza_Razzaq_DevOps.pdf';
     document.getElementById('year').textContent = new Date().getFullYear();
-
-    // PDF.js worker configuration
-    pdfjsLib.GlobalWorkerOptions.workerSrc = 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js';
-
-    let currentZoom = 1.0;
-    const container = document.getElementById('pdf-container');
-    const loadingEl = document.getElementById('loading');
-    const floatingBar = document.getElementById('floating-bar');
-    const zoomLabel = document.getElementById('zoom-label');
-    const pageIndicator = document.getElementById('page-indicator');
-    let totalPages = 2;
 
     // Toast Alert Helper
     function showToast(msg) {
@@ -630,10 +1279,10 @@
       setTimeout(() => toast.classList.remove('show'), 2500);
     }
 
-    // Email Copy Action (if button exists)
-    const copyBtn = document.getElementById('copy-email-btn');
-    if (copyBtn) {
-      copyBtn.addEventListener('click', async () => {
+    // Email Copy Action
+    const emailBtn = document.getElementById('copy-email-btn');
+    if (emailBtn) {
+      emailBtn.addEventListener('click', async () => {
         const email = 'mhamzarazzaq97@gmail.com';
         try {
           await navigator.clipboard.writeText(email);
@@ -643,97 +1292,6 @@
         }
       });
     }
-
-    // Print Action
-    document.getElementById('print-btn').addEventListener('click', () => {
-      window.print();
-    });
-
-    // Zoom Controls
-    function updateZoom(newZoom) {
-      currentZoom = Math.min(Math.max(newZoom, 0.7), 1.6);
-      zoomLabel.textContent = `${Math.round(currentZoom * 100)}%`;
-      container.style.transform = `scale(${currentZoom})`;
-    }
-
-    document.getElementById('zoom-in').addEventListener('click', () => updateZoom(currentZoom + 0.1));
-    document.getElementById('zoom-out').addEventListener('click', () => updateZoom(currentZoom - 0.1));
-
-    // Render PDF Pages
-    pdfjsLib.getDocument(pdfUrl).promise.then(async (pdf) => {
-      totalPages = pdf.numPages;
-      if (loadingEl) loadingEl.style.display = 'none';
-      floatingBar.style.display = 'flex';
-      pageIndicator.textContent = `Page 1 of ${totalPages}`;
-
-      for (let pageNum = 1; pageNum <= totalPages; pageNum++) {
-        const page = await pdf.getPage(pageNum);
-        
-        // High-DPI Retina Rendering calculation
-        const pixelRatio = Math.max(window.devicePixelRatio || 1, 2);
-        const cssScale = 1.45;
-        const cssViewport = page.getViewport({ scale: cssScale });
-        const canvasViewport = page.getViewport({ scale: cssScale * pixelRatio });
-
-        const pageWrapper = document.createElement('div');
-        pageWrapper.className = 'pdf-page-wrapper';
-        pageWrapper.setAttribute('data-page-num', pageNum);
-        pageWrapper.style.maxWidth = `${cssViewport.width}px`;
-
-        const canvas = document.createElement('canvas');
-        const context = canvas.getContext('2d', { alpha: false });
-        
-        canvas.width = canvasViewport.width;
-        canvas.height = canvasViewport.height;
-        
-        pageWrapper.appendChild(canvas);
-
-        // Text Layer for text selection and copy-pasting
-        const textLayerDiv = document.createElement('div');
-        textLayerDiv.className = 'textLayer';
-        textLayerDiv.style.setProperty('--scale-factor', cssScale);
-        pageWrapper.appendChild(textLayerDiv);
-
-        container.appendChild(pageWrapper);
-
-        // Render Canvas
-        await page.render({
-          canvasContext: context,
-          viewport: canvasViewport
-        }).promise;
-
-        // Render TextLayer
-        const textContent = await page.getTextContent();
-        await pdfjsLib.renderTextLayer({
-          textContentSource: textContent,
-          container: textLayerDiv,
-          viewport: cssViewport,
-          textDivs: []
-        }).promise;
-      }
-
-      // Scroll Spy to track current page
-      const pageElements = document.querySelectorAll('.pdf-page-wrapper');
-      const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            const num = entry.target.getAttribute('data-page-num');
-            pageIndicator.textContent = `Page ${num} of ${totalPages}`;
-          }
-        });
-      }, { threshold: 0.5 });
-
-      pageElements.forEach(el => observer.observe(el));
-
-    }).catch((err) => {
-      console.error('Error rendering PDF:', err);
-      if (loadingEl) {
-        loadingEl.innerHTML = `
-          <p style="color: #ef4444; font-weight: 600;">Unable to preview PDF directly in browser.</p>
-          <a href="${pdfUrl}" class="btn btn-primary" style="margin-top: 12px;">Download PDF Directly</a>
-        `;
-      }
-    });
   </script>
 
 </body>
