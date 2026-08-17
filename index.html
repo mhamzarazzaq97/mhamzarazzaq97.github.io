@@ -1,16 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
   <title>Muhammad Hamza Razzaq — DevOps Engineer | Kubestronaut</title>
-
+  
   <!-- SEO & Social Meta Tags -->
-  <meta name="description"
-    content="Muhammad Hamza Razzaq — Senior DevOps Engineer with 7+ years experience. CNCF Kubestronaut, 4x AWS Certified, Terraform Certified. Production AWS EKS, Azure AKS, Terraform IaC, and Kubernetes.">
-  <meta name="keywords"
-    content="DevOps, Kubestronaut, Kubernetes, AWS, Terraform, Cloud Engineer, SRE, Infrastructure, Linux, CNCF">
+  <meta name="description" content="Muhammad Hamza Razzaq — Senior DevOps Engineer with 7+ years experience. CNCF Kubestronaut, 4x AWS Certified, Terraform Certified. Production AWS EKS, Azure AKS, Terraform IaC, and Kubernetes.">
+  <meta name="keywords" content="DevOps, Kubestronaut, Kubernetes, AWS, Terraform, Cloud Engineer, SRE, Infrastructure, Linux, CNCF">
   <meta name="author" content="Muhammad Hamza Razzaq">
 
   <!-- Open Graph / Social Sharing -->
@@ -20,42 +17,43 @@
   <meta property="og:description" content="Senior DevOps Engineer &bull; Kubestronaut &bull; 4x AWS &bull; Terraform">
 
   <!-- Favicon: Terminal Prompt Icon -->
-  <link rel="icon"
-    href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2220%22 fill=%22%230c0e14%22 stroke=%22%2327272a%22 stroke-width=%224%22/><text x=%2250%%22 y=%2266%%22 font-family=%22monospace%22 font-weight=%22800%22 font-size=%2244%22 fill=%22%2338bdf8%22 text-anchor=%22middle%22>&gt;_</text></svg>">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2220%22 fill=%22%230c0e14%22 stroke=%22%2327272a%22 stroke-width=%224%22/><text x=%2250%%22 y=%2266%%22 font-family=%22monospace%22 font-weight=%22800%22 font-size=%2244%22 fill=%22%2338bdf8%22 text-anchor=%22middle%22>&gt;_</text></svg>">
 
   <!-- Google Fonts: Inter & Fira Code (Monospace) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600;700&family=Inter:wght@400;500;600;700;800&family=Outfit:wght@600;700;800&display=swap"
-    rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600;700&family=Inter:wght@400;500;600;700;800&family=Outfit:wght@600;700;800;900&display=swap" rel="stylesheet">
 
   <style>
     :root {
-      --bg-dark: #090a0f;
-      --bg-card: #0e1117;
-      --bg-card-header: #141822;
-      --bg-tag: #171b26;
-      --border: #232936;
-      --border-hover: #3b4254;
+      --bg-dark: #0a0c12;
+      --bg-card: #0f131d;
+      --bg-card-header: #151a27;
+      --bg-tag: #171d2c;
+      --border: #22293b;
+      --border-hover: #3b4663;
+      --border-accent: #38bdf8;
+      
       --text-white: #f8fafc;
       --text-main: #cbd5e1;
       --text-muted: #94a3b8;
       --text-subtle: #64748b;
-
-      /* Terminal / Linux Colors */
-      --cyan: #38bdf8;
-      --cyan-dim: rgba(56, 189, 248, 0.12);
-      --green: #4ade80;
-      --green-dim: rgba(74, 222, 128, 0.12);
-      --amber: #fbbf24;
-      --amber-dim: rgba(251, 191, 36, 0.12);
-      --purple: #c084fc;
-      --purple-dim: rgba(192, 132, 252, 0.12);
-      --blue: #60a5fa;
-      --blue-dim: rgba(96, 165, 250, 0.12);
-      --red: #f87171;
-
+      
+      /* Vibrant Terminal Theme Colors */
+      --term-cyan: #38bdf8;
+      --term-cyan-dim: rgba(56, 189, 248, 0.12);
+      --term-green: #4ade80;
+      --term-green-dim: rgba(74, 222, 128, 0.12);
+      --term-amber: #fbbf24;
+      --term-amber-dim: rgba(251, 191, 36, 0.12);
+      --term-purple: #c084fc;
+      --term-purple-dim: rgba(192, 132, 252, 0.12);
+      --term-blue: #60a5fa;
+      --term-blue-dim: rgba(96, 165, 250, 0.12);
+      --term-pink: #f472b6;
+      --term-pink-dim: rgba(244, 114, 182, 0.12);
+      --term-red: #f87171;
+      
       --font-mono: 'Fira Code', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
       --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
       --font-heading: 'Outfit', -apple-system, sans-serif;
@@ -70,10 +68,10 @@
     body {
       font-family: var(--font-sans);
       background-color: var(--bg-dark);
-      background-image:
-        radial-gradient(rgba(56, 189, 248, 0.04) 1px, transparent 1px),
-        linear-gradient(to bottom, #090a0f 0%, #0d1017 100%);
-      background-size: 20px 20px, 100% 100%;
+      background-image: 
+        radial-gradient(rgba(56, 189, 248, 0.05) 1px, transparent 1px),
+        linear-gradient(to bottom, #0a0c12 0%, #0d101a 100%);
+      background-size: 24px 24px, 100% 100%;
       color: var(--text-main);
       min-height: 100vh;
       display: flex;
@@ -91,11 +89,11 @@
       left: 0;
       right: 0;
       width: 100%;
-      background: rgba(9, 10, 15, 0.94);
-      backdrop-filter: blur(12px);
-      -webkit-backdrop-filter: blur(12px);
+      background: rgba(10, 12, 18, 0.92);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
       border-bottom: 1px solid var(--border);
-      padding: 10px 28px;
+      padding: 12px 32px;
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -105,21 +103,22 @@
     .brand-group {
       display: flex;
       align-items: center;
-      gap: 12px;
+      gap: 14px;
     }
 
-    .terminal-badge-prompt {
+    .avatar-term-box {
       font-family: var(--font-mono);
-      font-size: 0.85rem;
+      font-size: 0.9rem;
       font-weight: 700;
-      color: var(--cyan);
-      background: var(--bg-card);
-      border: 1px solid var(--border);
+      color: var(--term-cyan);
+      background: #151a27;
+      border: 1px solid rgba(56, 189, 248, 0.4);
       padding: 6px 12px;
       border-radius: 6px;
       display: flex;
       align-items: center;
-      gap: 8px;
+      gap: 6px;
+      box-shadow: 0 0 12px rgba(56, 189, 248, 0.15);
     }
 
     .brand-meta {
@@ -130,7 +129,7 @@
 
     .brand-title {
       font-family: var(--font-heading);
-      font-size: 1.12rem;
+      font-size: 1.15rem;
       font-weight: 700;
       color: var(--text-white);
       display: flex;
@@ -146,7 +145,7 @@
       gap: 6px;
     }
 
-    /* Linux / K8s Tags */
+    /* Terminal Skill Badges */
     .badge {
       display: inline-flex;
       align-items: center;
@@ -154,34 +153,36 @@
       font-family: var(--font-mono);
       font-size: 0.68rem;
       font-weight: 600;
-      padding: 2px 7px;
+      padding: 2px 8px;
       border-radius: 4px;
       border: 1px solid var(--border);
       background: var(--bg-tag);
       color: var(--text-muted);
+      transition: all 0.15s ease;
     }
 
     .badge-role {
       color: var(--text-white);
-      border-color: #3b4254;
+      border-color: #3b4663;
     }
 
     .badge-k8s {
-      background: var(--cyan-dim);
-      border-color: rgba(56, 189, 248, 0.4);
-      color: var(--cyan);
+      background: var(--term-cyan-dim);
+      border-color: rgba(56, 189, 248, 0.45);
+      color: var(--term-cyan);
+      box-shadow: 0 0 10px rgba(56, 189, 248, 0.2);
     }
 
     .badge-aws {
-      background: var(--amber-dim);
-      border-color: rgba(251, 191, 36, 0.4);
-      color: var(--amber);
+      background: var(--term-amber-dim);
+      border-color: rgba(251, 191, 36, 0.45);
+      color: var(--term-amber);
     }
 
     .badge-tf {
-      background: var(--purple-dim);
-      border-color: rgba(192, 132, 252, 0.4);
-      color: var(--purple);
+      background: var(--term-purple-dim);
+      border-color: rgba(192, 132, 252, 0.45);
+      color: var(--term-purple);
     }
 
     /* Actions Suite */
@@ -195,24 +196,25 @@
       display: inline-flex;
       align-items: center;
       gap: 6px;
-      padding: 7px 14px;
+      padding: 8px 16px;
       font-family: var(--font-mono);
-      font-size: 0.8rem;
+      font-size: 0.82rem;
       font-weight: 600;
       border-radius: 6px;
       text-decoration: none;
       transition: all 0.15s ease;
       cursor: pointer;
       border: 1px solid var(--border);
-      background: #141822;
+      background: #151a27;
       color: var(--text-main);
       outline: none;
     }
 
     .btn:hover {
-      background: #1b212f;
+      background: #1e2538;
       border-color: var(--border-hover);
       color: var(--text-white);
+      transform: translateY(-1px);
     }
 
     .btn-primary {
@@ -220,34 +222,41 @@
       color: #ffffff;
       border-color: #38bdf8;
       font-weight: 700;
+      box-shadow: 0 0 15px rgba(56, 189, 248, 0.3);
     }
 
     .btn-primary:hover {
       background: #38bdf8;
-      color: #090a0f;
+      color: #0a0c12;
+      box-shadow: 0 0 20px rgba(56, 189, 248, 0.5);
     }
 
     /* Main Container */
     main {
       width: 100%;
       max-width: 960px;
-      padding: 28px 20px 80px;
+      padding: 32px 20px 80px;
       display: flex;
       flex-direction: column;
       gap: 24px;
       z-index: 1;
     }
 
-    /* Linux Window Card */
-    .terminal-window {
+    /* Terminal Window Card */
+    .term-window {
       background: var(--bg-card);
       border: 1px solid var(--border);
       border-radius: 8px;
       overflow: hidden;
-      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.6);
+      box-shadow: 0 12px 32px rgba(0, 0, 0, 0.6);
+      transition: border-color 0.2s ease;
     }
 
-    .terminal-titlebar {
+    .term-window:hover {
+      border-color: rgba(56, 189, 248, 0.3);
+    }
+
+    .term-titlebar {
       background: var(--bg-card-header);
       border-bottom: 1px solid var(--border);
       padding: 10px 16px;
@@ -255,67 +264,59 @@
       align-items: center;
       justify-content: space-between;
       font-family: var(--font-mono);
-      font-size: 0.76rem;
-      color: var(--text-subtle);
+      font-size: 0.78rem;
     }
 
-    .terminal-controls {
+    .term-controls {
       display: flex;
       align-items: center;
       gap: 7px;
     }
 
-    .win-btn {
+    .term-dot {
       width: 11px;
       height: 11px;
       border-radius: 50%;
     }
+    .term-dot-red { background: #ef4444; }
+    .term-dot-yellow { background: #eab308; }
+    .term-dot-green { background: #22c55e; }
 
-    .win-close {
-      background: #ef4444;
-    }
-
-    .win-min {
-      background: #eab308;
-    }
-
-    .win-max {
-      background: #22c55e;
-    }
-
-    .terminal-titlebar-text {
+    .term-title-text {
       color: var(--text-muted);
-      font-weight: 500;
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      gap: 8px;
     }
 
-    .terminal-body {
+    .term-title-accent {
+      color: var(--term-cyan);
+    }
+
+    .term-body {
       padding: 24px;
     }
 
     /* CLI Prompt Box */
-    .cli-prompt-row {
+    .cli-prompt-line {
       display: flex;
       align-items: center;
       gap: 8px;
       font-family: var(--font-mono);
-      font-size: 0.88rem;
-      color: var(--cyan);
-      margin-bottom: 12px;
+      font-size: 0.9rem;
+      margin-bottom: 14px;
     }
 
-    .cli-prompt-user {
-      color: var(--green);
-      font-weight: 600;
-    }
-
-    .cli-prompt-path {
-      color: var(--blue);
-      font-weight: 500;
-    }
+    .cli-user { color: var(--term-green); font-weight: 700; }
+    .cli-host { color: var(--text-muted); }
+    .cli-path { color: var(--term-cyan); font-weight: 600; }
+    .cli-branch { color: var(--term-purple); font-size: 0.8rem; }
+    .cli-cmd { color: var(--text-white); font-weight: 600; }
 
     .hero-name-group h2 {
       font-family: var(--font-heading);
-      font-size: 2.15rem;
+      font-size: 2.25rem;
       font-weight: 800;
       color: var(--text-white);
       letter-spacing: -0.02em;
@@ -323,8 +324,8 @@
 
     .hero-subtitle {
       font-family: var(--font-mono);
-      font-size: 0.95rem;
-      color: var(--cyan);
+      font-size: 0.96rem;
+      color: var(--term-cyan);
       margin-top: 4px;
     }
 
@@ -334,7 +335,7 @@
       flex-wrap: wrap;
       gap: 10px;
       margin-top: 20px;
-      padding-top: 16px;
+      padding-top: 18px;
       border-top: 1px solid var(--border);
     }
 
@@ -344,11 +345,11 @@
       gap: 7px;
       color: var(--text-muted);
       font-family: var(--font-mono);
-      font-size: 0.8rem;
+      font-size: 0.82rem;
       text-decoration: none;
       transition: all 0.15s ease;
       cursor: pointer;
-      background: #141822;
+      background: #151a27;
       padding: 6px 12px;
       border-radius: 4px;
       border: 1px solid var(--border);
@@ -356,12 +357,13 @@
 
     .contact-item:hover {
       color: var(--text-white);
-      border-color: var(--border-hover);
-      background: #1c2230;
+      border-color: var(--term-cyan);
+      background: #1e2538;
+      box-shadow: 0 0 10px rgba(56, 189, 248, 0.15);
     }
 
     .contact-item svg {
-      color: var(--cyan);
+      color: var(--term-cyan);
       flex-shrink: 0;
     }
 
@@ -369,24 +371,39 @@
     .metrics-grid {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
-      gap: 12px;
+      gap: 14px;
     }
 
     .metric-card {
       background: var(--bg-card);
       border: 1px solid var(--border);
       border-radius: 8px;
-      padding: 16px 14px;
-      transition: border-color 0.15s ease;
+      padding: 18px 16px;
+      transition: all 0.15s ease;
+      position: relative;
+    }
+
+    .metric-card::before {
+      content: "";
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 2px;
+      background: var(--border);
+      transition: background 0.2s;
     }
 
     .metric-card:hover {
-      border-color: var(--border-hover);
+      border-color: rgba(56, 189, 248, 0.4);
+      transform: translateY(-2px);
+    }
+
+    .metric-card:hover::before {
+      background: var(--term-cyan);
     }
 
     .metric-val {
       font-family: var(--font-mono);
-      font-size: 1.65rem;
+      font-size: 1.75rem;
       font-weight: 700;
       color: var(--text-white);
       letter-spacing: -0.02em;
@@ -394,69 +411,29 @@
 
     .metric-label {
       font-family: var(--font-mono);
-      font-size: 0.72rem;
-      font-weight: 500;
-      color: var(--cyan);
+      font-size: 0.74rem;
+      font-weight: 600;
+      color: var(--term-cyan);
       text-transform: uppercase;
       letter-spacing: 0.05em;
-      margin-top: 2px;
-    }
-
-    /* Section Terminal Windows */
-    .section-window {
-      background: var(--bg-card);
-      border: 1px solid var(--border);
-      border-radius: 8px;
-      overflow: hidden;
-    }
-
-    .section-header {
-      background: var(--bg-card-header);
-      border-bottom: 1px solid var(--border);
-      padding: 12px 20px;
-      display: flex;
-      align-items: center;
-      gap: 10px;
-    }
-
-    .section-tag {
-      font-family: var(--font-mono);
-      font-size: 0.72rem;
-      color: var(--cyan);
-      background: var(--cyan-dim);
-      padding: 2px 7px;
-      border-radius: 4px;
-      border: 1px solid rgba(56, 189, 248, 0.3);
-      font-weight: 600;
-    }
-
-    .section-title {
-      font-family: var(--font-heading);
-      font-size: 1.15rem;
-      font-weight: 700;
-      color: var(--text-white);
-      letter-spacing: -0.01em;
-    }
-
-    .section-body {
-      padding: 24px;
+      margin-top: 3px;
     }
 
     .profile-summary-text {
-      font-size: 0.94rem;
+      font-size: 0.96rem;
       color: var(--text-main);
-      line-height: 1.75;
+      line-height: 1.8;
     }
 
     /* Skills Grid */
     .skills-grid {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
-      gap: 14px;
+      gap: 16px;
     }
 
     .skill-category-card {
-      background: #121620;
+      background: #131722;
       border: 1px solid var(--border);
       border-radius: 6px;
       padding: 16px;
@@ -464,10 +441,10 @@
 
     .skill-category-title {
       font-family: var(--font-mono);
-      font-size: 0.78rem;
+      font-size: 0.8rem;
       font-weight: 600;
-      color: var(--cyan);
-      margin-bottom: 10px;
+      color: var(--term-cyan);
+      margin-bottom: 12px;
       display: flex;
       align-items: center;
       gap: 6px;
@@ -481,25 +458,40 @@
 
     .skill-tag {
       font-family: var(--font-mono);
-      font-size: 0.74rem;
+      font-size: 0.76rem;
       font-weight: 500;
       color: var(--text-main);
-      background: #181d2a;
-      padding: 3px 8px;
+      background: #181f2e;
+      padding: 4px 9px;
       border-radius: 4px;
-      border: 1px solid #283042;
+      border: 1px solid #28334a;
+      transition: all 0.15s ease;
     }
+
+    .skill-tag:hover {
+      border-color: var(--term-cyan);
+      color: var(--text-white);
+      background: #20293d;
+    }
+
+    /* Specific category color tints for tags */
+    .skill-category-aws .skill-tag:hover { border-color: var(--term-amber); }
+    .skill-category-k8s .skill-tag:hover { border-color: var(--term-cyan); }
+    .skill-category-azure .skill-tag:hover { border-color: var(--term-blue); }
+    .skill-category-cicd .skill-tag:hover { border-color: var(--term-green); }
+    .skill-category-iac .skill-tag:hover { border-color: var(--term-purple); }
+    .skill-category-obs .skill-tag:hover { border-color: var(--term-pink); }
 
     /* Experience Timeline */
     .experience-list {
       display: flex;
       flex-direction: column;
-      gap: 28px;
+      gap: 30px;
     }
 
     .exp-item {
       position: relative;
-      padding-left: 22px;
+      padding-left: 24px;
       border-left: 2px solid var(--border);
     }
 
@@ -511,7 +503,8 @@
       width: 10px;
       height: 10px;
       border-radius: 2px;
-      background: var(--cyan);
+      background: var(--term-cyan);
+      box-shadow: 0 0 8px rgba(56, 189, 248, 0.4);
     }
 
     .exp-header {
@@ -520,25 +513,25 @@
       align-items: baseline;
       flex-wrap: wrap;
       gap: 8px;
-      margin-bottom: 6px;
+      margin-bottom: 8px;
     }
 
     .exp-role-company {
       font-family: var(--font-heading);
-      font-size: 1.12rem;
+      font-size: 1.15rem;
       font-weight: 700;
       color: var(--text-white);
     }
 
     .exp-company {
-      color: var(--cyan);
+      color: var(--term-cyan);
       font-weight: 600;
     }
 
     .exp-meta {
       font-family: var(--font-mono);
-      font-size: 0.78rem;
-      font-weight: 500;
+      font-size: 0.8rem;
+      font-weight: 600;
       color: var(--text-subtle);
       display: flex;
       align-items: center;
@@ -550,23 +543,23 @@
       margin-top: 12px;
       display: flex;
       flex-direction: column;
-      gap: 8px;
+      gap: 9px;
     }
 
     .exp-bullets li {
       position: relative;
-      padding-left: 18px;
-      font-size: 0.91rem;
+      padding-left: 20px;
+      font-size: 0.92rem;
       color: var(--text-main);
-      line-height: 1.65;
+      line-height: 1.7;
     }
 
     .exp-bullets li::before {
-      content: "$";
+      content: "❯";
       position: absolute;
       left: 0;
       font-family: var(--font-mono);
-      color: var(--green);
+      color: var(--term-green);
       font-size: 0.85rem;
       font-weight: 700;
     }
@@ -575,22 +568,22 @@
     .certs-grid {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
-      gap: 14px;
+      gap: 16px;
     }
 
     .cert-group {
-      background: #121620;
+      background: #131722;
       border: 1px solid var(--border);
       border-radius: 6px;
-      padding: 16px;
+      padding: 18px;
     }
 
     .cert-group-title {
       font-family: var(--font-mono);
-      font-size: 0.78rem;
+      font-size: 0.82rem;
       font-weight: 600;
-      color: var(--cyan);
-      margin-bottom: 12px;
+      color: var(--term-cyan);
+      margin-bottom: 14px;
       display: flex;
       align-items: center;
       gap: 6px;
@@ -607,49 +600,63 @@
       display: flex;
       align-items: center;
       gap: 8px;
-      background: #181d2a;
-      padding: 8px 12px;
+      background: #181f2e;
+      padding: 9px 12px;
       border-radius: 4px;
-      border: 1px solid #283042;
+      border: 1px solid #28334a;
       font-family: var(--font-mono);
-      font-size: 0.78rem;
+      font-size: 0.8rem;
       font-weight: 500;
       color: var(--text-white);
+      transition: all 0.15s ease;
+    }
+
+    .cert-card:hover {
+      border-color: rgba(56, 189, 248, 0.4);
+      background: #20293d;
+      transform: translateX(2px);
     }
 
     .cert-card.kubestronaut {
-      background: var(--cyan-dim);
-      border-color: rgba(56, 189, 248, 0.4);
-      color: var(--cyan);
-      font-weight: 600;
+      background: linear-gradient(135deg, rgba(56, 189, 248, 0.16), rgba(99, 102, 241, 0.16));
+      border-color: rgba(56, 189, 248, 0.5);
+      color: var(--term-cyan);
+      font-weight: 700;
+      box-shadow: 0 0 14px rgba(56, 189, 248, 0.2);
+    }
+
+    .cert-tag-code {
+      color: var(--term-green);
+      font-weight: 700;
+      margin-right: 2px;
     }
 
     /* Education */
     .edu-content h4 {
       font-family: var(--font-heading);
-      font-size: 1.05rem;
+      font-size: 1.1rem;
       font-weight: 700;
       color: var(--text-white);
     }
 
     .edu-institute {
-      color: var(--cyan);
-      font-size: 0.92rem;
+      color: var(--term-cyan);
+      font-size: 0.94rem;
       font-weight: 600;
       margin-top: 2px;
     }
 
     .edu-meta {
       font-family: var(--font-mono);
-      font-size: 0.8rem;
+      font-size: 0.82rem;
       color: var(--text-subtle);
       margin-top: 4px;
     }
 
     .edu-courses {
-      font-size: 0.86rem;
+      font-size: 0.88rem;
       color: var(--text-muted);
-      margin-top: 8px;
+      margin-top: 10px;
       line-height: 1.6;
     }
 
@@ -657,26 +664,33 @@
     .soft-skills-grid {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
-      gap: 10px;
+      gap: 12px;
     }
 
     .soft-skill-pill {
       display: flex;
       align-items: center;
       gap: 8px;
-      background: #121620;
-      padding: 10px 14px;
+      background: #131722;
+      padding: 11px 16px;
       border-radius: 6px;
       border: 1px solid var(--border);
       font-family: var(--font-mono);
-      font-size: 0.82rem;
+      font-size: 0.84rem;
       font-weight: 500;
       color: var(--text-main);
+      transition: all 0.15s ease;
+    }
+
+    .soft-skill-pill:hover {
+      border-color: var(--term-cyan);
+      background: #1a2030;
+      color: var(--text-white);
     }
 
     .soft-skill-pill::before {
-      content: ">";
-      color: var(--cyan);
+      content: "❯";
+      color: var(--term-cyan);
       font-weight: 700;
     }
 
@@ -685,18 +699,18 @@
       position: fixed;
       bottom: 24px;
       right: 24px;
-      background: #141822;
-      border: 1px solid var(--cyan);
+      background: #151a27;
+      border: 1px solid var(--term-cyan);
       color: var(--text-white);
       font-family: var(--font-mono);
-      padding: 10px 18px;
+      padding: 11px 18px;
       border-radius: 6px;
-      font-size: 0.82rem;
+      font-size: 0.84rem;
       font-weight: 600;
       display: flex;
       align-items: center;
       gap: 8px;
-      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.7);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.8);
       opacity: 0;
       transform: translateY(15px);
       pointer-events: none;
@@ -719,7 +733,7 @@
       align-items: center;
       gap: 6px;
       font-family: var(--font-mono);
-      font-size: 0.78rem;
+      font-size: 0.8rem;
       color: var(--text-subtle);
       margin-top: auto;
     }
@@ -730,7 +744,7 @@
     }
 
     footer a:hover {
-      color: var(--cyan);
+      color: var(--term-cyan);
     }
 
     /* Mobile Responsive */
@@ -738,50 +752,37 @@
       header {
         padding: 10px 14px;
       }
-
       .brand-title {
         font-size: 0.95rem;
       }
-
       .badge {
         font-size: 0.62rem;
         padding: 1px 5px;
       }
-
       .btn {
         padding: 6px 10px;
         font-size: 0.75rem;
       }
-
       main {
         padding: 16px 12px 60px;
         gap: 16px;
       }
-
-      .terminal-body,
-      .section-body {
-        padding: 16px 12px;
+      .term-body {
+        padding: 18px 14px;
       }
-
       .hero-name-group h2 {
-        font-size: 1.5rem;
+        font-size: 1.55rem;
       }
-
       .metrics-grid {
         grid-template-columns: repeat(2, 1fr);
         gap: 10px;
       }
-
       .metric-val {
-        font-size: 1.4rem;
+        font-size: 1.45rem;
       }
-
-      .skills-grid,
-      .certs-grid,
-      .soft-skills-grid {
+      .skills-grid, .certs-grid, .soft-skills-grid {
         grid-template-columns: 1fr;
       }
-
       .exp-header {
         flex-direction: column;
         gap: 2px;
@@ -789,13 +790,12 @@
     }
   </style>
 </head>
-
 <body>
 
   <!-- Sticky Header -->
   <header>
     <div class="brand-group">
-      <div class="terminal-badge-prompt">&gt;_</div>
+      <div class="avatar-term-box">&gt;_</div>
       <div class="brand-meta">
         <div class="brand-title">Muhammad Hamza Razzaq</div>
         <div class="brand-badges">
@@ -809,24 +809,14 @@
 
     <div class="actions-group">
       <!-- LinkedIn Link -->
-      <a href="https://linkedin.com/in/hamzarazzaq97" target="_blank" rel="noopener noreferrer" class="btn"
-        title="View LinkedIn Profile">
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
-          <path
-            d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.46 10.9v8.37H9.2V10.9H6.46M7.83 6.45a1.6 1.6 0 0 0-1.6 1.6 1.6 1.6 0 0 0 1.6 1.6 1.6 1.6 0 0 0 1.6-1.6 1.6 1.6 0 0 0-1.6-1.6Z" />
-        </svg>
+      <a href="https://linkedin.com/in/hamzarazzaq97" target="_blank" rel="noopener noreferrer" class="btn" title="View LinkedIn Profile">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.46 10.9v8.37H9.2V10.9H6.46M7.83 6.45a1.6 1.6 0 0 0-1.6 1.6 1.6 1.6 0 0 0 1.6 1.6 1.6 1.6 0 0 0 1.6-1.6 1.6 1.6 0 0 0-1.6-1.6Z"/></svg>
         <span>linkedin</span>
       </a>
 
       <!-- Download Button -->
-      <a href="./Hamza_Razzaq_DevOps.pdf" download="Hamza_Razzaq_DevOps.pdf" class="btn btn-primary"
-        title="Download LaTeX PDF Resume">
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
-          stroke-linecap="round" stroke-linejoin="round">
-          <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
-          <polyline points="7 10 12 15 17 10" />
-          <line x1="12" y1="15" x2="12" y2="3" />
-        </svg>
+      <a href="./Hamza_Razzaq_DevOps.pdf" download="Hamza_Razzaq_DevOps.pdf" class="btn btn-primary" title="Download LaTeX PDF Resume">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
         <span>resume.pdf</span>
       </a>
     </div>
@@ -835,22 +825,23 @@
   <!-- Main Content -->
   <main>
 
-    <!-- Hero Card / Terminal Header -->
-    <section class="terminal-window">
-      <div class="terminal-titlebar">
-        <div class="terminal-controls">
-          <div class="win-btn win-close"></div>
-          <div class="win-btn win-min"></div>
-          <div class="win-btn win-max"></div>
+    <!-- Hero Card / Terminal Header Window -->
+    <section class="term-window">
+      <div class="term-titlebar">
+        <div class="term-controls">
+          <div class="term-dot term-dot-red"></div>
+          <div class="term-dot term-dot-yellow"></div>
+          <div class="term-dot term-dot-green"></div>
         </div>
-        <div class="terminal-titlebar-text">hamza@k8s-control-plane: ~ (zsh)</div>
-        <div style="font-size: 0.7rem; color: var(--text-subtle);">80x24</div>
+        <div class="term-title-text">
+          <span>hamza@k8s-control-plane: ~ (zsh)</span>
+        </div>
+        <div style="color: var(--text-subtle); font-size: 0.72rem;">80x24</div>
       </div>
 
-      <div class="terminal-body">
-        <div class="cli-prompt-row">
-          <span class="cli-prompt-user">hamza@cloud-infra</span>:<span class="cli-prompt-path">~</span>$ whoami
-          --verbose
+      <div class="term-body">
+        <div class="cli-prompt-line">
+          <span class="cli-user">hamza</span><span class="cli-host">@cloud-infra</span>:<span class="cli-path">~</span><span class="cli-branch">(main)</span>$ <span class="cli-cmd">whoami --verbose</span>
         </div>
 
         <div class="hero-name-group">
@@ -861,31 +852,19 @@
         <!-- Contact Info Row -->
         <div class="contact-grid">
           <div class="contact-item" id="copy-email-btn" title="Click to copy email">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <rect width="20" height="16" x="2" y="4" rx="2" />
-              <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
-            </svg>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
             <span>mhamzarazzaq97@gmail.com</span>
           </div>
           <a href="tel:+971551039986" class="contact-item" title="Call phone number">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <path
-                d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
-            </svg>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
             <span>+971 55 103 9986</span>
           </a>
           <div class="contact-item">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z" />
-              <circle cx="12" cy="10" r="3" />
-            </svg>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
             <span>Abu Dhabi, UAE</span>
           </div>
           <a href="https://github.com/mhamzarazzaq97" target="_blank" rel="noopener noreferrer" class="contact-item">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
-              <path
-                d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.87 1.52 2.34 1.07 2.91.83.1-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33.85 0 1.71.11 2.5.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0 0 12 2Z" />
-            </svg>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.87 1.52 2.34 1.07 2.91.83.1-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33.85 0 1.71.11 2.5.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0 0 12 2Z"/></svg>
             <span>github.com/mhamzarazzaq97</span>
           </a>
         </div>
@@ -899,8 +878,8 @@
         <div class="metric-label">// EXPERIENCE</div>
       </div>
       <div class="metric-card">
-        <div class="metric-val">5x CNCF</div>
-        <div class="metric-label">// KUBESTRONAUT</div>
+        <div class="metric-val">10x</div>
+        <div class="metric-label">// CERTIFICATIONS</div>
       </div>
       <div class="metric-card">
         <div class="metric-val">4x AWS</div>
@@ -912,34 +891,44 @@
       </div>
     </div>
 
-    <!-- Profile Summary Section -->
-    <section class="section-window">
-      <div class="section-header">
-        <span class="section-tag">01</span>
-        <h3 class="section-title">Profile Summary</h3>
+    <!-- 01. Profile Summary Section -->
+    <section class="term-window">
+      <div class="term-titlebar">
+        <div class="term-controls">
+          <div class="term-dot term-dot-red"></div>
+          <div class="term-dot term-dot-yellow"></div>
+          <div class="term-dot term-dot-green"></div>
+        </div>
+        <div class="term-title-text">
+          <span class="term-title-accent">01.</span> Profile Summary
+        </div>
+        <div style="color: var(--text-subtle); font-size: 0.72rem;">summary.md</div>
       </div>
-      <div class="section-body">
+      <div class="term-body">
         <p class="profile-summary-text">
-          DevOps Engineer with 7+ years of experience and a track record of leading a team of 5 engineers managing 15+
-          production environments serving millions of daily requests with 99.99%+ uptime. Expert in AWS cloud
-          infrastructure (EKS, RDS, MSK, ElastiCache), Kubernetes, Terraform IaC, and security tools including Kyverno
-          and Trivy for vulnerability scanning. Delivered $200K+ in cost savings, 40% faster deployments, and
-          zero-downtime migrations across all environments. Currently building the product's Azure expansion.
+          DevOps Engineer with 7+ years of experience and a track record of leading a team of 5 engineers managing 15+ production environments serving millions of daily requests with 99.99%+ uptime. Expert in AWS cloud infrastructure (EKS, RDS, MSK, ElastiCache), Kubernetes, Terraform IaC, and security tools including Kyverno and Trivy for vulnerability scanning. Delivered $200K+ in cost savings, 40% faster deployments, and zero-downtime migrations across all environments. Currently building the product's Azure expansion.
         </p>
       </div>
     </section>
 
-    <!-- Technical Skills Section -->
-    <section class="section-window">
-      <div class="section-header">
-        <span class="section-tag">02</span>
-        <h3 class="section-title">Technical Stack & Core Domains</h3>
+    <!-- 02. Technical Skills Section -->
+    <section class="term-window">
+      <div class="term-titlebar">
+        <div class="term-controls">
+          <div class="term-dot term-dot-red"></div>
+          <div class="term-dot term-dot-yellow"></div>
+          <div class="term-dot term-dot-green"></div>
+        </div>
+        <div class="term-title-text">
+          <span class="term-title-accent">02.</span> Technical Stack & Core Domains
+        </div>
+        <div style="color: var(--text-subtle); font-size: 0.72rem;">stack.yaml</div>
       </div>
 
-      <div class="section-body">
+      <div class="term-body">
         <div class="skills-grid">
           <!-- AWS -->
-          <div class="skill-category-card">
+          <div class="skill-category-card skill-category-aws">
             <div class="skill-category-title">// AWS Cloud Infrastructure</div>
             <div class="skill-pill-container">
               <span class="skill-tag">EKS</span>
@@ -965,7 +954,7 @@
           </div>
 
           <!-- Kubernetes Ecosystem -->
-          <div class="skill-category-card">
+          <div class="skill-category-card skill-category-k8s">
             <div class="skill-category-title">// Kubernetes Ecosystem (CNCF)</div>
             <div class="skill-pill-container">
               <span class="skill-tag">Kubernetes</span>
@@ -985,7 +974,7 @@
           </div>
 
           <!-- Azure -->
-          <div class="skill-category-card">
+          <div class="skill-category-card skill-category-azure">
             <div class="skill-category-title">// Microsoft Azure Platform</div>
             <div class="skill-pill-container">
               <span class="skill-tag">AKS</span>
@@ -1000,7 +989,7 @@
           </div>
 
           <!-- CI/CD & GitOps -->
-          <div class="skill-category-card">
+          <div class="skill-category-card skill-category-cicd">
             <div class="skill-category-title">// GitOps & CI/CD Automation</div>
             <div class="skill-pill-container">
               <span class="skill-tag">GitHub Actions</span>
@@ -1014,7 +1003,7 @@
           </div>
 
           <!-- Programming & Scripting -->
-          <div class="skill-category-card">
+          <div class="skill-category-card skill-category-iac">
             <div class="skill-category-title">// IaC & Systems Programming</div>
             <div class="skill-pill-container">
               <span class="skill-tag">Terraform HCL</span>
@@ -1025,7 +1014,7 @@
           </div>
 
           <!-- Monitoring & Observability -->
-          <div class="skill-category-card">
+          <div class="skill-category-card skill-category-obs">
             <div class="skill-category-title">// Observability & Telemetry</div>
             <div class="skill-pill-container">
               <span class="skill-tag">Prometheus</span>
@@ -1040,14 +1029,21 @@
       </div>
     </section>
 
-    <!-- Professional Experience Section -->
-    <section class="section-window">
-      <div class="section-header">
-        <span class="section-tag">03</span>
-        <h3 class="section-title">Professional Experience</h3>
+    <!-- 03. Professional Experience Section -->
+    <section class="term-window">
+      <div class="term-titlebar">
+        <div class="term-controls">
+          <div class="term-dot term-dot-red"></div>
+          <div class="term-dot term-dot-yellow"></div>
+          <div class="term-dot term-dot-green"></div>
+        </div>
+        <div class="term-title-text">
+          <span class="term-title-accent">03.</span> Professional Experience
+        </div>
+        <div style="color: var(--text-subtle); font-size: 0.72rem;">experience.log</div>
       </div>
 
-      <div class="section-body">
+      <div class="term-body">
         <div class="experience-list">
           <!-- Callsign Technologies -->
           <div class="exp-item">
@@ -1062,32 +1058,17 @@
               </div>
             </div>
             <ul class="exp-bullets">
-              <li>Led and mentored a team of 5 DevOps engineers responsible for managing 15+ production and
-                non-production environments, overseeing component upgrades, releases, feature development, and
-                continuous improvements to the infrastructure codebase.</li>
-              <li>Maintaining 99.99% uptime while leading critical services upgrades (EKS, RDS, MSK) with zero downtime
-                and no data loss.</li>
-              <li>Building the product's Azure platform, developing Terraform modules for AKS, VNet, Front Door,
-                Application Gateway, and MySQL Flexible Server to achieve parity with the established AWS production
-                environment and enable multi-cloud deployment.</li>
-              <li>Played a key role in emergency cross-region DR failover for a top UAE banking client during a multi-AZ
-                AWS outage, coordinating with AWS support to migrate RDS databases, replicate S3 data, and provision
-                complete infrastructure in the secondary region, restoring full service operation.</li>
-              <li>Achieved $200K+ (35-40%) in cloud cost reduction through Graviton migrations, compute rightsizing,
-                automated non-prod environment downscaling, and storage lifecycle management.</li>
-              <li>Reduced critical CVEs through comprehensive cluster security implementation including Kyverno policy
-                enforcement, Trivy vulnerability scanning, and automated AMI patching via Karpenter.</li>
-              <li>Reduced deployment time by 30-40% by refactoring deployment strategy to decouple infrastructure and
-                application releases, enabling independent and faster change rollouts.</li>
-              <li>Cut infrastructure provisioning from hours to minutes by building a GitLab pipeline framework
-                orchestrating 15+ Terraform repos.</li>
-              <li>Serving as primary escalation point for complex production incidents, conducting deep-dive root cause
-                analysis across distributed systems to identify issues spanning multiple services, clusters, and AWS
-                components.</li>
-              <li>Reduced deployment time by migrating from IRSA to EKS Pod Identity, simplifying IAM management across
-                all microservices.</li>
-              <li>Improved cluster autoscaling efficiency by migrating from AWS Auto Scaling Groups to Karpenter and
-                implementing event-driven scaling with KEDA, reducing response time to traffic spikes.</li>
+              <li>Led and mentored a team of 5 DevOps engineers responsible for managing 15+ production and non-production environments, overseeing component upgrades, releases, feature development, and continuous improvements to the infrastructure codebase.</li>
+              <li>Maintaining 99.99% uptime while leading critical services upgrades (EKS, RDS, MSK) with zero downtime and no data loss.</li>
+              <li>Building the product's Azure platform, developing Terraform modules for AKS, VNet, Front Door, Application Gateway, and MySQL Flexible Server to achieve parity with the established AWS production environment and enable multi-cloud deployment.</li>
+              <li>Played a key role in emergency cross-region DR failover for a top UAE banking client during a multi-AZ AWS outage, coordinating with AWS support to migrate RDS databases, replicate S3 data, and provision complete infrastructure in the secondary region, restoring full service operation.</li>
+              <li>Achieved $200K+ (35-40%) in cloud cost reduction through Graviton migrations, compute rightsizing, automated non-prod environment downscaling, and storage lifecycle management.</li>
+              <li>Reduced critical CVEs through comprehensive cluster security implementation including Kyverno policy enforcement, Trivy vulnerability scanning, and automated AMI patching via Karpenter.</li>
+              <li>Reduced deployment time by 30-40% by refactoring deployment strategy to decouple infrastructure and application releases, enabling independent and faster change rollouts.</li>
+              <li>Cut infrastructure provisioning from hours to minutes by building a GitLab pipeline framework orchestrating 15+ Terraform repos.</li>
+              <li>Serving as primary escalation point for complex production incidents, conducting deep-dive root cause analysis across distributed systems to identify issues spanning multiple services, clusters, and AWS components.</li>
+              <li>Reduced deployment time by migrating from IRSA to EKS Pod Identity, simplifying IAM management across all microservices.</li>
+              <li>Improved cluster autoscaling efficiency by migrating from AWS Auto Scaling Groups to Karpenter and implementing event-driven scaling with KEDA, reducing response time to traffic spikes.</li>
             </ul>
           </div>
 
@@ -1104,17 +1085,12 @@
               </div>
             </div>
             <ul class="exp-bullets">
-              <li>Containerized legacy applications and migrated them to Kubernetes, delivering production-grade
-                scalability and reliability.</li>
-              <li>Built and rolled out GitOps workflows with ArgoCD, Helm, Kustomize, and External Secrets, ensuring
-                consistency across production and non-prod environments.</li>
-              <li>Designed and implemented CI/CD pipelines using GitHub Actions integrated with ArgoCD, enabling
-                automated and reliable deployment strategy with minimal human intervention.</li>
-              <li>Implemented a centralized observability stack with OpenSearch and Fluent Bit, reducing incident
-                detection and troubleshooting time from hours to minutes.</li>
+              <li>Containerized legacy applications and migrated them to Kubernetes, delivering production-grade scalability and reliability.</li>
+              <li>Built and rolled out GitOps workflows with ArgoCD, Helm, Kustomize, and External Secrets, ensuring consistency across production and non-prod environments.</li>
+              <li>Designed and implemented CI/CD pipelines using GitHub Actions integrated with ArgoCD, enabling automated and reliable deployment strategy with minimal human intervention.</li>
+              <li>Implemented a centralized observability stack with OpenSearch and Fluent Bit, reducing incident detection and troubleshooting time from hours to minutes.</li>
               <li>Continuously improved Terraform codebase to ensure consistent infrastructure across environments.</li>
-              <li>Integrated AWS SSO with ArgoCD and OpenSearch, tightening access control and simplifying
-                authentication across the platform.</li>
+              <li>Integrated AWS SSO with ArgoCD and OpenSearch, tightening access control and simplifying authentication across the platform.</li>
             </ul>
           </div>
 
@@ -1131,17 +1107,12 @@
               </div>
             </div>
             <ul class="exp-bullets">
-              <li>Migrated workloads from standalone EC2 instances to auto-scaling-group based architecture, improving
-                availability and reducing operational overhead.</li>
-              <li>Enhanced CI/CD pipelines with CircleCI and AWS CodeDeploy, accelerating release velocity and
-                minimizing deployment failures.</li>
-              <li>Authored reusable CloudFormation templates to standardize infrastructure provisioning and ensure
-                consistency across projects.</li>
+              <li>Migrated workloads from standalone EC2 instances to auto-scaling-group based architecture, improving availability and reducing operational overhead.</li>
+              <li>Enhanced CI/CD pipelines with CircleCI and AWS CodeDeploy, accelerating release velocity and minimizing deployment failures.</li>
+              <li>Authored reusable CloudFormation templates to standardize infrastructure provisioning and ensure consistency across projects.</li>
               <li>Tuned and optimized Nginx configurations, reducing application response times by more than 70%.</li>
-              <li>Automated repetitive operational tasks with Bash scripting, increasing team efficiency and reducing
-                manual toil.</li>
-              <li>Integrated New Relic for application performance monitoring, enabling proactive issue detection and
-                faster root-cause analysis.</li>
+              <li>Automated repetitive operational tasks with Bash scripting, increasing team efficiency and reducing manual toil.</li>
+              <li>Integrated New Relic for application performance monitoring, enabling proactive issue detection and faster root-cause analysis.</li>
             </ul>
           </div>
 
@@ -1158,12 +1129,9 @@
               </div>
             </div>
             <ul class="exp-bullets">
-              <li>Worked on writing reusable IaC scripts in CloudFormation and Terraform for seamless infrastructure
-                provisioning.</li>
-              <li>Contributed to the design and implementation of an application migration from Rackspace to AWS ECS,
-                improving scalability and reliability of services.</li>
-              <li>Developed AWS Lambda functions workflow orchestration using Step Functions, automating event-driven
-                processes.</li>
+              <li>Worked on writing reusable IaC scripts in CloudFormation and Terraform for seamless infrastructure provisioning.</li>
+              <li>Contributed to the design and implementation of an application migration from Rackspace to AWS ECS, improving scalability and reliability of services.</li>
+              <li>Developed AWS Lambda functions workflow orchestration using Step Functions, automating event-driven processes.</li>
               <li>Set up SFTP server on AWS using AWS Transfer Service, ensuring secure and reliable data transfer.</li>
             </ul>
           </div>
@@ -1171,14 +1139,21 @@
       </div>
     </section>
 
-    <!-- Certifications Section -->
-    <section class="section-window">
-      <div class="section-header">
-        <span class="section-tag">04</span>
-        <h3 class="section-title">Certifications & Accreditations</h3>
+    <!-- 04. Certifications Section -->
+    <section class="term-window">
+      <div class="term-titlebar">
+        <div class="term-controls">
+          <div class="term-dot term-dot-red"></div>
+          <div class="term-dot term-dot-yellow"></div>
+          <div class="term-dot term-dot-green"></div>
+        </div>
+        <div class="term-title-text">
+          <span class="term-title-accent">04.</span> Certifications & Accreditations
+        </div>
+        <div style="color: var(--text-subtle); font-size: 0.72rem;">certs.json</div>
       </div>
 
-      <div class="section-body">
+      <div class="term-body">
         <div class="certs-grid">
           <!-- CNCF / Kubernetes -->
           <div class="cert-group">
@@ -1188,19 +1163,19 @@
                 <span>&#9733; CNCF Kubestronaut</span>
               </li>
               <li class="cert-card">
-                <span>[CKS] Certified Kubernetes Security Specialist</span>
+                <span><span class="cert-tag-code">[CKS]</span> Certified Kubernetes Security Specialist</span>
               </li>
               <li class="cert-card">
-                <span>[CKA] Certified Kubernetes Administrator</span>
+                <span><span class="cert-tag-code">[CKA]</span> Certified Kubernetes Administrator</span>
               </li>
               <li class="cert-card">
-                <span>[CKAD] Certified Kubernetes Application Developer</span>
+                <span><span class="cert-tag-code">[CKAD]</span> Certified Kubernetes Application Developer</span>
               </li>
               <li class="cert-card">
-                <span>[KCSA] K8s & Cloud Native Security Associate</span>
+                <span><span class="cert-tag-code">[KCSA]</span> K8s & Cloud Native Security Associate</span>
               </li>
               <li class="cert-card">
-                <span>[KCNA] Kubernetes & Cloud Native Associate</span>
+                <span><span class="cert-tag-code">[KCNA]</span> Kubernetes & Cloud Native Associate</span>
               </li>
             </ul>
           </div>
@@ -1210,19 +1185,19 @@
             <div class="cert-group-title">// AWS (4x) & HashiCorp</div>
             <ul class="cert-list">
               <li class="cert-card">
-                <span>[AWS-PRO] DevOps Engineer - Professional</span>
+                <span><span class="cert-tag-code" style="color: var(--term-amber);">[AWS-PRO]</span> DevOps Engineer - Professional</span>
               </li>
               <li class="cert-card">
-                <span>[AWS-SAA] Solutions Architect - Associate</span>
+                <span><span class="cert-tag-code" style="color: var(--term-amber);">[AWS-SAA]</span> Solutions Architect - Associate</span>
               </li>
               <li class="cert-card">
-                <span>[AWS-DVA] Developer - Associate</span>
+                <span><span class="cert-tag-code" style="color: var(--term-amber);">[AWS-DVA]</span> Developer - Associate</span>
               </li>
               <li class="cert-card">
-                <span>[AWS-CLF] Cloud Practitioner</span>
+                <span><span class="cert-tag-code" style="color: var(--term-amber);">[AWS-CLF]</span> Cloud Practitioner</span>
               </li>
               <li class="cert-card">
-                <span>[HASHI] HashiCorp Certified: Terraform Associate</span>
+                <span><span class="cert-tag-code" style="color: var(--term-purple);">[HASHI]</span> HashiCorp Certified: Terraform Associate</span>
               </li>
             </ul>
           </div>
@@ -1230,34 +1205,47 @@
       </div>
     </section>
 
-    <!-- Education Section -->
-    <section class="section-window">
-      <div class="section-header">
-        <span class="section-tag">05</span>
-        <h3 class="section-title">Education</h3>
+    <!-- 05. Education Section -->
+    <section class="term-window">
+      <div class="term-titlebar">
+        <div class="term-controls">
+          <div class="term-dot term-dot-red"></div>
+          <div class="term-dot term-dot-yellow"></div>
+          <div class="term-dot term-dot-green"></div>
+        </div>
+        <div class="term-title-text">
+          <span class="term-title-accent">05.</span> Education
+        </div>
+        <div style="color: var(--text-subtle); font-size: 0.72rem;">education.txt</div>
       </div>
 
-      <div class="section-body">
+      <div class="term-body">
         <div class="edu-content">
           <h4>Bachelor of Science in Software Engineering</h4>
           <div class="edu-institute">Punjab University College of Information and Technology (PUCIT)</div>
           <div class="edu-meta">2015 ➔ 2019 &bull; CGPA: 3.62 / 4.00</div>
           <div class="edu-courses">
-            <strong>Relevant Coursework:</strong> Data Structures, Algorithms, Distributed Systems, Databases, Machine
-            Learning, Operating Systems
+            <strong>Relevant Coursework:</strong> Data Structures, Algorithms, Distributed Systems, Databases, Machine Learning, Operating Systems
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Leadership / Additional Skills Section -->
-    <section class="section-window">
-      <div class="section-header">
-        <span class="section-tag">06</span>
-        <h3 class="section-title">Leadership & Core Competencies</h3>
+    <!-- 06. Leadership / Additional Skills Section -->
+    <section class="term-window">
+      <div class="term-titlebar">
+        <div class="term-controls">
+          <div class="term-dot term-dot-red"></div>
+          <div class="term-dot term-dot-yellow"></div>
+          <div class="term-dot term-dot-green"></div>
+        </div>
+        <div class="term-title-text">
+          <span class="term-title-accent">06.</span> Leadership & Core Competencies
+        </div>
+        <div style="color: var(--text-subtle); font-size: 0.72rem;">leadership.cfg</div>
       </div>
 
-      <div class="section-body">
+      <div class="term-body">
         <div class="soft-skills-grid">
           <div class="soft-skill-pill">
             <span>Team Leadership & Mentorship</span>
@@ -1319,5 +1307,4 @@
   </script>
 
 </body>
-
 </html>
