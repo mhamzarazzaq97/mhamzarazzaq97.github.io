@@ -27,7 +27,8 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@500;600;700;800&display=swap" rel="stylesheet">
 
-  <!-- PDF.js CDN -->
+  <!-- PDF.js CDN & TextLayer Stylesheet -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf_viewer.min.css">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
 
   <style>
@@ -262,7 +263,9 @@
     }
 
     .pdf-page-wrapper {
+      position: relative;
       width: 100%;
+      max-width: 860px;
       display: flex;
       justify-content: center;
       background: #ffffff;
@@ -270,10 +273,41 @@
       overflow: hidden;
       box-shadow: var(--shadow-lg), 0 0 0 1px rgba(255, 255, 255, 0.08);
       transition: box-shadow 0.3s ease;
+      user-select: text;
+      -webkit-user-select: text;
     }
 
     .pdf-page-wrapper:hover {
       box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.8), 0 0 0 1px rgba(56, 189, 248, 0.2);
+    }
+
+    .textLayer {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      overflow: hidden;
+      opacity: 1;
+      line-height: 1.0;
+      transform-origin: 0 0;
+      z-index: 2;
+      user-select: text;
+      -webkit-user-select: text;
+    }
+
+    .textLayer span,
+    .textLayer br {
+      color: transparent;
+      position: absolute;
+      white-space: pre;
+      cursor: text;
+      transform-origin: 0% 0%;
+    }
+
+    .textLayer ::selection {
+      background: rgba(56, 189, 248, 0.35);
+      color: transparent;
     }
 
     canvas {
@@ -281,6 +315,7 @@
       width: 100% !important;
       height: auto !important;
       max-width: 860px;
+      z-index: 1;
     }
 
     /* Skeleton Loading State */
@@ -636,28 +671,45 @@
         
         // High-DPI Retina Rendering calculation
         const pixelRatio = Math.max(window.devicePixelRatio || 1, 2);
-        const scale = pixelRatio * 1.5;
-        const viewport = page.getViewport({ scale: scale });
+        const cssScale = 1.45;
+        const cssViewport = page.getViewport({ scale: cssScale });
+        const canvasViewport = page.getViewport({ scale: cssScale * pixelRatio });
 
         const pageWrapper = document.createElement('div');
         pageWrapper.className = 'pdf-page-wrapper';
         pageWrapper.setAttribute('data-page-num', pageNum);
+        pageWrapper.style.maxWidth = `${cssViewport.width}px`;
 
         const canvas = document.createElement('canvas');
         const context = canvas.getContext('2d', { alpha: false });
         
-        canvas.width = viewport.width;
-        canvas.height = viewport.height;
+        canvas.width = canvasViewport.width;
+        canvas.height = canvasViewport.height;
         
         pageWrapper.appendChild(canvas);
+
+        // Text Layer for text selection and copy-pasting
+        const textLayerDiv = document.createElement('div');
+        textLayerDiv.className = 'textLayer';
+        textLayerDiv.style.setProperty('--scale-factor', cssScale);
+        pageWrapper.appendChild(textLayerDiv);
+
         container.appendChild(pageWrapper);
 
-        const renderContext = {
+        // Render Canvas
+        await page.render({
           canvasContext: context,
-          viewport: viewport
-        };
+          viewport: canvasViewport
+        }).promise;
 
-        await page.render(renderContext).promise;
+        // Render TextLayer
+        const textContent = await page.getTextContent();
+        await pdfjsLib.renderTextLayer({
+          textContentSource: textContent,
+          container: textLayerDiv,
+          viewport: cssViewport,
+          textDivs: []
+        }).promise;
       }
 
       // Scroll Spy to track current page
