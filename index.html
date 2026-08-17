@@ -6,25 +6,46 @@
   <title>Muhammad Hamza Razzaq — DevOps Engineer | Kubestronaut</title>
   
   <!-- SEO & Social Meta Tags -->
-  <meta name="description" content="DevOps Engineer with 7+ years of experience. Kubestronaut, 4x AWS Certified, Terraform Certified. Expert in EKS, RDS, Terraform, GitOps, and Cloud Architecture.">
+  <meta name="description" content="Muhammad Hamza Razzaq — DevOps Engineer with 7+ years of experience. CNCF Kubestronaut, 4x AWS Certified, Terraform Certified. Expert in EKS, RDS, Terraform IaC, and Kubernetes.">
+  <meta name="keywords" content="DevOps, Kubestronaut, Kubernetes, AWS, Terraform, Cloud Engineer, Site Reliability Engineer, SRE">
   <meta name="author" content="Muhammad Hamza Razzaq">
-  <meta property="og:title" content="Muhammad Hamza Razzaq — DevOps Engineer | Kubestronaut">
-  <meta property="og:description" content="DevOps Engineer | Kubestronaut | 4x AWS Certified | Terraform Certified">
+
+  <!-- Open Graph / Social Sharing -->
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://www.hamzarazzaq.com">
+  <meta property="og:title" content="Muhammad Hamza Razzaq — DevOps Engineer | Kubestronaut">
+  <meta property="og:description" content="DevOps Engineer | Kubestronaut | 4x AWS Certified | Terraform Certified">
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:title" content="Muhammad Hamza Razzaq — DevOps Engineer | Kubestronaut">
+  <meta property="twitter:description" content="DevOps Engineer | Kubestronaut | 4x AWS Certified | Terraform Certified">
+
+  <!-- Favicon -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🚀</text></svg>">
+
+  <!-- Google Fonts: Inter & Outfit -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@500;600;700;800&display=swap" rel="stylesheet">
 
   <!-- PDF.js CDN -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
 
   <style>
     :root {
-      --bg-color: #0f172a;
-      --card-bg: #1e293b;
+      --bg-dark: #090d16;
+      --bg-surface: #0f172a;
+      --bg-card: #1e293b;
       --text-main: #f8fafc;
       --text-muted: #94a3b8;
+      --text-subtle: #64748b;
       --accent: #38bdf8;
+      --accent-glow: rgba(56, 189, 248, 0.25);
       --accent-hover: #0ea5e9;
-      --border-color: #334155;
+      --border: rgba(255, 255, 255, 0.08);
+      --border-hover: rgba(255, 255, 255, 0.16);
+      --shadow-lg: 0 20px 40px -15px rgba(0, 0, 0, 0.6);
+      --radius: 12px;
+      --header-h: 70px;
     }
 
     * {
@@ -34,72 +55,121 @@
     }
 
     body {
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-      background-color: var(--bg-color);
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      background-color: var(--bg-dark);
       color: var(--text-main);
       min-height: 100vh;
       display: flex;
       flex-direction: column;
       align-items: center;
       -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+      position: relative;
     }
 
-    /* Top Navigation Header */
+    /* Ambient Background Glow */
+    .ambient-glow {
+      position: fixed;
+      top: -150px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 700px;
+      height: 400px;
+      background: radial-gradient(circle, rgba(56, 189, 248, 0.12) 0%, rgba(99, 102, 241, 0.08) 45%, transparent 70%);
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    /* Sticky Navigation Header */
     header {
       position: sticky;
       top: 0;
       left: 0;
       right: 0;
       width: 100%;
-      background: rgba(15, 23, 42, 0.85);
-      backdrop-filter: blur(12px);
-      -webkit-backdrop-filter: blur(12px);
-      border-bottom: 1px solid var(--border-color);
-      padding: 12px 24px;
+      height: var(--header-h);
+      background: rgba(9, 13, 22, 0.82);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border-bottom: 1px solid var(--border);
+      padding: 0 24px;
       display: flex;
       justify-content: space-between;
       align-items: center;
       z-index: 100;
-      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+      transition: all 0.3s ease;
     }
 
-    .brand {
+    .brand-group {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+
+    .avatar-icon {
+      width: 40px;
+      height: 40px;
+      border-radius: 10px;
+      background: linear-gradient(135deg, #38bdf8, #6366f1);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Outfit', sans-serif;
+      font-weight: 800;
+      font-size: 1.05rem;
+      color: #090d16;
+      box-shadow: 0 0 20px var(--accent-glow);
+      flex-shrink: 0;
+    }
+
+    .brand-meta {
       display: flex;
       flex-direction: column;
-      gap: 2px;
+      gap: 3px;
     }
 
-    .brand h1 {
-      font-size: 1.1rem;
+    .brand-title {
+      font-family: 'Outfit', sans-serif;
+      font-size: 1.12rem;
       font-weight: 700;
       color: var(--text-main);
-      letter-spacing: -0.01em;
+      display: flex;
+      align-items: center;
+      gap: 8px;
     }
 
-    .brand p {
+    .brand-subtitle {
       font-size: 0.8rem;
       color: var(--text-muted);
       display: flex;
       align-items: center;
-      gap: 6px;
+      gap: 8px;
     }
 
-    .badge {
-      display: inline-block;
-      background: linear-gradient(135deg, #38bdf8, #818cf8);
-      color: #0f172a;
+    .badge-kubestronaut {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      background: linear-gradient(135deg, rgba(56, 189, 248, 0.2), rgba(99, 102, 241, 0.2));
+      border: 1px solid rgba(56, 189, 248, 0.4);
+      color: #7dd3fc;
       font-size: 0.7rem;
       font-weight: 700;
-      padding: 2px 6px;
-      border-radius: 4px;
+      padding: 2px 8px;
+      border-radius: 9999px;
+      letter-spacing: 0.03em;
       text-transform: uppercase;
-      letter-spacing: 0.05em;
     }
 
-    .actions {
+    .badge-kubestronaut svg {
+      color: #38bdf8;
+    }
+
+    /* Actions Suite */
+    .actions-group {
       display: flex;
       align-items: center;
-      gap: 10px;
+      gap: 8px;
     }
 
     .btn {
@@ -107,34 +177,46 @@
       align-items: center;
       gap: 6px;
       padding: 8px 14px;
-      font-size: 0.85rem;
+      font-size: 0.84rem;
       font-weight: 600;
       border-radius: 8px;
       text-decoration: none;
-      transition: all 0.2s ease;
+      transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
       cursor: pointer;
+      border: 1px solid var(--border);
+      background: rgba(30, 41, 59, 0.6);
+      color: var(--text-main);
+      outline: none;
     }
 
-    .btn-primary {
-      background-color: var(--accent);
-      color: #0f172a;
-      border: 1px solid transparent;
-    }
-
-    .btn-primary:hover {
-      background-color: var(--accent-hover);
+    .btn:hover {
+      background: rgba(51, 65, 85, 0.8);
+      border-color: var(--border-hover);
+      color: #fff;
       transform: translateY(-1px);
     }
 
-    .btn-secondary {
-      background-color: var(--card-bg);
-      color: var(--text-main);
-      border: 1px solid var(--border-color);
+    .btn:active {
+      transform: translateY(0);
     }
 
-    .btn-secondary:hover {
-      background-color: #334155;
-      border-color: #475569;
+    .btn-icon-only {
+      padding: 8px;
+      border-radius: 8px;
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, #38bdf8, #0ea5e9);
+      color: #090d16;
+      font-weight: 700;
+      border: 1px solid transparent;
+      box-shadow: 0 4px 14px var(--accent-glow);
+    }
+
+    .btn-primary:hover {
+      background: linear-gradient(135deg, #7dd3fc, #38bdf8);
+      box-shadow: 0 6px 20px rgba(56, 189, 248, 0.4);
+      color: #090d16;
       transform: translateY(-1px);
     }
 
@@ -142,11 +224,12 @@
     main {
       width: 100%;
       max-width: 900px;
-      padding: 24px 16px 48px;
+      padding: 28px 16px 80px;
       display: flex;
       flex-direction: column;
       align-items: center;
-      gap: 20px;
+      gap: 24px;
+      z-index: 1;
     }
 
     #pdf-container {
@@ -154,17 +237,24 @@
       display: flex;
       flex-direction: column;
       align-items: center;
-      gap: 20px;
+      gap: 24px;
+      transition: transform 0.2s ease-out;
+      transform-origin: top center;
     }
 
     .pdf-page-wrapper {
       width: 100%;
       display: flex;
       justify-content: center;
-      background: white;
+      background: #ffffff;
       border-radius: 8px;
       overflow: hidden;
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+      box-shadow: var(--shadow-lg), 0 0 0 1px rgba(255, 255, 255, 0.08);
+      transition: box-shadow 0.3s ease;
+    }
+
+    .pdf-page-wrapper:hover {
+      box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.8), 0 0 0 1px rgba(56, 189, 248, 0.2);
     }
 
     canvas {
@@ -174,110 +264,371 @@
       max-width: 860px;
     }
 
-    /* Loading Spinner */
+    /* Skeleton Loading State */
     #loading {
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      gap: 12px;
-      padding: 60px 0;
+      gap: 16px;
+      width: 100%;
+      max-width: 860px;
+      min-height: 500px;
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 8px;
       color: var(--text-muted);
-      font-size: 0.95rem;
+      position: relative;
+      overflow: hidden;
+    }
+
+    #loading::after {
+      content: "";
+      position: absolute;
+      top: 0; right: 0; bottom: 0; left: 0;
+      transform: translateX(-100%);
+      background-image: linear-gradient(
+        90deg,
+        rgba(255, 255, 255, 0) 0,
+        rgba(255, 255, 255, 0.04) 20%,
+        rgba(255, 255, 255, 0.08) 60%,
+        rgba(255, 255, 255, 0)
+      );
+      animation: shimmer 2s infinite;
+    }
+
+    @keyframes shimmer {
+      100% { transform: translateX(100%); }
     }
 
     .spinner {
-      width: 36px;
-      height: 36px;
-      border: 3px solid var(--border-color);
+      width: 42px;
+      height: 42px;
+      border: 3px solid rgba(56, 189, 248, 0.2);
       border-top-color: var(--accent);
       border-radius: 50%;
-      animation: spin 0.8s linear infinite;
+      animation: spin 0.8s cubic-bezier(0.65, 0, 0.35, 1) infinite;
     }
 
     @keyframes spin {
       to { transform: rotate(360deg); }
     }
 
-    /* Mobile Responsiveness */
-    @media (max-width: 640px) {
-      header {
-        padding: 10px 14px;
+    /* Floating Controller Bar */
+    .floating-bar {
+      position: fixed;
+      bottom: 24px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: rgba(15, 23, 42, 0.88);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      border: 1px solid var(--border-hover);
+      padding: 6px 12px;
+      border-radius: 9999px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+      z-index: 90;
+      transition: all 0.3s ease;
+    }
+
+    .floating-bar:hover {
+      border-color: rgba(56, 189, 248, 0.4);
+    }
+
+    .bar-divider {
+      width: 1px;
+      height: 18px;
+      background: var(--border);
+    }
+
+    .page-indicator {
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: var(--text-muted);
+      min-width: 75px;
+      text-align: center;
+    }
+
+    .zoom-btn {
+      background: transparent;
+      border: none;
+      color: var(--text-muted);
+      cursor: pointer;
+      width: 28px;
+      height: 28px;
+      border-radius: 6px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.15s ease;
+    }
+
+    .zoom-btn:hover {
+      background: rgba(255, 255, 255, 0.1);
+      color: var(--text-main);
+    }
+
+    .zoom-label {
+      font-size: 0.78rem;
+      font-weight: 600;
+      color: var(--text-subtle);
+      min-width: 42px;
+      text-align: center;
+    }
+
+    /* Toast Notification */
+    #toast {
+      position: fixed;
+      top: 85px;
+      left: 50%;
+      transform: translateX(-50%) translateY(-20px);
+      background: rgba(15, 23, 42, 0.95);
+      border: 1px solid var(--accent);
+      color: var(--text-main);
+      padding: 10px 18px;
+      border-radius: 8px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+      opacity: 0;
+      pointer-events: none;
+      transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+      z-index: 200;
+    }
+
+    #toast.show {
+      opacity: 1;
+      transform: translateX(-50%) translateY(0);
+    }
+
+    /* Footer */
+    footer {
+      width: 100%;
+      padding: 24px;
+      border-top: 1px solid var(--border);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 0.8rem;
+      color: var(--text-subtle);
+      margin-top: auto;
+      z-index: 1;
+    }
+
+    footer a {
+      color: var(--text-muted);
+      text-decoration: none;
+      margin-left: 6px;
+      transition: color 0.2s;
+    }
+
+    footer a:hover {
+      color: var(--accent);
+    }
+
+    /* Mobile Responsive Optimizations */
+    @media (max-width: 768px) {
+      :root {
+        --header-h: 64px;
       }
-      .brand h1 {
+      header {
+        padding: 0 14px;
+      }
+      .brand-title {
         font-size: 0.95rem;
       }
-      .brand p {
+      .brand-subtitle {
         display: none;
       }
+      .btn span {
+        display: none;
+      }
+      .btn-primary span {
+        display: inline;
+      }
       .btn {
-        padding: 6px 10px;
-        font-size: 0.78rem;
+        padding: 8px 10px;
       }
       main {
-        padding: 12px 8px 36px;
-        gap: 12px;
+        padding: 16px 8px 90px;
+        gap: 16px;
       }
       #pdf-container {
-        gap: 12px;
+        gap: 16px;
       }
-      .pdf-page-wrapper {
-        border-radius: 4px;
+      .floating-bar {
+        bottom: 16px;
+        padding: 5px 10px;
+        gap: 8px;
       }
     }
   </style>
 </head>
 <body>
 
+  <!-- Ambient Glow Effect -->
+  <div class="ambient-glow"></div>
+
+  <!-- Header -->
   <header>
-    <div class="brand">
-      <h1>Muhammad Hamza Razzaq</h1>
-      <p><span class="badge">Kubestronaut</span> DevOps Engineer &bull; 4x AWS &bull; Terraform</p>
+    <div class="brand-group">
+      <div class="avatar-icon">HR</div>
+      <div class="brand-meta">
+        <div class="brand-title">
+          Muhammad Hamza Razzaq
+          <span class="badge-kubestronaut">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="m12 1.5 2.8 6.9 7.4.6-5.6 4.9 1.7 7.3L12 17.3 5.7 21.2l1.7-7.3-5.6-4.9 7.4-.6z"/></svg>
+            Kubestronaut
+          </span>
+        </div>
+        <div class="brand-subtitle">
+          <span>DevOps Engineer</span>
+          <span>&bull;</span>
+          <span>4x AWS</span>
+          <span>&bull;</span>
+          <span>Terraform</span>
+        </div>
+      </div>
     </div>
-    <div class="actions">
-      <a href="https://linkedin.com/in/hamzarazzaq97" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.46 10.9v8.37H9.2V10.9H6.46M7.83 6.45a1.6 1.6 0 0 0-1.6 1.6 1.6 1.6 0 0 0 1.6 1.6 1.6 1.6 0 0 0 1.6-1.6 1.6 1.6 0 0 0-1.6-1.6Z"/></svg>
-        LinkedIn
+
+    <div class="actions-group">
+      <!-- Email Copy Button -->
+      <button id="copy-email-btn" class="btn" title="Copy email address" aria-label="Copy email">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+        <span>Email</span>
+      </button>
+
+      <!-- LinkedIn Link -->
+      <a href="https://linkedin.com/in/hamzarazzaq97" target="_blank" rel="noopener noreferrer" class="btn" title="View LinkedIn Profile" aria-label="LinkedIn">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.46 10.9v8.37H9.2V10.9H6.46M7.83 6.45a1.6 1.6 0 0 0-1.6 1.6 1.6 1.6 0 0 0 1.6 1.6 1.6 1.6 0 0 0 1.6-1.6 1.6 1.6 0 0 0-1.6-1.6Z"/></svg>
+        <span>LinkedIn</span>
       </a>
-      <a href="./Hamza_Razzaq_DevOps.pdf" download="Hamza_Razzaq_DevOps.pdf" class="btn btn-primary">
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-        Download PDF
+
+      <!-- GitHub Link -->
+      <a href="https://github.com/mhamzarazzaq97" target="_blank" rel="noopener noreferrer" class="btn btn-icon-only" title="View GitHub Profile" aria-label="GitHub">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.87 1.52 2.34 1.07 2.91.83.1-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33.85 0 1.71.11 2.5.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0 0 12 2Z"/></svg>
+      </a>
+
+      <!-- Download Button -->
+      <a href="./Hamza_Razzaq_DevOps.pdf" download="Hamza_Razzaq_DevOps.pdf" class="btn btn-primary" title="Download PDF Resume" aria-label="Download PDF">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+        <span>Download PDF</span>
       </a>
     </div>
   </header>
 
+  <!-- Main Viewer Content -->
   <main>
     <div id="loading">
       <div class="spinner"></div>
-      <span>Loading CV...</span>
+      <p style="font-weight: 600; font-size: 0.95rem;">Rendering Resume...</p>
+      <span style="font-size: 0.8rem; color: var(--text-subtle);">Optimizing high-resolution preview</span>
     </div>
     <div id="pdf-container"></div>
   </main>
 
+  <!-- Floating Controller Bar -->
+  <div class="floating-bar" id="floating-bar" style="display: none;">
+    <button class="zoom-btn" id="zoom-out" title="Zoom out" aria-label="Zoom out">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/></svg>
+    </button>
+    <span class="zoom-label" id="zoom-label">100%</span>
+    <button class="zoom-btn" id="zoom-in" title="Zoom in" aria-label="Zoom in">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+    </button>
+    <div class="bar-divider"></div>
+    <span class="page-indicator" id="page-indicator">Page 1 of 2</span>
+    <button class="zoom-btn" id="print-btn" title="Print resume" aria-label="Print">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 6 2 18 2 18 9"/><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect width="12" height="8" x="6" y="14"/></svg>
+    </button>
+  </div>
+
+  <!-- Toast Notification -->
+  <div id="toast">
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#38bdf8" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+    <span id="toast-message">Email copied to clipboard!</span>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <span>&copy; <span id="year"></span> Muhammad Hamza Razzaq &bull; Hosted on</span>
+    <a href="https://github.com/mhamzarazzaq97/mhamzarazzaq97.github.io" target="_blank" rel="noopener noreferrer">GitHub Pages</a>
+  </footer>
+
   <script>
     const pdfUrl = './Hamza_Razzaq_DevOps.pdf';
+    document.getElementById('year').textContent = new Date().getFullYear();
 
-    // Set PDF.js worker
+    // PDF.js worker configuration
     pdfjsLib.GlobalWorkerOptions.workerSrc = 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js';
 
-    // Load and render PDF
+    let currentZoom = 1.0;
+    const container = document.getElementById('pdf-container');
+    const loadingEl = document.getElementById('loading');
+    const floatingBar = document.getElementById('floating-bar');
+    const zoomLabel = document.getElementById('zoom-label');
+    const pageIndicator = document.getElementById('page-indicator');
+    let totalPages = 2;
+
+    // Toast Alert Helper
+    function showToast(msg) {
+      const toast = document.getElementById('toast');
+      const toastMsg = document.getElementById('toast-message');
+      toastMsg.textContent = msg;
+      toast.classList.add('show');
+      setTimeout(() => toast.classList.remove('show'), 2500);
+    }
+
+    // Email Copy Action
+    document.getElementById('copy-email-btn').addEventListener('click', async () => {
+      const email = 'mhamzarazzaq97@gmail.com';
+      try {
+        await navigator.clipboard.writeText(email);
+        showToast('Email copied to clipboard!');
+      } catch (err) {
+        window.location.href = `mailto:${email}`;
+      }
+    });
+
+    // Print Action
+    document.getElementById('print-btn').addEventListener('click', () => {
+      window.print();
+    });
+
+    // Zoom Controls
+    function updateZoom(newZoom) {
+      currentZoom = Math.min(Math.max(newZoom, 0.7), 1.6);
+      zoomLabel.textContent = `${Math.round(currentZoom * 100)}%`;
+      container.style.transform = `scale(${currentZoom})`;
+    }
+
+    document.getElementById('zoom-in').addEventListener('click', () => updateZoom(currentZoom + 0.1));
+    document.getElementById('zoom-out').addEventListener('click', () => updateZoom(currentZoom - 0.1));
+
+    // Render PDF Pages
     pdfjsLib.getDocument(pdfUrl).promise.then(async (pdf) => {
-      const loadingEl = document.getElementById('loading');
+      totalPages = pdf.numPages;
       if (loadingEl) loadingEl.style.display = 'none';
+      floatingBar.style.display = 'flex';
+      pageIndicator.textContent = `Page 1 of ${totalPages}`;
 
-      const container = document.getElementById('pdf-container');
-
-      for (let pageNum = 1; pageNum <= pdf.numPages; pageNum++) {
+      for (let pageNum = 1; pageNum <= totalPages; pageNum++) {
         const page = await pdf.getPage(pageNum);
         
-        // High-DPI rendering for sharp text on Retina / iPhone screens
+        // High-DPI Retina Rendering calculation
         const pixelRatio = Math.max(window.devicePixelRatio || 1, 2);
-        const unscaledViewport = page.getViewport({ scale: 1.0 });
         const scale = pixelRatio * 1.5;
         const viewport = page.getViewport({ scale: scale });
 
         const pageWrapper = document.createElement('div');
         pageWrapper.className = 'pdf-page-wrapper';
+        pageWrapper.setAttribute('data-page-num', pageNum);
 
         const canvas = document.createElement('canvas');
         const context = canvas.getContext('2d', { alpha: false });
@@ -295,13 +646,26 @@
 
         await page.render(renderContext).promise;
       }
+
+      // Scroll Spy to track current page
+      const pageElements = document.querySelectorAll('.pdf-page-wrapper');
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            const num = entry.target.getAttribute('data-page-num');
+            pageIndicator.textContent = `Page ${num} of ${totalPages}`;
+          }
+        });
+      }, { threshold: 0.5 });
+
+      pageElements.forEach(el => observer.observe(el));
+
     }).catch((err) => {
       console.error('Error rendering PDF:', err);
-      const loadingEl = document.getElementById('loading');
       if (loadingEl) {
         loadingEl.innerHTML = `
-          <p style="color: #ef4444; font-weight: 600;">Unable to render preview inline.</p>
-          <a href="${pdfUrl}" class="btn btn-primary" style="margin-top: 12px;">Download / Open PDF Directly</a>
+          <p style="color: #ef4444; font-weight: 600;">Unable to preview PDF directly in browser.</p>
+          <a href="${pdfUrl}" class="btn btn-primary" style="margin-top: 12px;">Download PDF Directly</a>
         `;
       }
     });
