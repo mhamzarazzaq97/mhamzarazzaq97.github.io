@@ -6,7 +6,7 @@
   <title>Muhammad Hamza Razzaq — DevOps Engineer | Kubestronaut</title>
   
   <!-- SEO & Social Meta Tags -->
-  <meta name="description" content="Muhammad Hamza Razzaq — Senior DevOps Engineer with 7+ years experience. CNCF Kubestronaut, 4x AWS Certified, Terraform Certified. Production EKS, Azure AKS, Terraform IaC, and Kubernetes.">
+  <meta name="description" content="Muhammad Hamza Razzaq — Senior DevOps Engineer with 7+ years experience. CNCF Kubestronaut, 4x AWS Certified, Terraform Certified. Expert in EKS, RDS, Terraform IaC, and Kubernetes.">
   <meta name="keywords" content="DevOps, Kubestronaut, Kubernetes, AWS, Terraform, Cloud Engineer, SRE, Infrastructure">
   <meta name="author" content="Muhammad Hamza Razzaq">
 
@@ -14,10 +14,10 @@
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://www.hamzarazzaq.com">
   <meta property="og:title" content="Muhammad Hamza Razzaq — DevOps Engineer | Kubestronaut">
-  <meta property="og:description" content="Senior DevOps Engineer &bull; Kubestronaut &bull; 4x AWS &bull; Terraform">
+  <meta property="og:description" content="DevOps Engineer | Kubestronaut | 4x AWS Certified | Terraform Certified">
 
-  <!-- Favicon: Sharp Monogram -->
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2220%22 fill=%22%2318181b%22 stroke=%22%2327272a%22 stroke-width=%224%22/><text x=%2250%%22 y=%2266%%22 font-family=%22monospace%22 font-weight=%22800%22 font-size=%2244%22 fill=%22%2338bdf8%22 text-anchor=%22middle%22>HR</text></svg>">
+  <!-- Favicon: Titanium Monogram -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2220%22 fill=%22%2318181b%22 stroke=%22%233f3f46%22 stroke-width=%224%22/><text x=%2250%%22 y=%2266%%22 font-family=%22monospace%22 font-weight=%22800%22 font-size=%2244%22 fill=%22%23ffffff%22 text-anchor=%22middle%22>HR</text></svg>">
 
   <!-- Google Fonts: Inter & Fira Code (Monospace) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -27,27 +27,17 @@
   <style>
     :root {
       --bg-dark: #09090b;
-      --bg-card: #111114;
-      --bg-card-hover: #16161a;
+      --bg-card: #121215;
+      --bg-card-hover: #17171c;
       --bg-tag: #18181b;
       --border: #27272a;
-      --border-hover: #3f3f46;
-      --text-white: #fafafa;
+      --border-hover: #52525b;
+      --border-active: #a1a1aa;
+      
+      --text-white: #ffffff;
       --text-main: #d4d4d8;
       --text-muted: #a1a1aa;
       --text-subtle: #71717a;
-      
-      /* Crisp Technical Accents */
-      --cyan: #38bdf8;
-      --cyan-dim: rgba(56, 189, 248, 0.12);
-      --green: #22c55e;
-      --green-dim: rgba(34, 197, 94, 0.12);
-      --amber: #f59e0b;
-      --amber-dim: rgba(245, 158, 11, 0.12);
-      --purple: #a855f7;
-      --purple-dim: rgba(168, 85, 247, 0.12);
-      --blue: #3b82f6;
-      --blue-dim: rgba(59, 130, 246, 0.12);
       
       --font-mono: 'Fira Code', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
       --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
@@ -82,9 +72,9 @@
       left: 0;
       right: 0;
       width: 100%;
-      background: rgba(9, 9, 11, 0.92);
-      backdrop-filter: blur(12px);
-      -webkit-backdrop-filter: blur(12px);
+      background: rgba(9, 9, 11, 0.94);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
       border-bottom: 1px solid var(--border);
       padding: 12px 32px;
       display: flex;
@@ -102,7 +92,7 @@
     .avatar-box {
       width: 40px;
       height: 40px;
-      border-radius: 8px;
+      border-radius: 6px;
       background: #18181b;
       border: 1px solid var(--border);
       display: flex;
@@ -110,8 +100,8 @@
       justify-content: center;
       font-family: var(--font-mono);
       font-weight: 700;
-      font-size: 1rem;
-      color: var(--cyan);
+      font-size: 0.95rem;
+      color: var(--text-white);
       flex-shrink: 0;
     }
 
@@ -128,7 +118,7 @@
       color: var(--text-white);
       display: flex;
       align-items: center;
-      gap: 10px;
+      gap: 8px;
       letter-spacing: -0.01em;
     }
 
@@ -139,42 +129,26 @@
       gap: 6px;
     }
 
-    /* Tech Badges (Crisp Monospace) */
+    /* Titanium Monospace Badges */
     .badge {
       display: inline-flex;
       align-items: center;
-      gap: 5px;
+      gap: 4px;
       font-family: var(--font-mono);
-      font-size: 0.7rem;
+      font-size: 0.68rem;
       font-weight: 600;
       padding: 2px 8px;
       border-radius: 4px;
       border: 1px solid var(--border);
       background: var(--bg-tag);
       color: var(--text-muted);
+      transition: all 0.15s ease;
     }
 
-    .badge-role {
+    .badge-highlight {
+      border-color: #52525b;
       color: var(--text-white);
-      border-color: #3f3f46;
-    }
-
-    .badge-k8s {
-      background: var(--cyan-dim);
-      border-color: rgba(56, 189, 248, 0.4);
-      color: var(--cyan);
-    }
-
-    .badge-aws {
-      background: var(--amber-dim);
-      border-color: rgba(245, 158, 11, 0.4);
-      color: var(--amber);
-    }
-
-    .badge-tf {
-      background: var(--purple-dim);
-      border-color: rgba(168, 85, 247, 0.4);
-      color: var(--purple);
+      background: #27272a;
     }
 
     /* Actions Suite */
@@ -187,7 +161,7 @@
     .btn {
       display: inline-flex;
       align-items: center;
-      gap: 8px;
+      gap: 7px;
       padding: 8px 16px;
       font-family: var(--font-mono);
       font-size: 0.82rem;
@@ -206,18 +180,19 @@
       background: #27272a;
       border-color: var(--border-hover);
       color: var(--text-white);
+      transform: translateY(-1px);
     }
 
     .btn-primary {
-      background: var(--cyan);
+      background: var(--text-white);
       color: #09090b;
-      border-color: var(--cyan);
+      border-color: var(--text-white);
       font-weight: 700;
     }
 
     .btn-primary:hover {
-      background: #7dd3fc;
-      border-color: #7dd3fc;
+      background: #e4e4e7;
+      border-color: #e4e4e7;
       color: #09090b;
     }
 
@@ -232,74 +207,33 @@
       z-index: 1;
     }
 
-    /* Hero / Terminal Card */
+    /* Titanium Card */
     .hero-card {
       background: var(--bg-card);
       border: 1px solid var(--border);
       border-radius: 8px;
-      padding: 28px;
+      padding: 32px;
       position: relative;
+      transition: border-color 0.2s ease;
     }
 
-    .terminal-bar {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      margin-bottom: 20px;
-      padding-bottom: 12px;
-      border-bottom: 1px solid var(--border);
-      font-family: var(--font-mono);
-      font-size: 0.78rem;
-      color: var(--text-subtle);
-    }
-
-    .terminal-dots {
-      display: flex;
-      gap: 6px;
-    }
-
-    .terminal-dot {
-      width: 10px;
-      height: 10px;
-      border-radius: 50%;
-      background: #27272a;
-    }
-
-    .status-badge {
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      color: var(--green);
-      font-family: var(--font-mono);
-      font-size: 0.75rem;
-      font-weight: 600;
-      background: var(--green-dim);
-      padding: 2px 8px;
-      border-radius: 4px;
-      border: 1px solid rgba(34, 197, 94, 0.3);
-    }
-
-    .status-pulse {
-      width: 6px;
-      height: 6px;
-      border-radius: 50%;
-      background: var(--green);
-      box-shadow: 0 0 8px var(--green);
+    .hero-card:hover {
+      border-color: var(--border-hover);
     }
 
     .hero-name-group h2 {
       font-family: var(--font-heading);
-      font-size: 2.2rem;
+      font-size: 2.25rem;
       font-weight: 800;
       color: var(--text-white);
-      letter-spacing: -0.02em;
+      letter-spacing: -0.025em;
     }
 
     .hero-subtitle {
       font-family: var(--font-sans);
-      font-size: 1.02rem;
+      font-size: 1.05rem;
       font-weight: 500;
-      color: var(--cyan);
+      color: var(--text-muted);
       margin-top: 6px;
       letter-spacing: -0.01em;
     }
@@ -309,8 +243,8 @@
       display: flex;
       flex-wrap: wrap;
       gap: 10px;
-      margin-top: 20px;
-      padding-top: 18px;
+      margin-top: 24px;
+      padding-top: 20px;
       border-top: 1px solid var(--border);
     }
 
@@ -320,7 +254,7 @@
       gap: 7px;
       color: var(--text-muted);
       font-family: var(--font-mono);
-      font-size: 0.8rem;
+      font-size: 0.82rem;
       text-decoration: none;
       transition: all 0.15s ease;
       cursor: pointer;
@@ -337,7 +271,7 @@
     }
 
     .contact-item svg {
-      color: var(--cyan);
+      color: var(--text-muted);
       flex-shrink: 0;
     }
 
@@ -352,53 +286,60 @@
       background: var(--bg-card);
       border: 1px solid var(--border);
       border-radius: 8px;
-      padding: 18px 16px;
-      transition: border-color 0.15s ease;
+      padding: 20px 16px;
+      transition: all 0.15s ease;
     }
 
     .metric-card:hover {
       border-color: var(--border-hover);
+      background: var(--bg-card-hover);
     }
 
     .metric-val {
       font-family: var(--font-mono);
-      font-size: 1.7rem;
+      font-size: 1.8rem;
       font-weight: 700;
       color: var(--text-white);
+      letter-spacing: -0.02em;
     }
 
     .metric-label {
       font-family: var(--font-mono);
-      font-size: 0.72rem;
-      font-weight: 500;
+      font-size: 0.74rem;
+      font-weight: 600;
       color: var(--text-subtle);
       text-transform: uppercase;
       letter-spacing: 0.05em;
-      margin-top: 2px;
+      margin-top: 3px;
     }
 
-    /* Section Component */
+    /* Section Card */
     .section-card {
       background: var(--bg-card);
       border: 1px solid var(--border);
       border-radius: 8px;
-      padding: 28px;
+      padding: 30px;
+      transition: border-color 0.2s ease;
+    }
+
+    .section-card:hover {
+      border-color: var(--border-hover);
     }
 
     .section-header {
       display: flex;
       align-items: center;
       gap: 10px;
-      margin-bottom: 20px;
+      margin-bottom: 22px;
       padding-bottom: 14px;
       border-bottom: 1px solid var(--border);
     }
 
     .section-prefix {
       font-family: var(--font-mono);
-      font-size: 0.9rem;
+      font-size: 0.85rem;
       font-weight: 700;
-      color: var(--cyan);
+      color: var(--text-muted);
     }
 
     .section-title {
@@ -410,9 +351,9 @@
     }
 
     .profile-summary-text {
-      font-size: 0.95rem;
+      font-size: 0.96rem;
       color: var(--text-main);
-      line-height: 1.75;
+      line-height: 1.8;
     }
 
     /* Skills Grid */
@@ -423,18 +364,18 @@
     }
 
     .skill-category-card {
-      background: #141417;
+      background: #16161a;
       border: 1px solid var(--border);
       border-radius: 6px;
-      padding: 16px;
+      padding: 18px;
     }
 
     .skill-category-title {
       font-family: var(--font-mono);
-      font-size: 0.78rem;
+      font-size: 0.8rem;
       font-weight: 600;
-      color: var(--cyan);
-      margin-bottom: 10px;
+      color: var(--text-white);
+      margin-bottom: 12px;
       display: flex;
       align-items: center;
       gap: 6px;
@@ -448,20 +389,27 @@
 
     .skill-tag {
       font-family: var(--font-mono);
-      font-size: 0.75rem;
+      font-size: 0.76rem;
       font-weight: 500;
       color: var(--text-main);
-      background: #1c1c20;
-      padding: 3px 8px;
+      background: #1f1f24;
+      padding: 4px 9px;
       border-radius: 4px;
-      border: 1px solid #2e2e33;
+      border: 1px solid #2e2e34;
+      transition: all 0.15s ease;
+    }
+
+    .skill-tag:hover {
+      border-color: #52525b;
+      color: var(--text-white);
+      background: #27272f;
     }
 
     /* Experience Timeline */
     .experience-list {
       display: flex;
       flex-direction: column;
-      gap: 28px;
+      gap: 30px;
     }
 
     .exp-item {
@@ -478,7 +426,7 @@
       width: 10px;
       height: 10px;
       border-radius: 2px;
-      background: var(--cyan);
+      background: var(--text-white);
     }
 
     .exp-header {
@@ -487,24 +435,24 @@
       align-items: baseline;
       flex-wrap: wrap;
       gap: 8px;
-      margin-bottom: 6px;
+      margin-bottom: 8px;
     }
 
     .exp-role-company {
       font-family: var(--font-heading);
-      font-size: 1.12rem;
+      font-size: 1.15rem;
       font-weight: 700;
       color: var(--text-white);
     }
 
     .exp-company {
-      color: var(--cyan);
+      color: var(--text-muted);
       font-weight: 600;
     }
 
     .exp-meta {
       font-family: var(--font-mono);
-      font-size: 0.78rem;
+      font-size: 0.8rem;
       font-weight: 500;
       color: var(--text-subtle);
       display: flex;
@@ -517,25 +465,24 @@
       margin-top: 12px;
       display: flex;
       flex-direction: column;
-      gap: 8px;
+      gap: 9px;
     }
 
     .exp-bullets li {
       position: relative;
-      padding-left: 18px;
-      font-size: 0.91rem;
+      padding-left: 20px;
+      font-size: 0.92rem;
       color: var(--text-main);
-      line-height: 1.65;
+      line-height: 1.7;
     }
 
     .exp-bullets li::before {
-      content: ">";
+      content: "—";
       position: absolute;
       left: 0;
       font-family: var(--font-mono);
-      color: var(--cyan);
+      color: var(--text-muted);
       font-size: 0.85rem;
-      font-weight: 700;
     }
 
     /* Certifications Grid */
@@ -546,7 +493,7 @@
     }
 
     .cert-group {
-      background: #141417;
+      background: #16161a;
       border: 1px solid var(--border);
       border-radius: 6px;
       padding: 18px;
@@ -554,10 +501,10 @@
 
     .cert-group-title {
       font-family: var(--font-mono);
-      font-size: 0.8rem;
+      font-size: 0.82rem;
       font-weight: 600;
-      color: var(--cyan);
-      margin-bottom: 12px;
+      color: var(--text-white);
+      margin-bottom: 14px;
       display: flex;
       align-items: center;
       gap: 6px;
@@ -574,54 +521,61 @@
       display: flex;
       align-items: center;
       gap: 8px;
-      background: #1c1c20;
-      padding: 8px 12px;
+      background: #1f1f24;
+      padding: 9px 12px;
       border-radius: 4px;
-      border: 1px solid #2e2e33;
+      border: 1px solid #2e2e34;
       font-family: var(--font-mono);
       font-size: 0.8rem;
       font-weight: 500;
       color: var(--text-white);
+      transition: all 0.15s ease;
+    }
+
+    .cert-card:hover {
+      border-color: #52525b;
+      background: #27272f;
+      transform: translateX(2px);
     }
 
     .cert-card.kubestronaut {
-      background: var(--cyan-dim);
-      border-color: rgba(56, 189, 248, 0.35);
-      color: var(--cyan);
-      font-weight: 600;
+      background: #27272a;
+      border-color: #52525b;
+      color: var(--text-white);
+      font-weight: 700;
     }
 
-    .cert-card svg {
-      flex-shrink: 0;
-      color: var(--cyan);
+    .cert-code {
+      color: var(--text-muted);
+      font-weight: 600;
     }
 
     /* Education */
     .edu-content h4 {
       font-family: var(--font-heading);
-      font-size: 1.05rem;
+      font-size: 1.1rem;
       font-weight: 700;
       color: var(--text-white);
     }
 
     .edu-institute {
-      color: var(--cyan);
-      font-size: 0.92rem;
+      color: var(--text-muted);
+      font-size: 0.94rem;
       font-weight: 600;
       margin-top: 2px;
     }
 
     .edu-meta {
       font-family: var(--font-mono);
-      font-size: 0.8rem;
+      font-size: 0.82rem;
       color: var(--text-subtle);
       margin-top: 4px;
     }
 
     .edu-courses {
-      font-size: 0.86rem;
+      font-size: 0.88rem;
       color: var(--text-muted);
-      margin-top: 8px;
+      margin-top: 10px;
       line-height: 1.6;
     }
 
@@ -629,25 +583,33 @@
     .soft-skills-grid {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
-      gap: 10px;
+      gap: 12px;
     }
 
     .soft-skill-pill {
       display: flex;
       align-items: center;
       gap: 8px;
-      background: #141417;
-      padding: 10px 14px;
+      background: #16161a;
+      padding: 11px 16px;
       border-radius: 6px;
       border: 1px solid var(--border);
       font-family: var(--font-mono);
-      font-size: 0.82rem;
+      font-size: 0.84rem;
       font-weight: 500;
       color: var(--text-main);
+      transition: all 0.15s ease;
     }
 
-    .soft-skill-pill svg {
-      color: var(--cyan);
+    .soft-skill-pill:hover {
+      border-color: #52525b;
+      background: #1f1f24;
+      color: var(--text-white);
+    }
+
+    .soft-skill-pill::before {
+      content: "—";
+      color: var(--text-muted);
     }
 
     /* Toast Alert */
@@ -656,17 +618,17 @@
       bottom: 24px;
       right: 24px;
       background: #18181b;
-      border: 1px solid var(--cyan);
+      border: 1px solid #52525b;
       color: var(--text-white);
       font-family: var(--font-mono);
-      padding: 10px 18px;
+      padding: 11px 18px;
       border-radius: 6px;
-      font-size: 0.82rem;
+      font-size: 0.84rem;
       font-weight: 600;
       display: flex;
       align-items: center;
       gap: 8px;
-      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.7);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.8);
       opacity: 0;
       transform: translateY(15px);
       pointer-events: none;
@@ -689,7 +651,7 @@
       align-items: center;
       gap: 6px;
       font-family: var(--font-mono);
-      font-size: 0.78rem;
+      font-size: 0.8rem;
       color: var(--text-subtle);
       margin-top: auto;
     }
@@ -700,7 +662,7 @@
     }
 
     footer a:hover {
-      color: var(--cyan);
+      color: var(--text-white);
     }
 
     /* Mobile Responsive */
@@ -724,17 +686,17 @@
         gap: 16px;
       }
       .hero-card, .section-card {
-        padding: 18px 14px;
+        padding: 20px 16px;
       }
       .hero-name-group h2 {
-        font-size: 1.5rem;
+        font-size: 1.6rem;
       }
       .metrics-grid {
         grid-template-columns: repeat(2, 1fr);
         gap: 10px;
       }
       .metric-val {
-        font-size: 1.4rem;
+        font-size: 1.45rem;
       }
       .skills-grid, .certs-grid, .soft-skills-grid {
         grid-template-columns: 1fr;
@@ -751,14 +713,14 @@
   <!-- Sticky Header -->
   <header>
     <div class="brand-group">
-      <div class="avatar-box">&gt;_</div>
+      <div class="avatar-box">HR</div>
       <div class="brand-meta">
         <div class="brand-title">Muhammad Hamza Razzaq</div>
         <div class="brand-badges">
-          <span class="badge badge-role">devops</span>
-          <span class="badge badge-k8s">&#9733; kubestronaut</span>
-          <span class="badge badge-aws">aws:4x</span>
-          <span class="badge badge-tf">terraform</span>
+          <span class="badge badge-highlight">DevOps</span>
+          <span class="badge badge-highlight">&#9733; Kubestronaut</span>
+          <span class="badge">4x AWS</span>
+          <span class="badge">Terraform</span>
         </div>
       </div>
     </div>
@@ -767,13 +729,13 @@
       <!-- LinkedIn Link -->
       <a href="https://linkedin.com/in/hamzarazzaq97" target="_blank" rel="noopener noreferrer" class="btn" title="View LinkedIn Profile">
         <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.46 10.9v8.37H9.2V10.9H6.46M7.83 6.45a1.6 1.6 0 0 0-1.6 1.6 1.6 1.6 0 0 0 1.6 1.6 1.6 1.6 0 0 0 1.6-1.6 1.6 1.6 0 0 0-1.6-1.6Z"/></svg>
-        <span>linkedin</span>
+        <span>LinkedIn</span>
       </a>
 
       <!-- Download Button -->
       <a href="./Hamza_Razzaq_DevOps.pdf" download="Hamza_Razzaq_DevOps.pdf" class="btn btn-primary" title="Download LaTeX PDF Resume">
         <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-        <span>resume.pdf</span>
+        <span>Download PDF</span>
       </a>
     </div>
   </header>
@@ -781,16 +743,8 @@
   <!-- Main Content -->
   <main>
 
-    <!-- Hero Card / Terminal Header -->
+    <!-- Hero Card -->
     <section class="hero-card">
-      <div class="terminal-bar">
-        <div class="terminal-dots">
-          <div class="terminal-dot"></div>
-          <div class="terminal-dot"></div>
-          <div class="terminal-dot"></div>
-        </div>
-      </div>
-
       <div class="hero-name-group">
         <h2>Muhammad Hamza Razzaq</h2>
         <div class="hero-subtitle">DevOps Engineer &bull; Kubestronaut &bull; 4x AWS Certified &bull; Terraform Certified</div>
@@ -837,7 +791,7 @@
       </div>
     </div>
 
-    <!-- Profile Summary Section -->
+    <!-- 01. Profile Summary Section -->
     <section class="section-card">
       <div class="section-header">
         <span class="section-prefix">01.</span>
@@ -848,7 +802,7 @@
       </p>
     </section>
 
-    <!-- Technical Skills Section -->
+    <!-- 02. Technical Skills Section -->
     <section class="section-card">
       <div class="section-header">
         <span class="section-prefix">02.</span>
@@ -957,7 +911,7 @@
       </div>
     </section>
 
-    <!-- Professional Experience Section -->
+    <!-- 03. Professional Experience Section -->
     <section class="section-card">
       <div class="section-header">
         <span class="section-prefix">03.</span>
@@ -1058,7 +1012,7 @@
       </div>
     </section>
 
-    <!-- Certifications Section -->
+    <!-- 04. Certifications Section -->
     <section class="section-card">
       <div class="section-header">
         <span class="section-prefix">04.</span>
@@ -1074,19 +1028,19 @@
               <span>&#9733; CNCF Kubestronaut</span>
             </li>
             <li class="cert-card">
-              <span>[CKS] Certified Kubernetes Security Specialist</span>
+              <span><span class="cert-code">[CKS]</span> Certified Kubernetes Security Specialist</span>
             </li>
             <li class="cert-card">
-              <span>[CKA] Certified Kubernetes Administrator</span>
+              <span><span class="cert-code">[CKA]</span> Certified Kubernetes Administrator</span>
             </li>
             <li class="cert-card">
-              <span>[CKAD] Certified Kubernetes Application Developer</span>
+              <span><span class="cert-code">[CKAD]</span> Certified Kubernetes Application Developer</span>
             </li>
             <li class="cert-card">
-              <span>[KCSA] K8s & Cloud Native Security Associate</span>
+              <span><span class="cert-code">[KCSA]</span> K8s & Cloud Native Security Associate</span>
             </li>
             <li class="cert-card">
-              <span>[KCNA] Kubernetes & Cloud Native Associate</span>
+              <span><span class="cert-code">[KCNA]</span> Kubernetes & Cloud Native Associate</span>
             </li>
           </ul>
         </div>
@@ -1096,26 +1050,26 @@
           <div class="cert-group-title">// AWS (4x) & HashiCorp</div>
           <ul class="cert-list">
             <li class="cert-card">
-              <span>[AWS-PRO] DevOps Engineer - Professional</span>
+              <span><span class="cert-code">[AWS-PRO]</span> DevOps Engineer - Professional</span>
             </li>
             <li class="cert-card">
-              <span>[AWS-SAA] Solutions Architect - Associate</span>
+              <span><span class="cert-code">[AWS-SAA]</span> Solutions Architect - Associate</span>
             </li>
             <li class="cert-card">
-              <span>[AWS-DVA] Developer - Associate</span>
+              <span><span class="cert-code">[AWS-DVA]</span> Developer - Associate</span>
             </li>
             <li class="cert-card">
-              <span>[AWS-CLF] Cloud Practitioner</span>
+              <span><span class="cert-code">[AWS-CLF]</span> Cloud Practitioner</span>
             </li>
             <li class="cert-card">
-              <span>[HASHI] HashiCorp Certified: Terraform Associate</span>
+              <span><span class="cert-code">[HASHI]</span> HashiCorp Certified: Terraform Associate</span>
             </li>
           </ul>
         </div>
       </div>
     </section>
 
-    <!-- Education Section -->
+    <!-- 05. Education Section -->
     <section class="section-card">
       <div class="section-header">
         <span class="section-prefix">05.</span>
@@ -1132,31 +1086,31 @@
       </div>
     </section>
 
-    <!-- Leadership / Additional Skills Section -->
+    <!-- 06. Leadership / Additional Skills Section -->
     <section class="section-card">
       <div class="section-header">
         <span class="section-prefix">06.</span>
-        <h3 class="section-title">Core Competencies & Leadership</h3>
+        <h3 class="section-title">Leadership & Core Competencies</h3>
       </div>
 
       <div class="soft-skills-grid">
         <div class="soft-skill-pill">
-          <span>&gt; Team Leadership & Mentorship</span>
+          <span>Team Leadership & Mentorship</span>
         </div>
         <div class="soft-skill-pill">
-          <span>&gt; Incident Management & RCA</span>
+          <span>Incident Management & RCA</span>
         </div>
         <div class="soft-skill-pill">
-          <span>&gt; Cross-Functional Collaboration</span>
+          <span>Cross-Functional Collaboration</span>
         </div>
         <div class="soft-skill-pill">
-          <span>&gt; Disaster Recovery & Chaos Engineering</span>
+          <span>Disaster Recovery & Chaos Engineering</span>
         </div>
         <div class="soft-skill-pill">
-          <span>&gt; Technical Architecture & Review</span>
+          <span>Technical Architecture & Review</span>
         </div>
         <div class="soft-skill-pill">
-          <span>&gt; Production Infrastructure Security</span>
+          <span>Production Infrastructure Security</span>
         </div>
       </div>
     </section>
@@ -1165,7 +1119,7 @@
 
   <!-- Toast Notification -->
   <div id="toast">
-    <span>&gt; Email copied to clipboard</span>
+    <span>Email copied to clipboard</span>
   </div>
 
   <!-- Footer -->
@@ -1190,7 +1144,7 @@
         const email = 'mhamzarazzaq97@gmail.com';
         try {
           await navigator.clipboard.writeText(email);
-          showToast('> mhamzarazzaq97@gmail.com copied to clipboard');
+          showToast('mhamzarazzaq97@gmail.com copied to clipboard');
         } catch (err) {
           window.location.href = `mailto:${email}`;
         }
