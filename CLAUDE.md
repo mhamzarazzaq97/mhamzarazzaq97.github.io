@@ -16,10 +16,10 @@ Personal portfolio and CV site for a DevOps Engineer, hosted on GitHub Pages at 
 
 ## LaTeX Build
 
-No build tooling is configured in the repo. Compile the CV with:
+Whenever the user asks to build or compile the CV, build `develop.tex` using Tectonic, which is installed on the user's machine. Run from the repository root:
 
 ```
-pdflatex develop.tex
+tectonic develop.tex
 ```
 
 Key packages used: `moderncv`, `tikz`, `graphicx`, `multicol`, `enumitem`, `fontawesome` (via moderncv).

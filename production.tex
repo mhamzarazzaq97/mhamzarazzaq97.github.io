@@ -30,80 +30,89 @@
 \par\addvspace{#1}}
 \begin{document}
 \vspace*{-10mm}
+{\centering
 {\Huge\bfseries Muhammad Hamza Razzaq}\\[4pt]
 \textbf{Platform Engineer | Kubestronaut | 4x AWS Certified | Terraform Certified}\\[4pt]
-\begin{tabular}{ @{} l @{\hspace{2em}} l @{\hspace{2em}} l }
-\faMobile\enspace +971 55 103 9986 & \faEnvelope\enspace mhamzarazzaq97@gmail.com & \faLinkedin\enspace \href{https://linkedin.com/in/hamzarazzaq97}{in/hamzarazzaq97} \\[3pt]
-\faHome\enspace Abu Dhabi, UAE & \faCalendar\enspace Last Updated: \today &
-\end{tabular}
+\textbullet\enspace +971 55 103 9986 \enspace\textbullet\enspace mhamzarazzaq97@gmail.com \enspace\textbullet\enspace \href{https://linkedin.com/in/hamzarazzaq97}{linkedin.com/in/hamzarazzaq97}
+\par\vspace{3pt}
+Abu Dhabi, UAE
+\par}
 
 \section{Profile Summary}
-Platform Engineer with 7+ years of experience and a track record of leading a team of 5 engineers managing 15+ production environments serving millions of daily requests with 99.99\%+ uptime. Expert in AWS cloud infrastructure (EKS, RDS, MSK, ElastiCache), Kubernetes, Terraform IaC, and security tools including Kyverno and Trivy for vulnerability scanning. Delivered \$200K+ in cost savings, 40\% faster deployments, and zero-downtime migrations across all environments. Currently building the product's Azure expansion.
+Platform Engineer with 7+ years of experience specializing in AWS and Azure cloud infrastructure, Kubernetes, and Terraform. Leading a team of 5 engineers managing cloud environments supporting fintech services handling millions of requests per hour, maintaining 99.99\% production availability. Driving platform improvements through architectural decision-making and technical leadership. Delivered \$500K+ in monthly cloud savings, a self-service platform, and release process improvements and automation that cut deployment time from two days to a few hours.
 
-\section{Technical Skills}
-{\begin{itemize}[label=\textbullet]
-\item {\textbf{AWS —} EKS, RDS, ELB, ASG, CloudFront, OpenSearch, MSK, ElastiCache, Route53, Secrets Manager, IAM, VPC, S3, EC2, Lambda, CloudWatch, SNS, SQS, KMS, CloudFormation}
-\item {\textbf{Azure —} AKS, VNet, Front Door, Application Gateway, MySQL Flexible Server, Storage Accounts, Entra ID, VMs}
-\item {\textbf{Kubernetes Ecosystem —} Kubernetes, Helm, Kustomize, ArgoCD, FluxCD, Karpenter, Kyverno, Trivy, KEDA, Istio, External Secrets, cert-manager, Lens}
-\item {\textbf{CI/CD \& GitOps —} GitHub Actions, GitLab CI/CD, ArgoCD, FluxCD, Jenkins, CodeDeploy, CodePipeline}
-\item {\textbf{Programming \& Scripting —} Bash, Terraform HCL, Golang, Python}
-\item {\textbf{Monitoring \& Observability —} Prometheus, Grafana, OpenSearch, Fluent Bit, New Relic, CloudWatch}
-\end{itemize}}
+\section{Core Skills}
+Technical Leadership \textbullet{} Platform Architecture \textbullet{} AWS \& Azure \textbullet{} Kubernetes \textbullet{} Terraform / IaC \textbullet{} GitOps \textbullet{} GitLab CI/CD \textbullet{} Self-Service Platform \textbullet{} FinOps \& Cost Optimization \textbullet{} DevSecOps \textbullet{} SRE \& Observability \textbullet{} Golang
 
 \section{Professional Experience}
 \customcventry{01/2023 ‐ present}{}{Platform Engineer — Callsign Technologies}{Abu Dhabi, UAE}{}{
-{\begin{itemize}[leftmargin=0.6cm,topsep=5pt, itemsep=2pt, parsep=2pt, label={\textbullet}]
-    \item Leading a team of 5 DevOps engineers responsible for managing 15+ production and non-production environments, overseeing component upgrades, releases, feature development, and continuous improvements to the infrastructure codebase.
-    \item Enabled independent application deployments by building a self-service platform for engineers, reducing dependency on the DevOps team for routine deployments and scaling up or down.
-    \item Automated release documentation creation and updates by building a Claude plugin and skills for repetitive paperwork, saving 40+ engineering hours per release cycle.
-    \item Maintaining 99.99\% uptime while leading critical services upgrades (EKS, RDS, MSK) with zero downtime and no data loss.
-    \item Building the product's Azure platform, developing Terraform modules for AKS, VNet, Front Door, Application Gateway, and MySQL Flexible Server to achieve parity with the established AWS production environment and enable multi-cloud deployment.
-    \item Played a key role in emergency cross-region DR failover for a top UAE banking client during a multi-AZ AWS outage, coordinating with AWS support to migrate RDS databases, replicate S3 data, and provision complete infrastructure in the secondary region, restoring full service operation.
-    \item Achieved \$200K+ (35-40\%) in cloud cost reduction through Graviton migrations, compute rightsizing, automated non-prod environment downscaling, and storage lifecycle management.
+{\begin{itemize}[leftmargin=1cm,topsep=4pt, itemsep=0pt, parsep=0pt, label={\textbullet}]
+    \item[] \hspace*{-0.4cm}\textbf{Leadership \& Operational Ownership}\nopagebreak
+    \item Leading and mentoring 5 platform engineers across 25+ environments, owning architectural decisions and delivery priorities, and resolving technical blockers while maintaining 99.99\% availability for services handling millions of requests per hour.
+    \item Restored service in a secondary AWS region for the UAE's largest bank during a regional outage, leading emergency recovery of RDS, S3, and DynamoDB data.
+    \item[] \hspace*{-0.4cm}\textbf{Internal Developer Platform \& Self-Service}\nopagebreak
+    \item Introduced a developer self-service model, shifting routine environment operations from the platform team to developers through an internal portal designed and built using React and Golang.
+    \item Enabled independent deployments, on-demand scaling, and a centralized view of 25+ environments across 20+ AWS accounts, reducing dependency on the platform team for day-to-day operations.
+    \item[] \hspace*{-0.4cm}\textbf{Process Improvements}\nopagebreak
+    \item Reduced deployment duration per environment from two days to a few hours by leading initiatives to improve release processes and automate manual workflows.
+    \item Enabled independent, continuous delivery of platform-owned infrastructure changes, including Kubernetes upgrades and Helm chart updates, by proposing a separate release process and securing stakeholder approval.
+    \item Saved 40+ engineering hours per release cycle by automating release documentation across 15+ production environments using a custom Claude plugin and skills.
+    % TODO: Revisit disaster recovery planning, RTO, and RPO with confirmed ownership and outcomes.
+    \item[] \hspace*{-0.4cm}\textbf{FinOps \& Cost Optimization}\nopagebreak
+    \item Delivered \$500K+ in monthly cloud cost savings by leading infrastructure rightsizing, Spot adoption for non-critical workloads, Keyspaces capacity optimization, resource and snapshot cleanup, and CloudTrail logging optimization.
+    \item[] \hspace*{-0.4cm}\textbf{Cloud Infrastructure, Kubernetes \& CI/CD}\nopagebreak
+    \item Leading critical service upgrades (EKS, RDS, MSK) with zero downtime and no data loss.
+    \item Led migration from ingress-nginx to Gateway API to address the controller's end of support.
     \item Reduced critical CVEs through comprehensive cluster security implementation including Kyverno policy enforcement, Trivy vulnerability scanning, and automated AMI patching via Karpenter.
-    \item Reduced deployment time by 30-40\% by refactoring deployment strategy to decouple infrastructure and application releases, enabling independent and faster change rollouts.
-    \item Cut infrastructure provisioning from hours to minutes by building a GitLab pipeline framework orchestrating 15+ Terraform repos.
-    \item Serving as primary escalation point for complex production incidents, conducting deep-dive root cause analysis across distributed systems to identify issues spanning multiple services, clusters, and AWS components.
-    \item Reduced deployment time by migrating from IRSA to EKS Pod Identity, simplifying IAM management across all microservices.
-    \item Improved cluster autoscaling efficiency by migrating from AWS Auto Scaling Groups to Karpenter and implementing event-driven scaling with KEDA, reducing response time to traffic spikes.
-    \item[]
-    \item[]
+    \item Built the product's Azure platform with reusable Terraform modules for AKS, networking, and managed databases, targeting AWS production parity and multi-cloud deployment.
+    \item Cut infrastructure provisioning from hours to minutes by building a one-click GitLab orchestration framework that runs 15+ Terraform pipelines in dependency order, replacing manual sequential execution.
 \end{itemize}}}
 
 \customcventry{02/2022 ‐ 01/2023}{}{DevOps Engineer — Dubizzle Labs}{Lahore, Pakistan}{}{
-{\begin{itemize}[leftmargin=0.6cm,topsep=5pt, itemsep=2pt, parsep=2pt, label={\textbullet}]
+{\begin{itemize}[leftmargin=0.6cm,topsep=4pt, itemsep=1pt, parsep=0pt, label={\textbullet}]
     \item Containerized legacy applications and migrated them to Kubernetes, delivering production-grade scalability and reliability.
-    \item Built and rolled out GitOps workflows with ArgoCD, Helm, Kustomize, and External Secrets, ensuring consistency across production and non-prod environments.  
-    \item Designed and implemented CI/CD pipelines using GitHub Actions integrated with ArgoCD, enabling automated and reliable deployment strategy with minimal human intervention.  
+    \item Built and rolled out GitOps workflows with ArgoCD, Helm, Kustomize, and External Secrets, ensuring consistency across production and non-prod environments.
+    \item Designed and implemented CI/CD pipelines using GitHub Actions integrated with ArgoCD, enabling automated and reliable deployment strategy with minimal human intervention.
     \item Implemented a centralized observability stack with OpenSearch and Fluent Bit, reducing incident detection and troubleshooting time from hours to minutes.
     \item Continuously improved Terraform codebase to ensure consistent infrastructure across environments.
     \item Integrated AWS SSO with ArgoCD and OpenSearch, tightening access control and simplifying authentication across the platform.
-\item[]
 \end{itemize}}}
 
 \customcventry{02/2021 ‐ 02/2022}{}{DevOps Engineer — Arbisoft}{Lahore, Pakistan}{}{
-{\begin{itemize}[leftmargin=0.6cm,topsep=5pt, itemsep=1pt, parsep=1pt, label={\textbullet}]
+{\begin{itemize}[leftmargin=0.6cm,topsep=4pt, itemsep=1pt, parsep=0pt, label={\textbullet}]
     \item Migrated workloads from standalone EC2 instances to auto-scaling-group based architecture, improving availability and reducing operational overhead.
-    \item Enhanced CI/CD pipelines with CircleCI and AWS CodeDeploy, accelerating release velocity and minimizing deployment failures.  
-    \item Authored reusable CloudFormation templates to standardize infrastructure provisioning and ensure consistency across projects.  
-    \item Tuned and optimized Nginx configurations, reducing application response times by more than 70\%.  
+    \item Enhanced CI/CD pipelines with CircleCI and AWS CodeDeploy, accelerating release velocity and minimizing deployment failures.
+    \item Authored reusable CloudFormation templates to standardize infrastructure provisioning and ensure consistency across projects.
+    \item Tuned and optimized Nginx configurations, reducing application response times by more than 70\%.
     \item Automated repetitive operational tasks with Bash scripting, increasing team efficiency and reducing manual toil.
     \item Integrated New Relic for application performance monitoring, enabling proactive issue detection and faster root-cause analysis.
-\item[]
 \end{itemize}}}
 
 \customcventry{07/2019 ‐ 02/2021}{}{Software Engineer — Northbay Solutions}{Lahore, Pakistan}{}{
-{\begin{itemize}[leftmargin=0.6cm,topsep=5pt, itemsep=1pt, parsep=1pt, label={\textbullet}]
+{\begin{itemize}[leftmargin=0.6cm,topsep=4pt, itemsep=1pt, parsep=0pt, label={\textbullet}]
     \item Worked on writing reusable IaC scripts in CloudFormation and Terraform for seamless infrastructure provisioning.
-    \item Contributed to the design and implementation of an application migration from Rackspace to AWS ECS, improving scalability and reliability of services.  
-    \item Developed AWS Lambda functions workflow orchestration using Step Functions, automating event-driven processes.  
+    \item Contributed to the design and implementation of an application migration from Rackspace to AWS ECS, improving scalability and reliability of services.
+    \item Developed AWS Lambda functions workflow orchestration using Step Functions, automating event-driven processes.
     \item Set up SFTP server on AWS using AWS Transfer Service, ensuring secure and reliable data transfer.
-\item[]
 \end{itemize}}}
+
+\section{Technical Skills}
+{\begin{itemize}[label=\textbullet, topsep=4pt, itemsep=2pt, parsep=0pt]
+\item {\textbf{AWS —} EKS, RDS, ELB, ASG, CloudFront, OpenSearch, MSK, ElastiCache, Route53, Secrets Manager, IAM, VPC, S3, EC2, Lambda, CloudWatch, SNS, SQS, KMS, CloudFormation}
+\item {\textbf{Azure —} AKS, VNet, Front Door, Application Gateway, MySQL Flexible Server, Storage Accounts, Entra ID, VMs}
+\item {\textbf{Kubernetes Ecosystem —} Kubernetes, Helm, Kustomize, ArgoCD, FluxCD, Karpenter, Kyverno, Trivy, KEDA, Istio, External Secrets, cert-manager, Lens, Kubebuilder}
+\item {\textbf{AI \& MLOps —} Kubeflow, KServe, vLLM, GPU scheduling}
+\item {\textbf{CI/CD \& GitOps —} GitHub Actions, GitLab CI/CD, ArgoCD, FluxCD, Jenkins, CodeDeploy, CodePipeline}
+\item {\textbf{Programming \& Scripting —} Bash, Terraform HCL, Golang, Python}
+\item {\textbf{Monitoring \& Observability —} Prometheus, Grafana, OpenSearch, Fluent Bit, New Relic, CloudWatch}
+\item {\textbf{Reliability \& Disaster Recovery —} Site Reliability Engineering (SRE), SLAs, SLIs, SLOs, RTO, RPO, Incident Response \& Management, Mean Time to Recovery (MTTR), Root Cause Analysis}
+\item {\textbf{Security \& DevSecOps —} Teleport, Vault, Istio mTLS, Cloudflare, SAST, DAST, Vulnerability Management}
+\item {\textbf{Compliance \& Regulations —} SOC 2, PCI DSS, ISO 27001, GDPR}
+\end{itemize}}
 
 \section{ Certifications}
 \begin{multicols}{2}
-  {\begin{itemize}[leftmargin=0.6cm,topsep=5pt, itemsep=2pt, parsep=2pt, label={\textbullet}]
+  {\begin{itemize}[leftmargin=0.6cm,topsep=4pt, itemsep=1pt, parsep=0pt, label={\textbullet}]
      \item CNCF Kubestronaut
      \item Certified Kubernetes Security Specialist
      \item Certified Kubernetes Administrator
@@ -115,25 +124,16 @@ Platform Engineer with 7+ years of experience and a track record of leading a te
      \item AWS Certified Developer - Associate
      \item AWS Certified Cloud Practitioner
      \item Terraform Certified Associate
-     \item[]
-  \end{itemize}} 
+       \end{itemize}}
 \end{multicols}
 
 \section{Education}
 \customcventry{2015-2019}{\underline{Punjab University College of Information and Technology}}{Bachelor’s in Software Engineering}{}{}{}{Relevant Courses: Data Structures, Algorithms, Object Oriented Programming, Databases, Machine Learning}\\
 {CGPA: 3.62/4}
 
-\section{Additional Skills}
-\begin{multicols}{2}
-  {\begin{itemize}[leftmargin=0.6cm,topsep=5pt, itemsep=2pt, parsep=2pt, label={\textbullet}]
-     \item Cloud Engineering
-     \item Site Reliability Engineering (SRE)
-     \item Team Leadership \& Mentorship
-     \item Incident Management \& Root Cause Analysis
-     \item Cross-Functional Collaboration
-     \item Critical Thinking \& Problem Solving
-     \item Technical Communication
-  \end{itemize}} 
-\end{multicols}
+% Keywords retained for future integration into evidence-based experience bullets:
+% Cloud Engineering; Site Reliability Engineering (SRE); Team Leadership & Mentorship;
+% Incident Management & Root Cause Analysis; Cross-Functional Collaboration;
+% Critical Thinking & Problem Solving; Technical Communication.
 
 \end{document}
