@@ -72,7 +72,6 @@
     }
 
     .exp-group-title { margin: 20px 0 8px; color: var(--text-white); font-size: 0.95rem; }
-    .ai-skills { margin-top: 12px; }
 
     /* Sticky Navigation */
     header {
@@ -380,15 +379,17 @@
     /* Skills Grid */
     .skills-grid {
       display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 16px;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 12px;
+      align-items: stretch;
     }
 
     .skill-category-card {
       background: #16161a;
       border: 1px solid var(--border);
       border-radius: 6px;
-      padding: 18px;
+      padding: 14px;
+      min-width: 0;
       transition: border-color 0.15s ease;
     }
 
@@ -952,16 +953,11 @@
       <div class="skills-grid"><div class="skill-category-card"><div class="skill-category-title">// AWS</div><div class="skill-pill-container"><span class="skill-tag">EKS</span><span class="skill-tag">RDS</span><span class="skill-tag">ELB</span><span class="skill-tag">ASG</span><span class="skill-tag">CloudFront</span><span class="skill-tag">OpenSearch</span><span class="skill-tag">MSK</span><span class="skill-tag">ElastiCache</span><span class="skill-tag">Route53</span><span class="skill-tag">Secrets Manager</span><span class="skill-tag">IAM</span><span class="skill-tag">VPC</span><span class="skill-tag">S3</span><span class="skill-tag">EC2</span><span class="skill-tag">Lambda</span><span class="skill-tag">CloudWatch</span><span class="skill-tag">SNS</span><span class="skill-tag">SQS</span><span class="skill-tag">KMS</span><span class="skill-tag">CloudFormation</span></div></div>
 <div class="skill-category-card"><div class="skill-category-title">// Azure</div><div class="skill-pill-container"><span class="skill-tag">AKS</span><span class="skill-tag">VNet</span><span class="skill-tag">Front Door</span><span class="skill-tag">Application Gateway</span><span class="skill-tag">MySQL Flexible Server</span><span class="skill-tag">Storage Accounts</span><span class="skill-tag">Entra ID</span><span class="skill-tag">VMs</span></div></div>
 <div class="skill-category-card"><div class="skill-category-title">// Kubernetes Ecosystem</div><div class="skill-pill-container"><span class="skill-tag">Kubernetes</span><span class="skill-tag">Helm</span><span class="skill-tag">Kustomize</span><span class="skill-tag">ArgoCD</span><span class="skill-tag">FluxCD</span><span class="skill-tag">Karpenter</span><span class="skill-tag">Kyverno</span><span class="skill-tag">Trivy</span><span class="skill-tag">KEDA</span><span class="skill-tag">Istio</span><span class="skill-tag">External Secrets</span><span class="skill-tag">cert-manager</span><span class="skill-tag">Lens</span><span class="skill-tag">Kubebuilder</span></div></div>
-<div class="skill-category-card"><div class="skill-category-title">// AI &amp; MLOps</div><ul class="exp-bullets ai-skills">
-<li>Model-serving concepts with KServe on Kubernetes.</li>
-<li>LLM inference fundamentals with vLLM.</li>
-<li>Machine learning workflow concepts with Kubeflow.</li>
-<li>GPU resource requests, limits, and scheduling concepts for Kubernetes workloads.</li>
-</ul></div>
+<div class="skill-category-card"><div class="skill-category-title">// AI &amp; MLOps</div><div class="skill-pill-container"><span class="skill-tag">Kubeflow</span><span class="skill-tag">KServe</span><span class="skill-tag">vLLM</span><span class="skill-tag">GPU Scheduling</span></div></div>
 <div class="skill-category-card"><div class="skill-category-title">// CI/CD &amp; GitOps</div><div class="skill-pill-container"><span class="skill-tag">GitHub Actions</span><span class="skill-tag">GitLab CI/CD</span><span class="skill-tag">ArgoCD</span><span class="skill-tag">FluxCD</span><span class="skill-tag">Jenkins</span><span class="skill-tag">CodeDeploy</span><span class="skill-tag">CodePipeline</span></div></div>
 <div class="skill-category-card"><div class="skill-category-title">// Programming &amp; Scripting</div><div class="skill-pill-container"><span class="skill-tag">Bash</span><span class="skill-tag">Terraform HCL</span><span class="skill-tag">Golang</span><span class="skill-tag">Python</span></div></div>
 <div class="skill-category-card"><div class="skill-category-title">// Monitoring &amp; Observability</div><div class="skill-pill-container"><span class="skill-tag">Prometheus</span><span class="skill-tag">Grafana</span><span class="skill-tag">OpenSearch</span><span class="skill-tag">Fluent Bit</span><span class="skill-tag">New Relic</span><span class="skill-tag">CloudWatch</span></div></div>
-<div class="skill-category-card"><div class="skill-category-title">// Reliability &amp; Disaster Recovery</div><div class="skill-pill-container"><span class="skill-tag">Site Reliability Engineering (SRE)</span><span class="skill-tag">SLAs</span><span class="skill-tag">SLIs</span><span class="skill-tag">SLOs</span><span class="skill-tag">RTO</span><span class="skill-tag">RPO</span><span class="skill-tag">Incident Response &amp; Management</span><span class="skill-tag">Mean Time to Recovery (MTTR)</span><span class="skill-tag">Root Cause Analysis</span></div></div>
+<div class="skill-category-card"><div class="skill-category-title">// Reliability &amp; Disaster Recovery</div><div class="skill-pill-container"><span class="skill-tag">SRE</span><span class="skill-tag">SLAs</span><span class="skill-tag">SLIs</span><span class="skill-tag">SLOs</span><span class="skill-tag">RTO</span><span class="skill-tag">RPO</span><span class="skill-tag">Incident Response</span><span class="skill-tag">MTTR</span><span class="skill-tag">RCA</span></div></div>
 <div class="skill-category-card"><div class="skill-category-title">// Security &amp; DevSecOps</div><div class="skill-pill-container"><span class="skill-tag">Teleport</span><span class="skill-tag">Vault</span><span class="skill-tag">Istio mTLS</span><span class="skill-tag">Cloudflare</span><span class="skill-tag">SAST</span><span class="skill-tag">DAST</span><span class="skill-tag">Vulnerability Management</span></div></div>
 <div class="skill-category-card"><div class="skill-category-title">// Compliance &amp; Regulations</div><div class="skill-pill-container"><span class="skill-tag">SOC 2</span><span class="skill-tag">PCI DSS</span><span class="skill-tag">ISO 27001</span><span class="skill-tag">GDPR</span></div></div></div>
     </section>
